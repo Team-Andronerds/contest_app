@@ -1,4 +1,4 @@
-Android application for the OSU App Center competition.
+###Android application for the OSU App Center competition.
 
 Competition Theme: Drive to Win!
 
@@ -12,7 +12,7 @@ acceleration, harsh turns, speeding for each trip.
 
 =======================================================================================================
 
-Useful resources for project members:
+##Useful resources for project members
 
 Trello:
 
