@@ -13,19 +13,35 @@ acceleration, harsh turns, speeding for each trip.
 Useful resources for project members:
 
 Trello:
+
 For organization and management of sprints for each team-member, as well as historical archiving.
+
 https://trello.com/b/8p54iUuW/contest-app-project-board
 
+======================================================================================================
+
 How to use Trello with Agile Development:
+
 An article on using Trello with Agile Dev methodologies.
+
 http://www.tommasonervegna.com/blog/2014/1/9/10-effective-tips-for-using-trello-as-an-agile-scrum-project-management-tool
 
+=======================================================================================================
+
 Proper Github Branching Model:
+
 A guide on how to use Github properly when working with a team.
+
 http://nvie.com/posts/a-successful-git-branching-model/
 
+===========================================================================================================
+
 Websites with more Android libraries:
+
 Here are a few websites that make for great library references when working with Android.
+
 https://android-arsenal.com/
+
 https://github.com/wasabeef/awesome-android-ui
+
 http://developer.android.com/tools/support-library/index.html
