@@ -10,6 +10,8 @@ application predicts the exact time, it would take to reach the destination base
 has the features of road assistance, maintenance schedule and shows the driving behavior measuring harsh breaking, harsh
 acceleration, harsh turns, speeding for each trip.
 
+=======================================================================================================
+
 Useful resources for project members:
 
 Trello:
