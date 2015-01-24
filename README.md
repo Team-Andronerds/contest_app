@@ -51,7 +51,7 @@ http://developer.android.com/tools/support-library/index.html
 
 ###Libraries currently used in app:
 
-Appcompat Support v7 - Contains many "material" constructs to keep older versions of Android look more in line with 5.0
+Appcompat Support v7 - Contains many "material" constructs to keep older versions of Android more in line with 5.0
 
 https://developer.android.com/tools/support-library/features.html
 
