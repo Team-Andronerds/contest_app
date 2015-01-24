@@ -1,4 +1,4 @@
-###Android application for the OSU App Center competition.
+##Android application for the OSU App Center competition.
 
 Competition Theme: Drive to Win!
 
@@ -11,7 +11,7 @@ has the features of road assistance, maintenance schedule and shows the driving 
 acceleration, harsh turns, speeding for each trip.
 
 
-##Useful resources for project members
+###Useful resources for project members
 
 Trello:
 
@@ -49,7 +49,7 @@ http://developer.android.com/tools/support-library/index.html
 
 ===========================================================================================================
 
-Libraries currently used in app:
+###Libraries currently used in app:
 
 Appcompat Support v7 - Contains many "material" constructs to keep older versions of Android look more in line with 5.0
 
