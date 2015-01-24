@@ -21,5 +21,16 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:21.0.2'
+
+    //App compat support library containing several material design constructs
+    compile 'com.android.support:appcompat-v7:21.0.+'
+
+    //Library containing CardViews and related
+    compile 'com.github.gabrielemariotti.cards:cardslib-core:2.0.1'
+
+    //A simple image loading and caching library
+    compile 'com.squareup.picasso:picasso:2.4.0'
+
+    //Library adds color and transparency options to system and status bar
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 }
