@@ -11,7 +11,10 @@
     <TextView
         android:text="@string/hello_world"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
-<!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/C:/Users/Dilancuan/Documents/contest_app/app/src/main/res/layout/activity_main.xml -->
