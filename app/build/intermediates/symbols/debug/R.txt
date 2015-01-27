@@ -347,10 +347,11 @@ int id action_menu_presenter 0x7f070018
 int id action_mode_bar 0x7f07002e
 int id action_mode_bar_stub 0x7f07002d
 int id action_mode_close_button 0x7f070020
-int id action_settings 0x7f07003f
+int id action_settings 0x7f070041
 int id activity_chooser_view_content 0x7f070021
 int id always 0x7f07000f
 int id beginning 0x7f07000a
+int id changeText 0x7f070040
 int id checkbox 0x7f070029
 int id collapseActionView 0x7f070011
 int id decor_content_parent 0x7f07002f
@@ -393,6 +394,7 @@ int id showTitle 0x7f070007
 int id split_action_bar 0x7f07001c
 int id submit_area 0x7f07003c
 int id tabMode 0x7f070002
+int id textOne 0x7f07003f
 int id title 0x7f070027
 int id up 0x7f07001d
 int id useLogo 0x7f070004
@@ -443,7 +445,9 @@ int string abc_shareactionprovider_share_with_application 0x7f0a000e
 int string abc_toolbar_collapse_description 0x7f0a000f
 int string action_settings 0x7f0a0010
 int string app_name 0x7f0a0011
-int string hello_world 0x7f0a0012
+int string buttonText 0x7f0a0012
+int string hello_world 0x7f0a0013
+int string labelText 0x7f0a0014
 int style AppTheme 0x7f0b0000
 int style Base_TextAppearance_AppCompat 0x7f0b0001
 int style Base_TextAppearance_AppCompat_Body1 0x7f0b0002

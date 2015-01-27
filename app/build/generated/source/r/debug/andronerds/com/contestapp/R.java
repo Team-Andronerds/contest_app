@@ -1315,10 +1315,11 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f07002e;
         public static final int action_mode_bar_stub=0x7f07002d;
         public static final int action_mode_close_button=0x7f070020;
-        public static final int action_settings=0x7f07003f;
+        public static final int action_settings=0x7f070041;
         public static final int activity_chooser_view_content=0x7f070021;
         public static final int always=0x7f07000f;
         public static final int beginning=0x7f07000a;
+        public static final int changeText=0x7f070040;
         public static final int checkbox=0x7f070029;
         public static final int collapseActionView=0x7f070011;
         public static final int decor_content_parent=0x7f07002f;
@@ -1361,6 +1362,7 @@ containing a value of this type.
         public static final int split_action_bar=0x7f07001c;
         public static final int submit_area=0x7f07003c;
         public static final int tabMode=0x7f070002;
+        public static final int textOne=0x7f07003f;
         public static final int title=0x7f070027;
         public static final int up=0x7f07001d;
         public static final int useLogo=0x7f070004;
@@ -1419,7 +1421,9 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f0a000f;
         public static final int action_settings=0x7f0a0010;
         public static final int app_name=0x7f0a0011;
-        public static final int hello_world=0x7f0a0012;
+        public static final int buttonText=0x7f0a0012;
+        public static final int hello_world=0x7f0a0013;
+        public static final int labelText=0x7f0a0014;
     }
     public static final class style {
         /**  Customize your theme here. 

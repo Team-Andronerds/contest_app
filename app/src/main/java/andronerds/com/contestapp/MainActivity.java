@@ -1,9 +1,14 @@
 package andronerds.com.contestapp;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.andronerds.obdLib.*;
 
 
 public class MainActivity extends ActionBarActivity
@@ -14,6 +19,20 @@ public class MainActivity extends ActionBarActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button buttonOne = (Button)findViewById(R.id.changeText);
+
+        buttonOne.setOnClickListener(
+          new Button.OnClickListener(){
+              public void onClick(View v){
+                  TextView textOne = (TextView)findViewById(R.id.textOne);
+                  textOne.setText(OnBoardDiagnostic.getString());
+              }
+          }
+        );
+
+        OnBoardDiagnostic.newTrip("ayylmao");
+        OnBoardDiagnostic.startTrip();
     }
 
 
