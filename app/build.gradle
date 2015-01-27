@@ -23,7 +23,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //App compat support library containing several material design constructs
-    compile 'com.android.support:appcompat-v7:21.0.+'
+    compile "com.android.support:appcompat-v7:21.0.+"
 
     //Library containing CardViews and related
     compile 'com.github.gabrielemariotti.cards:cardslib-core:2.0.1'
