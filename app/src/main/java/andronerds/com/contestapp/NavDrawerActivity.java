@@ -1,8 +1,10 @@
 package andronerds.com.contestapp;
 
+import android.graphics.drawable.Drawable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -12,10 +14,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 
 public abstract class NavDrawerActivity extends ActionBarActivity {
 
     private DrawerLayout mDrawerLayout;
+    private NavDrawerItem drawerItems;
+    private ActionBarDrawerToggle mDrawerToggle;
     private ListView mDrawerList;
     private CharSequence mTitle;
     private Toolbar toolbar;
@@ -28,11 +34,12 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String[] drawerTitles = getResources().getStringArray(R.array.nav_drawer_titles);
+        ArrayList<NavDrawerItem> navDrawerItems = getNavDrawerItems();
         this.mDrawerLayout = (DrawerLayout) findViewById(R.id.navdrawerlayout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item,drawerTitles));
+        mDrawerList.setAdapter(new NavDrawerAdapter(navDrawerItems,this));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+
     }
 
 
@@ -67,5 +74,20 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
             //selectItem(position);
             mDrawerLayout.closeDrawer(mDrawerList);
         }
+    }
+
+    private ArrayList<NavDrawerItem> getNavDrawerItems()
+    {
+        String[] drawerTitles = getResources().getStringArray(R.array.nav_drawer_titles);
+        ArrayList<NavDrawerItem> aList = new ArrayList<NavDrawerItem>();
+
+        for(int i = 0; i < drawerTitles.length; i++ )
+        {
+            NavDrawerItem navItem = new NavDrawerItem(drawerTitles[i],(Drawable) getResources().getDrawable(R.drawable.ic_launcher));
+            aList.add(navItem);
+        }
+
+        return aList;
+
     }
 }

@@ -10,6 +10,12 @@ public class NavDrawerItem {
     private String menuItemName;
     private Drawable menuIcon;
 
+    public NavDrawerItem(String title, Drawable draw)
+    {
+        this.menuItemName = title;
+        this.menuIcon = draw;
+    }
+
     /*
      *  Getters for MenuDrawerItem class
      */

@@ -6,6 +6,7 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="nav_drawer_titles">
+        <item name="userName"> userName</item>
         <item>Drive To Win</item>
         <item>My Trips</item>
         <item>My Vehicle</item>

@@ -1,9 +1,12 @@
 package andronerds.com.contestapp;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -26,11 +29,18 @@ public class NavDrawerAdapter extends BaseAdapter {
     {
         this.menuDrawerItems = drawerItems;
         this.navDrawerContext = context;
-
     }
 
     public View getView(int x, View v, ViewGroup vg)
     {
+        LayoutInflater inflater = (LayoutInflater) this.navDrawerContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        v = inflater.inflate(R.layout.drawer_list_item,
+                null, false);
+
+        ImageView icon = (ImageView) v.findViewById(R.id.drawerIcon);
+        TextView title = (TextView) v.findViewById(R.id.navDrawerText);
+        title.setText(this.menuDrawerItems.get(x).getMenuItemName());
+        icon.setImageDrawable(this.menuDrawerItems.get(x).getMenuIcon());
 
         return v;
     }
