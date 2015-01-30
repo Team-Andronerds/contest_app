@@ -5,4 +5,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <string-array name="nav_drawer_titles">
+        <item>Drive To Win</item>
+        <item>My Trips</item>
+        <item>My Vehicle</item>
+        <item>Insurance Info</item>
+        <item>Emergency</item>
+    </string-array>
+
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+
 </resources>
