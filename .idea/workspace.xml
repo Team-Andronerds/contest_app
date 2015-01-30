@@ -22,358 +22,15 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: andronerds.com.contestapp" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2629cd-8a7c-44eb-951a-811f7e12cb2c" name="Default" comment="Updated nav drawer to follow material design.&#10;Changed style to NoActionBar&#10;Added Toolbar in activity_main&#10;Hello World Text View is appearing behind toolbar for some reason, Will Fix.">
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\.idea\libraries\appcompat_v7_21_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\.idea\libraries\support_annotations_21_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\.idea\libraries\support_v4_21_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\generated\source\buildConfig\test\debug\andronerds\com\contestapp\test\BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\R.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\anim\abc_fade_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\anim\abc_fade_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\anim\abc_slide_in_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\anim\abc_slide_in_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\anim\abc_slide_out_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\anim\abc_slide_out_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\color\abc_background_cache_hint_selector_material_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\color\abc_background_cache_hint_selector_material_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\color\abc_primary_text_disable_only_material_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\color\abc_primary_text_disable_only_material_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\color\abc_primary_text_material_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\color\abc_primary_text_material_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\color\abc_search_url_text.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\color\abc_secondary_text_material_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\color\abc_secondary_text_material_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ab_share_pack_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ab_share_pack_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_go_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_list_divider_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_popup_background_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-hdpi\abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-hdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-hdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-hdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-hdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-mdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-mdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-mdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-mdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xxhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xxhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xxhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xxhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xxxhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xxxhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xxxhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-ldrtl-xxxhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ab_share_pack_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ab_share_pack_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_go_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_list_divider_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_popup_background_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-mdpi\abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ab_share_pack_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ab_share_pack_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_go_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_list_divider_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_popup_background_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xhdpi\abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ab_share_pack_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ab_share_pack_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_go_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_list_divider_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_popup_background_mtrl_mult.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxhdpi\abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable-xxxhdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_btn_check_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_btn_radio_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_cab_background_internal_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_cab_background_top_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_edit_text_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_item_background_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_item_background_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_list_selector_background_transition_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_list_selector_background_transition_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_list_selector_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_list_selector_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_switch_thumb_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_tab_indicator_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\drawable\abc_textfield_search_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout-v11\abc_screen_content_include.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_action_bar_title_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_action_bar_up_container.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_action_bar_view_list_nav_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_action_menu_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_action_menu_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_action_mode_bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_action_mode_close_item_material.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_activity_chooser_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_activity_chooser_view_include.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_activity_chooser_view_list_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_expanded_menu_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_list_menu_item_checkbox.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_list_menu_item_icon.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_list_menu_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_list_menu_item_radio.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_popup_menu_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_screen_content_include.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_screen_simple.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_screen_simple_overlay_action_mode.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_screen_toolbar.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_search_dropdown_item_icons_2line.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_search_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\abc_simple_dropdown_hint.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\layout\support_simple_spinner_dropdown_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-af\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-am\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ar\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-bg\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-bn-rBD\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ca\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-cs\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-da\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-de\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-el\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-en-rGB\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-en-rIN\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-es-rUS\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-es\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-et-rEE\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-eu-rES\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-fa\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-fi\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-fr-rCA\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-fr\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-gl-rES\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-hi\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-hr\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-hu\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-hy-rAM\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-in\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-is-rIS\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-it\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-iw\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ja\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ka-rGE\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-kk-rKZ\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-km-rKH\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-kn-rIN\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ko\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ky-rKG\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-land\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-large\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-lo-rLA\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-lt\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-lv\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-mk-rMK\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ml-rIN\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-mn-rMN\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-mr-rIN\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ms-rMY\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-my-rMM\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-nb\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ne-rNP\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-nl\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-pl\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-port\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-pt-rPT\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-pt\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ro\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ru\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-si-rLK\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-sk\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-sl\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-sr\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-sv\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-sw600dp\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-sw\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ta-rIN\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-te-rIN\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-th\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-tl\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-tr\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-uk\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-ur-rPK\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-uz-rUZ\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-v11\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-v14\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-v17\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-v21\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-vi\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-w360dp\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-w480dp\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-w500dp\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-w600dp\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-w720dp\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-xlarge-land\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-xlarge\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-zh-rCN\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-zh-rHK\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-zh-rTW\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values-zu\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\res\values\values.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\aidl\android\support\v4\app\INotificationSideChannel.aidl" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\CPprograms\Android\contest_app\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/andronerds/com/contestapp/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/andronerds/com/contestapp/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/andronerds/com/contestapp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/andronerds/com/contestapp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="ad2629cd-8a7c-44eb-951a-811f7e12cb2c" name="Default" comment="Same messages, Last Commit did not commit everything">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/NavDrawerActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/NavDrawerAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/NavDrawerItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_nav_drawer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drawer_list_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drawer_test_layout.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_nav_drawer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ContestApp.iws" />
@@ -417,9 +74,11 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8360656" vertical-offset="34" max-vertical-offset="459">
-              <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-              <folding />
+            <state vertical-scroll-proportion="0.55737704" vertical-offset="85" max-vertical-offset="459">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding>
+                <element signature="e#416#434#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -440,8 +99,8 @@
       <file leaf-file-name="NavDrawerActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/NavDrawerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="411" max-vertical-offset="1139">
-              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+              <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -1264,6 +923,62 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ContestApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ContestApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1531,6 +1246,11 @@
       <created>1421651324822</created>
       <updated>1421651324822</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated nav drawer to follow material design.&#10;Changed style to NoActionBar&#10;Added Toolbar in activity_main&#10;Hello World Text View is appearing behind toolbar for some reason, Will Fix.">
+      <created>1422643243223</created>
+      <updated>1422643243223</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1604,7 +1324,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Updated nav drawer to follow material design.&#10;Changed style to NoActionBar&#10;Added Toolbar in activity_main&#10;Hello World Text View is appearing behind toolbar for some reason, Will Fix." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated nav drawer to follow material design.&#10;Changed style to NoActionBar&#10;Added Toolbar in activity_main&#10;Hello World Text View is appearing behind toolbar for some reason, Will Fix." />
+    <MESSAGE value="Same messages, Last Commit did not commit everything" />
+    <option name="LAST_COMMIT_MESSAGE" value="Same messages, Last Commit did not commit everything" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1687,6 +1408,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1718,6 +1440,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
           <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1742,6 +1465,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="558">
           <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1769,6 +1493,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
           <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1801,14 +1526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.9259257" vertical-offset="0" max-vertical-offset="289">
           <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/string_arraylists.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1877,17 +1594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6666665" vertical-offset="0" max-vertical-offset="289">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1898,14 +1604,6 @@
           <folding>
             <element signature="e#1067#1088#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/NavDrawerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="819" max-vertical-offset="1139">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1930,11 +1628,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.6666665" vertical-offset="0" max-vertical-offset="289">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/NavDrawerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8360656" vertical-offset="34" max-vertical-offset="459">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
+        <state vertical-scroll-proportion="0.55737704" vertical-offset="85" max-vertical-offset="459">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="e#416#434#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
