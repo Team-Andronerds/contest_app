@@ -22,6 +22,11 @@
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
     <color name="background_material_light">#ffeeeeee</color>
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <item name="black" type="color">#000000</item>
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -99,6 +104,7 @@
     <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="toolbar_color" type="color">#4CAF50</item>
+    <item name="white" type="color">#FFFFFF</item>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -342,14 +348,29 @@
     <eat-comment/>
     <string name="card_empty_cardwithlist_text">No data....</string>
     <string name="card_progressbar_cardwithlist_text">Loading data...</string>
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="drive_current_points">Current Points</string>
+    <string name="drive_points_placeholder">40 / 100</string>
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <eat-comment/>
     <string name="font_fontFamily_medium">sans-serif</string>
     <string name="font_fontFamily_regular">sans-serif</string>
     <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="from">from:</string>
     <string name="hello_world">Hello world!</string>
     <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="list_card_undo_title">Undo</string>
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="to">to:</string>
+    <string name="trip_from_placeholder">Stillwater, OK</string>
+    <string name="trip_pts">points</string>
+    <string name="trip_pts_earned">You earned</string>
+    <string name="trip_pts_placeholder">20</string>
+    <string name="trip_to_placeholder">Oklahoma City, OK</string>
     <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">

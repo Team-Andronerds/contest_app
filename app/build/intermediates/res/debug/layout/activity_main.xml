@@ -11,8 +11,10 @@
     <include layout="@layout/base_toolbar"/>
 
     <FrameLayout
+        android:layout_below="@+id/home_toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="true"
         android:id="@+id/home_fragment_container">
     </FrameLayout>
 

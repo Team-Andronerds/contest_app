@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="150dip">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dip">
+
+    <ImageView
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:id="@+id/drive_card_image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/drive_card_image"
+        android:id="@+id/drive_card_current_points_text"
+        android:text="@string/drive_current_points"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="40dip"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/drive_card_image"
+        android:layout_below="@+id/drive_card_current_points_text"
+        android:id="@+id/drive_card_points_text"
+        android:textSize="40sp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/drive_points_placeholder"
+        android:layout_marginLeft="30dip"/>
+
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/white"/>
+
+</LinearLayout>

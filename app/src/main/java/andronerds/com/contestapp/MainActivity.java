@@ -15,14 +15,17 @@ import andronerds.com.contestapp.fragments.HomeFragment;
 
 public class MainActivity extends ActionBarActivity
 {
+    //@InjectView(R.id.home_toolbar) Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //ButterKnife.inject(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.home_toolbar);
+        //Toolbar settings
+        Toolbar toolbar = (Toolbar) this.findViewById(R.id.home_toolbar);
         toolbar.showOverflowMenu();
         toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
