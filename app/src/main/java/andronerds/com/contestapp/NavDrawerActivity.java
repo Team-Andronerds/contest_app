@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
 
     private DrawerLayout mDrawerLayout;
     private NavDrawerItem drawerItems;
+    private LinearLayout drawerItemLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     private ListView mDrawerList;
     private CharSequence mTitle;
@@ -39,6 +41,9 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mDrawerList.setAdapter(new NavDrawerAdapter(navDrawerItems,this));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+
+        this.drawerItemLayout = (LinearLayout) findViewById(R.id.navDrawer);
+
 
     }
 
@@ -71,7 +76,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
         @Override
         public void onItemClick(AdapterView parent, View view, int position, long id) {
             Log.i("sel", "onClick");
-            //selectItem(position);
+            //drawerItemLayout.setBackgroundColor(getResources().getColor(R.color.background_material_light));
             mDrawerLayout.closeDrawer(mDrawerList);
         }
     }

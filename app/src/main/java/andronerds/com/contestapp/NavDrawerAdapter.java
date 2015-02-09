@@ -34,13 +34,26 @@ public class NavDrawerAdapter extends BaseAdapter {
     public View getView(int x, View v, ViewGroup vg)
     {
         LayoutInflater inflater = (LayoutInflater) this.navDrawerContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        v = inflater.inflate(R.layout.drawer_list_item,
-                null, false);
 
-        ImageView icon = (ImageView) v.findViewById(R.id.drawerIcon);
-        TextView title = (TextView) v.findViewById(R.id.navDrawerText);
-        title.setText(this.menuDrawerItems.get(x).getMenuItemName());
-        icon.setImageDrawable(this.menuDrawerItems.get(x).getMenuIcon());
+
+        if(x == 0)
+        {
+            v = inflater.inflate(R.layout.header,null,false);
+            ImageView profilePic = (ImageView) v.findViewById(R.id.profilePic);
+            TextView name = (TextView) v.findViewById(R.id.name);
+            name.setText("Chris Portokalis");
+            profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));
+
+        }
+        else
+        {
+            v = inflater.inflate(R.layout.drawer_list_item,
+                    null, false);
+            ImageView icon = (ImageView) v.findViewById(R.id.drawerIcon);
+            TextView title = (TextView) v.findViewById(R.id.navDrawerText);
+            title.setText(this.menuDrawerItems.get(x).getMenuItemName());
+            icon.setImageDrawable(this.menuDrawerItems.get(x).getMenuIcon());
+        }
 
         return v;
     }

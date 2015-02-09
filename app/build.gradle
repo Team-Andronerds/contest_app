@@ -33,4 +33,7 @@ dependencies {
 
     //Library adds color and transparency options to system and status bar
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+
+    //Library for circle image for header view in nav drawer
+    compile 'de.hdodenhof:circleimageview:1.2.1'
 }
