@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="nav_drawer_titles">
+        <item name="userName"> Header PlaceHolder</item>
+        <item>Drive To Win</item>
+        <item>My Trips</item>
+        <item>My Vehicle</item>
+        <item>Insurance Info</item>
+        <item>Emergency</item>
+    </string-array>
     <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -365,6 +375,7 @@
     <string name="list_card_undo_title">Undo</string>
     <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
     <string name="to">to:</string>
     <string name="trip_from_placeholder">Stillwater, OK</string>
     <string name="trip_pts">points</string>

@@ -1,9 +1,9 @@
 package andronerds.com.contestapp;
 
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -11,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -39,7 +38,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
         ArrayList<NavDrawerItem> navDrawerItems = getNavDrawerItems();
         this.mDrawerLayout = (DrawerLayout) findViewById(R.id.navdrawerlayout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
-        mDrawerList.setAdapter(new NavDrawerAdapter(navDrawerItems,this));
+        mDrawerList.setAdapter(new NavDrawerAdapter(navDrawerItems, this));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         this.drawerItemLayout = (LinearLayout) findViewById(R.id.navDrawer);
