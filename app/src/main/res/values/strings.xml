@@ -14,4 +14,15 @@
     <string name="trip_from_placeholder">Stillwater, OK</string>
     <string name="trip_to_placeholder">Oklahoma City, OK</string>
 
+    <string-array name="nav_drawer_titles">
+        <item name="userName"> Header PlaceHolder</item>
+        <item>Drive To Win</item>
+        <item>My Trips</item>
+        <item>My Vehicle</item>
+        <item>Insurance Info</item>
+        <item>Emergency</item>
+    </string-array>
+
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+
 </resources>
