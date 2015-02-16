@@ -27,13 +27,14 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
     private CharSequence mTitle;
     private Toolbar toolbar;
 
+    abstract protected void init();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        init();
 
         ArrayList<NavDrawerItem> navDrawerItems = getNavDrawerItems();
         this.mDrawerLayout = (DrawerLayout) findViewById(R.id.navdrawerlayout);
@@ -42,7 +43,6 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         this.drawerItemLayout = (LinearLayout) findViewById(R.id.navDrawer);
-
 
     }
 

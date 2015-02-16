@@ -13,10 +13,10 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import andronerds.com.contestapp.fragments.HomeFragment;
 
 
-public class MainActivity extends ActionBarActivity
+public class MainActivity extends NavDrawerActivity
 {
 
-    @Override
+   /* @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,11 @@ public class MainActivity extends ActionBarActivity
         //ButterKnife.inject(this);
 
         //Toolbar settings
+
+    }*/
+
+    protected void init()
+    {
         Toolbar toolbar = (Toolbar) this.findViewById(R.id.home_toolbar);
         toolbar.showOverflowMenu();
         toolbar.setTitle("Home");
@@ -38,6 +43,7 @@ public class MainActivity extends ActionBarActivity
         HomeFragment homeFragment = new HomeFragment();
         fragmentTransaction.add(R.id.home_fragment_container, homeFragment);
         fragmentTransaction.commit();
+
     }
 
 
