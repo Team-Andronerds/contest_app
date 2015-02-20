@@ -16,6 +16,7 @@
 
     <string-array name="nav_drawer_titles">
         <item name="userName"> Header PlaceHolder</item>
+        <item>Home</item>
         <item>Drive To Win</item>
         <item>My Trips</item>
         <item>My Vehicle</item>

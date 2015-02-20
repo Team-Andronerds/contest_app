@@ -1,5 +1,7 @@
 package andronerds.com.contestapp.navDrawer;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -17,6 +19,12 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.ArrayList;
 
+import andronerds.com.contestapp.DriveToWinActivity;
+import andronerds.com.contestapp.EmergencyActivity;
+import andronerds.com.contestapp.InsuranceInfoActivity;
+import andronerds.com.contestapp.MainActivity;
+import andronerds.com.contestapp.MyTripsActivity;
+import andronerds.com.contestapp.MyVehicleActivity;
 import andronerds.com.contestapp.R;
 import butterknife.InjectView;
 
@@ -27,9 +35,18 @@ import butterknife.InjectView;
  */
 public abstract class NavDrawerActivity extends ActionBarActivity
 {
+    private final String ACTION_HOME = "Home";
+    private final String ACTION_DRIVE_TO_WIN = "Drive To Win";
+    private final String ACTION_MY_TRIPS = "My Trips";
+    private final String ACTION_MY_VEHICLE = "My Vehicle";
+    private final String ACTION_INSURANCE_INFO = "Insurance Info";
+    private final String ACTION_EMERGENCY = "Emergency";
+
     private ActionBarDrawerToggle mDrawerToggle;
     private Toolbar mToolbar;
     private CharSequence mTitle;
+    private ArrayList<NavDrawerItem> mNavDrawerItems;
+    private Context mContext = this;
 
     abstract protected Toolbar init();
 
@@ -48,8 +65,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ArrayList<NavDrawerItem> navDrawerItems = getNavDrawerItems();
-        mDrawerList.setAdapter(new NavDrawerAdapter(navDrawerItems, this));
+        mNavDrawerItems = getNavDrawerItems();
+        mDrawerList.setAdapter(new NavDrawerAdapter(mNavDrawerItems, this));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         mDrawerToggle = new ActionBarDrawerToggle(
@@ -69,7 +86,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
 
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("Drawer");
+                getSupportActionBar().setTitle("Drive To Win");
                 supportInvalidateOptionsMenu();
             }
         };
@@ -108,6 +125,45 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             Log.i("sel", "onClick");
             //drawerItemLayout.setBackgroundColor(getResources().getColor(R.color.background_material_light));
             mDrawerLayout.closeDrawer(mDrawerList);
+
+            Intent intent = null;
+            Log.d("NAV DRAWER ITEM POS", mNavDrawerItems.get(position).getMenuItemName());
+
+            switch(mNavDrawerItems.get(position).getMenuItemName()) {
+                case ACTION_HOME:
+                    Log.d("ACTIVITY_HOME", "Home activity initiated.");
+                    intent = new Intent(mContext, MainActivity.class);
+                    break;
+                case ACTION_DRIVE_TO_WIN:
+                    Log.d("ACTIVITY_DRIVE", "Drive to win activity initiated.");
+                    intent = new Intent(mContext, DriveToWinActivity.class);
+                    break;
+                case ACTION_MY_TRIPS:
+                    Log.d("ACTIVITY_TRIPS", "My trips activity initiated.");
+                    intent = new Intent(mContext, MyTripsActivity.class);
+                    break;
+                case ACTION_MY_VEHICLE:
+                    Log.d("ACTIVITY_VEHICLE", "My vehicle activity initiated.");
+                    intent = new Intent(mContext, MyVehicleActivity.class);
+                    break;
+                case ACTION_INSURANCE_INFO:
+                    Log.d("ACTIVITY_INSURANCE", "Insurance info activity initiated.");
+                    intent = new Intent(mContext, InsuranceInfoActivity.class);
+                    break;
+                case ACTION_EMERGENCY:
+                    Log.d("ACTIVITY_EMERGENCY", "Emergency activity initiated.");
+                    intent = new Intent(mContext, EmergencyActivity.class);
+                    break;
+                default:
+                    break;
+            }
+
+            if(intent != null)
+            {
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+                finish();
+            }
         }
     }
 

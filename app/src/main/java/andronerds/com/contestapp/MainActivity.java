@@ -20,6 +20,7 @@ public class MainActivity extends NavDrawerActivity
 
     @InjectView(R.id.main_activity_toolbar)Toolbar mToolbar;
 
+    @Override
     protected Toolbar init()
     {
         setContentView(R.layout.activity_main);
