@@ -5,17 +5,17 @@
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
     android:background="?android:attr/activatedBackgroundIndicator"
-    android:id="@+id/navDrawer">
+    android:id="@+id/nav_drawer">
 
     <ImageView android:layout_height="50dp"
         android:layout_width="50dp"
         android:paddingLeft="16dp"
-        android:id="@+id/drawerIcon"
+        android:id="@+id/drawer_icon"
         android:src="@drawable/ic_launcher">
 
     </ImageView>
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/navDrawerText"
+        android:id="@+id/nav_drawer_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
@@ -23,6 +23,6 @@
         android:paddingLeft="16dp"
         android:textSize="16sp"
         android:paddingRight="16dp"
-        android:textColor="#FFF"
+        android:textColor="@color/black"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"/>
 </LinearLayout>

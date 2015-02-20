@@ -1,4 +1,4 @@
-package andronerds.com.contestapp;
+package andronerds.com.contestapp.navDrawer;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -11,56 +11,89 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
+
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.ArrayList;
 
+import andronerds.com.contestapp.R;
+import butterknife.InjectView;
 
-public abstract class NavDrawerActivity extends ActionBarActivity {
-
-    private DrawerLayout mDrawerLayout;
-    private NavDrawerItem drawerItems;
-    private LinearLayout drawerItemLayout;
+/**
+ * @author Chris Portokalis
+ * @version ContestApp v0.1A
+ * @since 2/19/15
+ */
+public abstract class NavDrawerActivity extends ActionBarActivity
+{
     private ActionBarDrawerToggle mDrawerToggle;
-    private ListView mDrawerList;
+    private Toolbar mToolbar;
     private CharSequence mTitle;
-    private Toolbar toolbar;
+
+    abstract protected Toolbar init();
+
+    @InjectView(R.id.nav_drawer_layout)DrawerLayout mDrawerLayout;
+    @InjectView(R.id.left_drawer)ListView mDrawerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        /* Init sets content view and
+        other specifics based on activity implementation */
+        mToolbar = init();
+
+        mTitle = mToolbar.getTitle();
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ArrayList<NavDrawerItem> navDrawerItems = getNavDrawerItems();
-        this.mDrawerLayout = (DrawerLayout) findViewById(R.id.navdrawerlayout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mDrawerList.setAdapter(new NavDrawerAdapter(navDrawerItems, this));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
-        this.drawerItemLayout = (LinearLayout) findViewById(R.id.navDrawer);
+        mDrawerToggle = new ActionBarDrawerToggle(
+                this,
+                mDrawerLayout,
+                mToolbar,
+                R.string.drawer_open,
+                R.string.drawer_closed
+        ) {
 
 
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                getSupportActionBar().setTitle(mTitle);
+                supportInvalidateOptionsMenu();
+            }
+
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle("Drawer");
+                supportInvalidateOptionsMenu();
+            }
+        };
+
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        mDrawerToggle.syncState();
+
+        SystemBarTintManager tintManager = new SystemBarTintManager(this);
+        tintManager.setStatusBarTintColor(this.getResources().getColor(R.color.toolbar_color));
+        tintManager.setStatusBarTintEnabled(true);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+// Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_nav_drawer, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -68,8 +101,6 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
@@ -84,14 +115,11 @@ public abstract class NavDrawerActivity extends ActionBarActivity {
     {
         String[] drawerTitles = getResources().getStringArray(R.array.nav_drawer_titles);
         ArrayList<NavDrawerItem> aList = new ArrayList<NavDrawerItem>();
-
         for(int i = 0; i < drawerTitles.length; i++ )
         {
             NavDrawerItem navItem = new NavDrawerItem(drawerTitles[i],(Drawable) getResources().getDrawable(R.drawable.ic_launcher));
             aList.add(navItem);
         }
-
         return aList;
-
     }
 }
