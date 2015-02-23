@@ -86,7 +86,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
 
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("Drive To Win");
+                getSupportActionBar().setTitle(mTitle);
                 supportInvalidateOptionsMenu();
             }
         };
@@ -95,7 +95,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         mDrawerToggle.syncState();
 
         SystemBarTintManager tintManager = new SystemBarTintManager(this);
-        tintManager.setStatusBarTintColor(this.getResources().getColor(R.color.toolbar_color));
+        tintManager.setStatusBarTintColor(this.getResources().getColor(R.color.status_bar_color));
         tintManager.setStatusBarTintEnabled(true);
     }
 

@@ -11,7 +11,7 @@ import butterknife.InjectView;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
- * @version ContestApp v0.1A
+ * @version ContestApp v1.0A
  * @since 2/19/15
  */
 public class MyVehicleActivity extends NavDrawerActivity

@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_width="175dip"
+              android:layout_height="175dip">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:id="@+id/trip_map"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dip"
+        android:background="@color/status_bar_color">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/white"
+            android:text="Click for more details"/>
+
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_weight="0.2"
+            android:layout_height="match_parent"
+            android:id="@+id/more_details_image"/>
+
+    </LinearLayout>
 
 </LinearLayout>

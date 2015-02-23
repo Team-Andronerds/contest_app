@@ -10,7 +10,7 @@ import andronerds.com.contestapp.R;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
- * @version ContestApp v0.1A
+ * @version ContestApp v1.0
  * @since 2/15/15
  */
 public class MyVehicleFragment extends Fragment
