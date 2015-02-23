@@ -2,6 +2,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@color/light_green_body_color">
+
+    <ImageView
+        android:layout_width="125dip"
+        android:layout_height="125dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dip"
+        android:id="@+id/emergency_icon"/>
+
+    <Button
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/emergency_button"
+        android:text="@string/emergency_call"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/generic_red_button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:textColor="@color/black"
+        android:text="or"/>
+
+    <Button
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/accident_information_button"
+        android:text="@string/accident_info_button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/generic_red_button"/>
 
 </LinearLayout>

@@ -94,6 +94,7 @@
     <orderEntry type="library" exported="" name="picasso-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="cardslib-core-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="systembartint-1.0.3" level="project" />
+    <orderEntry type="library" exported="" name="play-services-6.5.87" level="project" />
   </component>
 </module>
 

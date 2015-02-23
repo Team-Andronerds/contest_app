@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.android.gms.common.SignInButton;
 import com.squareup.picasso.Picasso;
 
 import andronerds.com.contestapp.R;
@@ -15,24 +17,29 @@ import butterknife.InjectView;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
- * @version ContestApp v0.1A
- * @since 2/15/15
+ * @version ContestApp v1.0
+ * @since 2/22/15
  */
-public class EmergencyFragment extends Fragment
+public class LoginFragment extends Fragment
 {
-    @InjectView(R.id.emergency_icon)ImageView mEmergencyIcon;
+    @InjectView(R.id.login_logo)ImageView mLoginLogo;
+    @InjectView(R.id.sign_in_button)SignInButton mGPlusSignIn;
+    @InjectView(R.id.login_username)EditText mLoginUsername;
+    @InjectView(R.id.login_password)EditText mLoginPassword;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.fragment_emergency, container, false);
+        View view = inflater.inflate(R.layout.fragment_login, container, false);
         ButterKnife.inject(this, view);
 
         Picasso.with(this.getActivity())
-                .load(R.drawable.ic_emergency)
+                .load(R.drawable.pc_login_logo)
                 .fit()
-                .into(mEmergencyIcon);
+                .into(mLoginLogo);
+
+        mGPlusSignIn.setSize(SignInButton.SIZE_WIDE);
 
         return view;
     }

@@ -112,8 +112,13 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch(id) {
+            case R.id.action_settings:
+                Log.d("MENU", "Action settings clicked");
+                break;
+            case R.id.obd_connect:
+                Log.d("MENU", "OBD connect clicked");
+                break;
         }
 
         return super.onOptionsItemSelected(item);

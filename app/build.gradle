@@ -40,4 +40,7 @@ dependencies {
 
     //Library for Circle Image Views
     compile 'de.hdodenhof:circleimageview:1.2.1'
+
+    //Google Play Services
+    compile 'com.google.android.gms:play-services:6.5.87'
 }
