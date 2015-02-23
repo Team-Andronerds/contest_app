@@ -25,7 +25,6 @@ import it.gmariotti.cardslib.library.view.CardListView;
  */
 public class HomeFragment extends Fragment
 {
-    //@InjectView(R.id.home_drive_card_frame) CardViewNative homeDriveCard;
     @InjectView(R.id.home_trip_list) CardListView homeTripList;
 
     private ArrayList<Card> mTripCardsList = new ArrayList<>();
@@ -39,8 +38,7 @@ public class HomeFragment extends Fragment
         ButterKnife.inject(this, view);
         HomeDriveCard card = new HomeDriveCard(view.getContext());
         Log.d("CARDVIEW", card.toString());
-        //Log.d("CARDCONTAINER", homeDriveCard.toString());
-        //homeDriveCard.setCard(card);
+
         mTripCardsList.add(card);
         for(int i = 0; i < 3; i++)
         {

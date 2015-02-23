@@ -25,7 +25,7 @@ public class HomeTripCard extends Card
 
     public HomeTripCard(Context context)
     {
-        super(context, R.layout.home_trip_card);
+        super(context, R.layout.card_home_trips);
     }
 
     @Override

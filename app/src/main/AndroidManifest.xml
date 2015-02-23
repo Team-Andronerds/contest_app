@@ -17,6 +17,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DriveToWinActivity"
+            android:label="Drive To Win">
+        </activity>
+        <activity
+            android:name=".MyTripsActivity"
+            android:label="My Trips">
+        </activity>
+        <activity
+            android:name=".MyVehicleActivity"
+            android:label="My Vehicle">
+        </activity>
+        <activity
+            android:name=".InsuranceInfoActivity"
+            android:label="Insurance Info">
+        </activity>
+        <activity
+            android:name=".EmergencyActivity"
+            android:label="Emergency">
+        </activity>
     </application>
 
 </manifest>

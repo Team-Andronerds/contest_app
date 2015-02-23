@@ -6,6 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:clipToPadding="true"
-    android:layout_marginBottom="5dip"
     android:minHeight="?attr/actionBarSize"
-    android:background="?attr/colorPrimary" />
+    android:background="?attr/colorPrimary"
+    android:fitsSystemWindows="true"/>

@@ -1,4 +1,4 @@
-package andronerds.com.contestapp;
+package andronerds.com.contestapp.navDrawer;
 
 import android.graphics.drawable.Drawable;
 

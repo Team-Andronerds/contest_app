@@ -16,12 +16,16 @@
 
     <string-array name="nav_drawer_titles">
         <item name="userName"> Header PlaceHolder</item>
+        <item>Home</item>
         <item>Drive To Win</item>
         <item>My Trips</item>
         <item>My Vehicle</item>
         <item>Insurance Info</item>
         <item>Emergency</item>
     </string-array>
+
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_closed">drawer_closed</string>
 
     <string name="title_activity_nav_drawer">NavDrawerActivity</string>
 

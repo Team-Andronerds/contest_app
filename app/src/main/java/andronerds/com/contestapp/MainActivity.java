@@ -2,41 +2,29 @@ package andronerds.com.contestapp;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.readystatesoftware.systembartint.SystemBarTintManager;
-
 import andronerds.com.contestapp.fragments.HomeFragment;
+import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 
 public class MainActivity extends NavDrawerActivity
 {
+    private CharSequence mTitle = "Home";
 
-   /* @Override
-    protected void onCreate(Bundle savedInstanceState)
+    @InjectView(R.id.main_activity_toolbar)Toolbar mToolbar;
+
+    @Override
+    protected Toolbar init()
     {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //ButterKnife.inject(this);
-
-        //Toolbar settings
-
-    }*/
-
-    protected void init()
-    {
-        Toolbar toolbar = (Toolbar) this.findViewById(R.id.home_toolbar);
-        toolbar.showOverflowMenu();
-        toolbar.setTitle("Home");
-        setSupportActionBar(toolbar);
-
-        SystemBarTintManager tintManager = new SystemBarTintManager(this);
-        tintManager.setStatusBarTintColor(this.getResources().getColor(R.color.status_bar_color));
-        tintManager.setStatusBarTintEnabled(true);
+        ButterKnife.inject(this);
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -44,16 +32,24 @@ public class MainActivity extends NavDrawerActivity
         fragmentTransaction.add(R.id.home_fragment_container, homeFragment);
         fragmentTransaction.commit();
 
-    }
+        //Toolbar settings
+        mToolbar.showOverflowMenu();
+        mToolbar.setTitle(mTitle);
+        setSupportActionBar(mToolbar);
 
+        Log.d("NAV_DRAWER", "Activating nav drawer activity");
+        return mToolbar;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuInflater inflater = new MenuInflater(this);
+        inflater.inflate(R.menu.menu_main,menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item)

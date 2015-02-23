@@ -23,7 +23,7 @@ public class HomeDriveCard extends Card
 
     public HomeDriveCard(Context context)
     {
-        super(context, R.layout.home_drive_card);
+        super(context, R.layout.card_home_drive);
     }
 
     @Override

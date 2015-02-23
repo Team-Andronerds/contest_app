@@ -1,4 +1,4 @@
-package andronerds.com.contestapp;
+package andronerds.com.contestapp.navDrawer;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import andronerds.com.contestapp.R;
+
 /**
  * Created by Chris on 1/28/2015.
  */
@@ -18,12 +20,7 @@ public class NavDrawerAdapter extends BaseAdapter {
     private Context navDrawerContext;
     private ArrayList<NavDrawerItem> menuDrawerItems;
 
-
-
-    public NavDrawerAdapter()
-    {
-
-    }
+    public NavDrawerAdapter() {}
 
     public NavDrawerAdapter(ArrayList<NavDrawerItem> drawerItems, Context context)
     {
@@ -35,22 +32,20 @@ public class NavDrawerAdapter extends BaseAdapter {
     {
         LayoutInflater inflater = (LayoutInflater) this.navDrawerContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-
         if(x == 0)
         {
-            v = inflater.inflate(R.layout.header,null,false);
-            ImageView profilePic = (ImageView) v.findViewById(R.id.profilePic);
+            v = inflater.inflate(R.layout.header, null, false);
             TextView name = (TextView) v.findViewById(R.id.name);
+            ImageView profilePic = (ImageView) v.findViewById(R.id.profile_pic);
             name.setText("Chris Portokalis");
             profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));
 
         }
         else
         {
-            v = inflater.inflate(R.layout.drawer_list_item,
-                    null, false);
-            ImageView icon = (ImageView) v.findViewById(R.id.drawerIcon);
-            TextView title = (TextView) v.findViewById(R.id.navDrawerText);
+            v = inflater.inflate(R.layout.drawer_list_item, null, false);
+            TextView title = (TextView) v.findViewById(R.id.nav_drawer_text);
+            ImageView icon = (ImageView) v.findViewById(R.id.drawer_icon);
             title.setText(this.menuDrawerItems.get(x).getMenuItemName());
             icon.setImageDrawable(this.menuDrawerItems.get(x).getMenuIcon());
         }

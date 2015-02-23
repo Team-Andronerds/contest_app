@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <include
-        android:id="@+id/main_activity_toolbar"
+        android:id="@+id/drive_to_win_toolbar"
         layout="@layout/base_toolbar"/>
 
     <android.support.v4.widget.DrawerLayout
@@ -15,17 +15,17 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="true"
-                android:id="@+id/home_fragment_container">
-            </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            android:id="@+id/drive_to_win_fragment_container">
+        </FrameLayout>
 
         <FrameLayout
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:id="@+id/content_frame">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_frame">
 
         </FrameLayout>
 

@@ -4,16 +4,11 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <!--<it.gmariotti.cardslib.library.view.CardViewNative
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/home_drive_card_frame">
-    </it.gmariotti.cardslib.library.view.CardViewNative> -->
-
     <it.gmariotti.cardslib.library.view.CardListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clipToPadding="true"
+        android:clipToPadding="false"
+        android:paddingTop="10dip"
         android:id="@+id/home_trip_list">
     </it.gmariotti.cardslib.library.view.CardListView>
 
