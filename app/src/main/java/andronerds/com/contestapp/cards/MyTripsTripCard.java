@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 import andronerds.com.contestapp.R;
+import andronerds.com.contestapp.data.Trip;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import it.gmariotti.cardslib.library.internal.Card;
@@ -19,12 +20,15 @@ import it.gmariotti.cardslib.library.internal.Card;
  */
 public class MyTripsTripCard extends Card
 {
+    private Trip mTrip;
+
     @InjectView(R.id.trip_map)ImageView mTripMapView;
     @InjectView(R.id.more_details_image)ImageView mMoreDetailsImage;
 
-    public MyTripsTripCard(Context context)
+    public MyTripsTripCard(Context context, Trip trip)
     {
         super(context, R.layout.card_my_trips_trip);
+        this.mTrip = trip;
     }
 
     @Override
@@ -36,14 +40,19 @@ public class MyTripsTripCard extends Card
         //mTripMapView.setImageDrawable(getContext().getResources().getDrawable(R.drawable.map_placeholder));
 
         Picasso.with(this.getContext())
-                .load(R.drawable.map_placeholder)
+                .load(mTrip.getmTripMap())
                 .fit()
                 .into(mTripMapView);
 
-        /*Picasso.with(this.getContext())
-                .load(R.drawable.ic_chevron_right_grey600_24dp)
+        Picasso.with(this.getContext())
+                .load(R.drawable.ic_right_white_arrow)
                 .centerInside()
                 .fit()
-                .into(mMoreDetailsImage);*/
+                .into(mMoreDetailsImage);
+    }
+
+    public Trip getTrip()
+    {
+        return this.mTrip;
     }
 }

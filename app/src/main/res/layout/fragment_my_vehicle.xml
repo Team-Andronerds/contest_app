@@ -4,4 +4,36 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:orientation="horizontal"
+        android:id="@+id/recent_trip_layout"
+        android:background="@color/toolbar_color">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dip"
+            android:layout_height="125dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:id="@+id/my_vehicle_image"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dip"
+                android:textSize="18sp"
+                android:id="@+id/my_vehicle_info"
+                android:text="vehicle info"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </LinearLayout>
