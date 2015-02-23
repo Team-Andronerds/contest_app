@@ -4,6 +4,4 @@
     tools:context="andronerds.com.contestapp.navDrawer.NavDrawerActivity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/obd_connect" android:title="@string/obd_connect_menu"
-          android:orderInCategory="1"/>
 </menu>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -20,12 +21,14 @@ import butterknife.InjectView;
  * @version ContestApp v1.0
  * @since 2/22/15
  */
-public class LoginFragment extends Fragment
+public class LoginFragment extends Fragment implements Button.OnClickListener
 {
     @InjectView(R.id.login_logo)ImageView mLoginLogo;
     @InjectView(R.id.sign_in_button)SignInButton mGPlusSignIn;
     @InjectView(R.id.login_username)EditText mLoginUsername;
     @InjectView(R.id.login_password)EditText mLoginPassword;
+    @InjectView(R.id.login_sign_in)Button mLoginSignIn;
+    @InjectView(R.id.login_sign_up)Button mLoginSignUp;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,7 +43,14 @@ public class LoginFragment extends Fragment
                 .into(mLoginLogo);
 
         mGPlusSignIn.setSize(SignInButton.SIZE_WIDE);
+        mGPlusSignIn.setOnClickListener(this);
 
         return view;
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+
     }
 }

@@ -46,6 +46,10 @@
             android:name=".EmergencyActivity"
             android:label="Emergency">
         </activity>
+        <activity
+            android:name=".OBDConnectActivity"
+            android:label="Connect an OBD">
+        </activity>
     </application>
 
 </manifest>

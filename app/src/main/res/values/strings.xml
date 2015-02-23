@@ -25,6 +25,7 @@
         <item>My Vehicle</item>
         <item>Insurance Info</item>
         <item>Emergency</item>
+        <item>Connect an OBD</item>
     </string-array>
 
     <string name="drawer_open">drawer_open</string>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/obd_connect_toolbar"
+        layout="@layout/base_toolbar"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/nav_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            android:id="@+id/obd_connect_fragment_container">
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_frame">
+
+        </FrameLayout>
+
+        <ListView android:id="@+id/left_drawer"
+                  android:layout_width="280dp"
+                  android:layout_height="match_parent"
+                  android:layout_gravity="start"
+                  android:choiceMode="singleChoice"
+                  android:divider="@android:color/black"
+                  android:dividerHeight="0dp"
+                  android:background="@color/white"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
