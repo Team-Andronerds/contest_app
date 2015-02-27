@@ -1,6 +1,7 @@
 package andronerds.com.contestapp.navDrawer;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import andronerds.com.contestapp.R;
-import andronerds.com.contestapp.data.UserProfile;
-import andronerds.com.contestapp.utils.ProfileUtils;
+import andronerds.com.contestapp.utils.IdentityStrings;
 
 /**
  * Created by Chris on 1/28/2015.
@@ -23,7 +23,7 @@ public class NavDrawerAdapter extends BaseAdapter {
 
     private Context navDrawerContext;
     private ArrayList<NavDrawerItem> menuDrawerItems;
-    private static UserProfile userProfile = ProfileUtils.getUserProfile();
+    private SharedPreferences userProfilePrefs;
 
     public NavDrawerAdapter() {}
 
@@ -42,9 +42,11 @@ public class NavDrawerAdapter extends BaseAdapter {
             v = inflater.inflate(R.layout.header, null, false);
             TextView name = (TextView) v.findViewById(R.id.name);
             ImageView profilePic = (ImageView) v.findViewById(R.id.profile_pic);
-            name.setText(userProfile.getName());
+            userProfilePrefs = navDrawerContext.getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+
+            name.setText(userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
             Picasso.with(navDrawerContext)
-                    .load(userProfile.getPhotoUrl())
+                    .load(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, ""))
                     .fit()
                     .into(profilePic);
             //profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));

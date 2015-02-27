@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -20,9 +21,8 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.HashMap;
 
-import andronerds.com.contestapp.data.UserProfile;
 import andronerds.com.contestapp.fragments.LoginFragment;
-import andronerds.com.contestapp.utils.ProfileUtils;
+import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 
 /**
@@ -41,6 +41,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
 
     private static final int PROFILE_PIC_SIZE = 300;
     private HashMap<String, String> friendsList;
+    private boolean signOut = false;
 
     private static final String LOG_TAG = "GPLUS_LOG";
 
@@ -50,6 +51,26 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.inject(this);
+
+        Intent intent = getIntent();
+        Bundle bundle = null;
+
+        if(intent != null)
+        {
+            bundle = intent.getExtras();
+            if(bundle != null)
+            {
+                String signOutStr = bundle.getString(IdentityStrings.BUNDLE_SIGN_OUT);
+                if(signOutStr.equals(IdentityStrings.BUNDLE_SIGN_OUT))
+                {
+                    signOut = true;
+                }
+                else
+                {
+                    signOut = false;
+                }
+            }
+        }
 
         mGoogleServices = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -103,7 +124,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
     @Override
     public void onConnectionFailed(ConnectionResult result)
     {
-        Log.d("CONNECT FAILED", "Connection to GPlus failed");
+        Log.i("CONNECT FAILED", "Connection to GPlus failed");
         if(!mIntentInProgress)
         {
             mConnectionResult = result;
@@ -133,19 +154,38 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
     public void onConnected(Bundle connectionHint) {
         mSignInClicked = false;
         Plus.PeopleApi.loadVisible(mGoogleServices, null).setResultCallback(this);
-        ProfileUtils.setUserProfile(getProfileInformation());
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
-        finish();
-
-        //Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
+        addProfileToSharedPrefs();
+        if(signOut)
+        {
+            signOutGPlus();
+            signOut = false;
+        }
+        else
+        {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent);
+            finish();
+        }
     }
 
     @Override
     public void onConnectionSuspended(int i)
     {
 
+    }
+
+    public void signOutGPlus()
+    {
+        Log.d("SIGN_OUT", "Sign out occured");
+        if(mGoogleServices.isConnected())
+        {
+            Log.d("SIGN_OUT", "Google services signing out");
+            Plus.AccountApi.clearDefaultAccount(mGoogleServices);
+            mGoogleServices.disconnect();
+            removeProfileFromSharedPrefs();
+            mGoogleServices.connect();
+        }
     }
 
     public void setSignInClicked(boolean signInClicked) { this.mSignInClicked = signInClicked; }
@@ -172,9 +212,17 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         }
     }
 
-    public UserProfile getProfileInformation() {
-        UserProfile userProfile = new UserProfile();
+    public void removeProfileFromSharedPrefs()
+    {
+        SharedPreferences settings = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+        SharedPreferences.Editor editor = settings.edit();
 
+        editor.clear();
+        editor.commit();
+    }
+
+    public void addProfileToSharedPrefs()
+    {
         try {
             if(Plus.PeopleApi.getCurrentPerson(mGoogleServices) != null) {
                 Person mCurrentPerson = Plus.PeopleApi.getCurrentPerson(mGoogleServices);
@@ -188,19 +236,20 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
                 Log.i(LOG_TAG, "Person G+ Profile: " + personGooglePlusProfile);
                 Log.i(LOG_TAG, "Person E-Mail: " + personEmail);
 
-                userProfile.setName(personName);
-                userProfile.setGPlusProfile(personGooglePlusProfile);
-                userProfile.setEmail(personEmail);
+                SharedPreferences settings = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+                SharedPreferences.Editor editor = settings.edit();
+
+                editor.putString(IdentityStrings.USER_NAME, personName);
+                editor.putString(IdentityStrings.USER_PROFILE_PIC, personPhotoUrl);
+                editor.putString(IdentityStrings.USER_G_PLUS_PROFILE, personGooglePlusProfile);
+                editor.putString(IdentityStrings.USER_EMAIL, personEmail);
+                editor.commit();
+
                 personPhotoUrl = personPhotoUrl.substring(0, personPhotoUrl.length() -2) + PROFILE_PIC_SIZE;
                 Log.i(LOG_TAG, "Photo URL Length: " + personPhotoUrl.length());
-                userProfile.setPhotoUrl(personPhotoUrl);
-
-                //new LoadProfileImage(imageProfilePic).execute(personPhotoUrl);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
-        return userProfile;
     }
 }

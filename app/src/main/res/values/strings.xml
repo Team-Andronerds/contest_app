@@ -15,7 +15,8 @@
     <string name="trip_to_placeholder">Oklahoma City, OK</string>
     <string name="emergency_call">Make Emergency Call</string>
     <string name="accident_info_button">Report An Accident</string>
-    <string name="obd_connect_menu">Connect to an OBD</string>
+    <string name="settings_menu">Settings</string>
+    <string name="sign_out_button">Sign out</string>
 
     <string-array name="nav_drawer_titles">
         <item name="userName"> Header PlaceHolder</item>
@@ -25,7 +26,7 @@
         <item>My Vehicle</item>
         <item>Insurance Info</item>
         <item>Emergency</item>
-        <item>Connect an OBD</item>
+        <item>Settings</item>
     </string-array>
 
     <string name="drawer_open">drawer_open</string>

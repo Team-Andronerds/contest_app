@@ -25,7 +25,7 @@ import andronerds.com.contestapp.InsuranceInfoActivity;
 import andronerds.com.contestapp.MainActivity;
 import andronerds.com.contestapp.MyTripsActivity;
 import andronerds.com.contestapp.MyVehicleActivity;
-import andronerds.com.contestapp.OBDConnectActivity;
+import andronerds.com.contestapp.SettingsActivity;
 import andronerds.com.contestapp.R;
 import butterknife.InjectView;
 
@@ -42,7 +42,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
     private final String ACTION_MY_VEHICLE = "My Vehicle";
     private final String ACTION_INSURANCE_INFO = "Insurance Info";
     private final String ACTION_EMERGENCY = "Emergency";
-    private final String ACTION_OBD_CONNECT = "Connect an OBD";
+    private final String ACTION_OBD_CONNECT = "Settings";
 
     private ActionBarDrawerToggle mDrawerToggle;
     private Toolbar mToolbar;
@@ -159,8 +159,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                     intent = new Intent(mContext, EmergencyActivity.class);
                     break;
                 case ACTION_OBD_CONNECT:
-                    Log.d("ACTIVITY_OBD_CONNECT", "OBD Connect activity initiated.");
-                    intent = new Intent(mContext, OBDConnectActivity.class);
+                    Log.d("ACTIVITY_SETTINGS", "Settings activity initiated.");
+                    intent = new Intent(mContext, SettingsActivity.class);
                     break;
                 default:
                     break;
