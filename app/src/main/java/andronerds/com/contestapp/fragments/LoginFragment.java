@@ -2,6 +2,7 @@ package andronerds.com.contestapp.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import com.google.android.gms.common.SignInButton;
 import com.squareup.picasso.Picasso;
 
+import andronerds.com.contestapp.LoginActivity;
 import andronerds.com.contestapp.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -21,7 +23,7 @@ import butterknife.InjectView;
  * @version ContestApp v1.0
  * @since 2/22/15
  */
-public class LoginFragment extends Fragment implements Button.OnClickListener
+public class LoginFragment extends Fragment implements View.OnClickListener
 {
     @InjectView(R.id.login_logo)ImageView mLoginLogo;
     @InjectView(R.id.sign_in_button)SignInButton mGPlusSignIn;
@@ -51,6 +53,15 @@ public class LoginFragment extends Fragment implements Button.OnClickListener
     @Override
     public void onClick(View v)
     {
+        LoginActivity loginActivity = (LoginActivity) this.getActivity();
+        Log.d("ON CLICK", "GPlus button clicked");
 
+        if(v.getId() == R.id.sign_in_button
+                && !loginActivity.getGoogleServices().isConnecting())
+        {
+            Log.d("SIGNING IN", "Attempting to sign in to GPlus");
+            loginActivity.setSignInClicked(true);
+            loginActivity.resolveSignInError();
+        }
     }
 }

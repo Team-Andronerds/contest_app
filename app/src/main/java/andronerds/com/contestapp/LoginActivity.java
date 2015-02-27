@@ -3,9 +3,22 @@ package andronerds.com.contestapp;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.content.IntentSender;
 import android.os.Bundle;
+import android.util.Log;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.CommonStatusCodes;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.plus.People;
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.model.people.Person;
+import com.google.android.gms.plus.model.people.PersonBuffer;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
+
+import java.util.HashMap;
 
 import andronerds.com.contestapp.fragments.LoginFragment;
 import butterknife.ButterKnife;
@@ -15,14 +28,37 @@ import butterknife.ButterKnife;
  * @version ContestApp v1.0
  * @since 2/22/15
  */
-public class LoginActivity extends Activity
+public class LoginActivity extends Activity implements GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener, ResultCallback<People.LoadPeopleResult>
 {
+    private GoogleApiClient mGoogleServices;
+    private boolean mIntentInProgress;
+    private boolean mSignInClicked;
+    private ConnectionResult mConnectionResult;
+    private static final int RC_SIGN_IN = 0;
+
+    private static final int PROFILE_PIC_SIZE = 300;
+    public static final String PERSON_NAME = "personName";
+    public static final String PERSON_PHOTO_URL = "personPhotoUrl";
+    public static final String PERSON_GPLUS_PROFILE = "personG";
+    public static final String PERSON_EMAIL = "personEmail";
+    private HashMap<String, String> friendsList;
+
+    private static final String LOG_TAG = "GPLUS_LOG";
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.inject(this);
+
+        mGoogleServices = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this).addApi(Plus.API)
+                .addScope(Plus.SCOPE_PLUS_LOGIN)
+                .addScope(Plus.SCOPE_PLUS_PROFILE)
+                .build();
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -33,5 +69,135 @@ public class LoginActivity extends Activity
         SystemBarTintManager tintManager = new SystemBarTintManager(this);
         tintManager.setStatusBarTintColor(this.getResources().getColor(R.color.toolbar_color));
         tintManager.setStatusBarTintEnabled(true);
+    }
+
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        mGoogleServices.connect();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(mGoogleServices.isConnected()) {
+            mGoogleServices.disconnect();
+        }
+    }
+
+    public void resolveSignInError()
+    {
+        if(mConnectionResult.hasResolution())
+        {
+            try
+            {
+                mIntentInProgress = true;
+                startIntentSenderForResult(mConnectionResult.getResolution().getIntentSender(),
+                        RC_SIGN_IN, null, 0, 0, 0);
+            } catch(IntentSender.SendIntentException e) {
+                mIntentInProgress = false;
+                mGoogleServices.connect();
+            }
+        }
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult result)
+    {
+        Log.d("CONNECT FAILED", "Connection to GPlus failed");
+        if(!mIntentInProgress)
+        {
+            mConnectionResult = result;
+        }
+        if(mSignInClicked)
+        {
+            resolveSignInError();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int responseCode, Intent intent) {
+        if (requestCode == RC_SIGN_IN) {
+            if (responseCode != RESULT_OK) {
+                mSignInClicked = false;
+            }
+
+            mIntentInProgress = false;
+
+            if (!mGoogleServices.isConnecting()) {
+                mGoogleServices.connect();
+            }
+        }
+    }
+
+    @Override
+    public void onConnected(Bundle connectionHint) {
+        mSignInClicked = false;
+        Plus.PeopleApi.loadVisible(mGoogleServices, null).setResultCallback(this);
+        getProfileInformation();
+        //Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onConnectionSuspended(int i)
+    {
+
+    }
+
+    public void setSignInClicked(boolean signInClicked) { this.mSignInClicked = signInClicked; }
+
+    public GoogleApiClient getGoogleServices() { return this.mGoogleServices; }
+
+    @Override
+    public void onResult(People.LoadPeopleResult loadPeopleResult) {
+        friendsList = new HashMap<String, String>();
+        if(loadPeopleResult.getStatus().getStatusCode() == CommonStatusCodes.SUCCESS) {
+            PersonBuffer personBuffer = loadPeopleResult.getPersonBuffer();
+
+            try {
+                int count = personBuffer.getCount();
+
+                for (int i = 0; i < count; i++) {
+                    friendsList.put(personBuffer.get(i).getDisplayName(), personBuffer.get(i).getImage().getUrl());
+                }
+            } finally {
+                personBuffer.close();
+            }
+        } else {
+            Log.e(LOG_TAG, "Error requesting data..." + loadPeopleResult.getStatus());
+        }
+    }
+
+    public HashMap<String, String> getProfileInformation() {
+        HashMap<String, String> userProfile = new HashMap<String, String>();
+
+        try {
+            if(Plus.PeopleApi.getCurrentPerson(mGoogleServices) != null) {
+                Person mCurrentPerson = Plus.PeopleApi.getCurrentPerson(mGoogleServices);
+                String personName = mCurrentPerson.getDisplayName();
+                String personPhotoUrl = mCurrentPerson.getImage().getUrl();
+                String personGooglePlusProfile = mCurrentPerson.getUrl();
+                final String personEmail = Plus.AccountApi.getAccountName(mGoogleServices);
+
+                Log.i(LOG_TAG, "Person Name: " + personName);
+                Log.i(LOG_TAG, "Person Photo URL: " + personPhotoUrl);
+                Log.i(LOG_TAG, "Person G+ Profile: " + personGooglePlusProfile);
+                Log.i(LOG_TAG, "Person E-Mail: " + personEmail);
+
+                userProfile.put(PERSON_NAME, personName);
+                userProfile.put(PERSON_GPLUS_PROFILE + "+", personGooglePlusProfile);
+                userProfile.put(PERSON_EMAIL, personEmail);
+                personPhotoUrl = personPhotoUrl.substring(0, personPhotoUrl.length() -2) + PROFILE_PIC_SIZE;
+                Log.i(LOG_TAG, "Photo URL Length: " + personPhotoUrl.length());
+                userProfile.put(PERSON_PHOTO_URL, personPhotoUrl);
+
+                //new LoadProfileImage(imageProfilePic).execute(personPhotoUrl);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return userProfile;
     }
 }
