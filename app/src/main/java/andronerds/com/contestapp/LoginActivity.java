@@ -20,7 +20,9 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.HashMap;
 
+import andronerds.com.contestapp.data.UserProfile;
 import andronerds.com.contestapp.fragments.LoginFragment;
+import andronerds.com.contestapp.utils.ProfileUtils;
 import butterknife.ButterKnife;
 
 /**
@@ -38,10 +40,6 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
     private static final int RC_SIGN_IN = 0;
 
     private static final int PROFILE_PIC_SIZE = 300;
-    public static final String PERSON_NAME = "personName";
-    public static final String PERSON_PHOTO_URL = "personPhotoUrl";
-    public static final String PERSON_GPLUS_PROFILE = "personG";
-    public static final String PERSON_EMAIL = "personEmail";
     private HashMap<String, String> friendsList;
 
     private static final String LOG_TAG = "GPLUS_LOG";
@@ -135,7 +133,12 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
     public void onConnected(Bundle connectionHint) {
         mSignInClicked = false;
         Plus.PeopleApi.loadVisible(mGoogleServices, null).setResultCallback(this);
-        getProfileInformation();
+        ProfileUtils.setUserProfile(getProfileInformation());
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
+
         //Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
     }
 
@@ -169,8 +172,8 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         }
     }
 
-    public HashMap<String, String> getProfileInformation() {
-        HashMap<String, String> userProfile = new HashMap<String, String>();
+    public UserProfile getProfileInformation() {
+        UserProfile userProfile = new UserProfile();
 
         try {
             if(Plus.PeopleApi.getCurrentPerson(mGoogleServices) != null) {
@@ -185,12 +188,12 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
                 Log.i(LOG_TAG, "Person G+ Profile: " + personGooglePlusProfile);
                 Log.i(LOG_TAG, "Person E-Mail: " + personEmail);
 
-                userProfile.put(PERSON_NAME, personName);
-                userProfile.put(PERSON_GPLUS_PROFILE + "+", personGooglePlusProfile);
-                userProfile.put(PERSON_EMAIL, personEmail);
+                userProfile.setName(personName);
+                userProfile.setGPlusProfile(personGooglePlusProfile);
+                userProfile.setEmail(personEmail);
                 personPhotoUrl = personPhotoUrl.substring(0, personPhotoUrl.length() -2) + PROFILE_PIC_SIZE;
                 Log.i(LOG_TAG, "Photo URL Length: " + personPhotoUrl.length());
-                userProfile.put(PERSON_PHOTO_URL, personPhotoUrl);
+                userProfile.setPhotoUrl(personPhotoUrl);
 
                 //new LoadProfileImage(imageProfilePic).execute(personPhotoUrl);
             }

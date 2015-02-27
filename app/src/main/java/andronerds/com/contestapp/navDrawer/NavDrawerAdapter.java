@@ -8,9 +8,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import andronerds.com.contestapp.R;
+import andronerds.com.contestapp.data.UserProfile;
+import andronerds.com.contestapp.utils.ProfileUtils;
 
 /**
  * Created by Chris on 1/28/2015.
@@ -19,6 +23,7 @@ public class NavDrawerAdapter extends BaseAdapter {
 
     private Context navDrawerContext;
     private ArrayList<NavDrawerItem> menuDrawerItems;
+    private static UserProfile userProfile = ProfileUtils.getUserProfile();
 
     public NavDrawerAdapter() {}
 
@@ -37,8 +42,12 @@ public class NavDrawerAdapter extends BaseAdapter {
             v = inflater.inflate(R.layout.header, null, false);
             TextView name = (TextView) v.findViewById(R.id.name);
             ImageView profilePic = (ImageView) v.findViewById(R.id.profile_pic);
-            name.setText("Chris Portokalis");
-            profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));
+            name.setText(userProfile.getName());
+            Picasso.with(navDrawerContext)
+                    .load(userProfile.getPhotoUrl())
+                    .fit()
+                    .into(profilePic);
+            //profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));
 
         }
         else
