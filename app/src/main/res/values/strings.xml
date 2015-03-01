@@ -22,12 +22,53 @@
     <string-array name="nav_drawer_titles">
         <item name="userName"> Header PlaceHolder</item>
         <item>Home</item>
-        <item>Drive To Win</item>
-        <item>My Trips</item>
-        <item>My Vehicle</item>
+        <item>DRIVE TO WIN</item>
+        <item>Achievements</item>
+        <item>Stats</item>
+        <item>Ladder</item>
+        <item>Milestones</item>
+        <item>MY TRIPS</item>
+        <item>Trips</item>
+        <item>MY VEHICLE</item>
+        <item>Vehicle</item>
         <item>Insurance Info</item>
         <item>Emergency</item>
         <item>Settings</item>
+    </string-array>
+
+    <string-array name="nav_drawer_types">
+        <item>HeaderView</item>
+        <item>Activity</item>
+        <item>Header</item>
+        <item>Activity</item>
+        <item>Activity</item>
+        <item>Activity</item>
+        <item>Activity</item>
+        <item>Header</item>
+        <item>Activity</item>
+        <item>Header</item>
+        <item>Activity</item>
+        <item>Activity</item>
+        <item>Activity</item>
+        <item>Activity</item>
+    </string-array>
+
+    <string-array name="achievement_description">
+        <item name="firstDrive">You Went on Your First Drive</item>
+        <item name="firstSafeDrive">Drove Safely for the First Time!</item>
+        <item name="fiveSafeDrive">Drove Safely 5 Times!</item>
+        <item name="tenSafeDrive">Drove Safely 10 Times!</item>
+        <item name="twentyFiveSafeDrive">Drove Safely 25 Times!</item>
+        <item name="fiftySafeDrive">Drove Safely 50 Times!</item>
+    </string-array>
+
+    <string-array name="achievement_title">
+        <item name="firstDriveTitle">First Drive</item>
+        <item name="firstSafeDriveTitle">First Safe Drive</item>
+        <item name="fiveSafeDriveTitle">Five Safe Drives</item>
+        <item name="tenSafeDriveTitle">Ten Safe Drives</item>
+        <item name="twentySafeDriveTitle">Twenty Safe Drives</item>
+        <item name="fiftySafeDriveTitle">Fifty Safe Drives</item>
     </string-array>
     
     <string-array name="settings_menu_rows">

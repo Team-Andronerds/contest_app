@@ -42,13 +42,16 @@ public abstract class NavDrawerActivity extends ActionBarActivity
     private final String ACTION_MY_VEHICLE = "My Vehicle";
     private final String ACTION_INSURANCE_INFO = "Insurance Info";
     private final String ACTION_EMERGENCY = "Emergency";
-    private final String ACTION_OBD_CONNECT = "Settings";
+    private final String ACTION_SETTINGS = "Settings";
+    private final String ACTION_ACHIEVEMENTS = "Achievements";
 
     private ActionBarDrawerToggle mDrawerToggle;
     private Toolbar mToolbar;
     private CharSequence mTitle;
     private ArrayList<NavDrawerItem> mNavDrawerItems;
     private Context mContext = this;
+
+    private static int mCurrentSelectionIndex = 1;
 
     abstract protected Toolbar init();
 
@@ -68,7 +71,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mNavDrawerItems = getNavDrawerItems();
-        mDrawerList.setAdapter(new NavDrawerAdapter(mNavDrawerItems, this));
+        mDrawerList.setAdapter(new NavDrawerAdapter(mNavDrawerItems, this, mCurrentSelectionIndex));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         mDrawerToggle = new ActionBarDrawerToggle(
@@ -99,6 +102,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         SystemBarTintManager tintManager = new SystemBarTintManager(this);
         tintManager.setStatusBarTintColor(this.getResources().getColor(R.color.status_bar_color));
         tintManager.setStatusBarTintEnabled(true);
+
+        //mDrawerList.setItemChecked(this.mCurrentSelectionIndex, true);
     }
 
     @Override
@@ -129,6 +134,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             Log.i("sel", "onClick");
             //drawerItemLayout.setBackgroundColor(getResources().getColor(R.color.background_material_light));
             mDrawerLayout.closeDrawer(mDrawerList);
+            mCurrentSelectionIndex = position;
+            //mDrawerList.setSelected(true);
 
             Intent intent = null;
             Log.d("NAV DRAWER ITEM POS", mNavDrawerItems.get(position).getMenuItemName());
@@ -137,6 +144,9 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 case ACTION_HOME:
                     Log.d("ACTIVITY_HOME", "Home activity initiated.");
                     intent = new Intent(mContext, MainActivity.class);
+                    break;
+                case ACTION_ACHIEVEMENTS:
+                    intent = new Intent(mContext, DriveToWinActivity.class);
                     break;
                 case ACTION_DRIVE_TO_WIN:
                     Log.d("ACTIVITY_DRIVE", "Drive to win activity initiated.");
@@ -158,7 +168,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                     Log.d("ACTIVITY_EMERGENCY", "Emergency activity initiated.");
                     intent = new Intent(mContext, EmergencyActivity.class);
                     break;
-                case ACTION_OBD_CONNECT:
+                case ACTION_SETTINGS:
                     Log.d("ACTIVITY_SETTINGS", "Settings activity initiated.");
                     intent = new Intent(mContext, SettingsActivity.class);
                     break;

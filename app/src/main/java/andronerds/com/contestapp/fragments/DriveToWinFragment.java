@@ -6,7 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 import andronerds.com.contestapp.R;
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardGridArrayAdapter;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
@@ -15,6 +19,9 @@ import andronerds.com.contestapp.R;
  */
 public class DriveToWinFragment extends Fragment
 {
+    private ArrayList<Card> mAchievementList = new ArrayList<>();
+    private CardGridArrayAdapter mAchievementsGridAdapter;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
