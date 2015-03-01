@@ -2039,20 +2039,21 @@ containing a value of this type.
         public static final int ic_right_white_arrow=0x7f02007e;
         public static final int ic_undobar_undo=0x7f02007f;
         public static final int login_text_box=0x7f020080;
-        public static final int me=0x7f020081;
-        public static final int native_card_selector=0x7f020082;
-        public static final int pc_kia_sportage=0x7f020083;
-        public static final int pc_login_logo=0x7f020084;
-        public static final int pc_map=0x7f020085;
-        public static final int pc_my_vehicle=0x7f020086;
-        public static final int powered_by_google_dark=0x7f020087;
-        public static final int powered_by_google_light=0x7f020088;
-        public static final int pressed_background_card=0x7f020089;
-        public static final int pressed_background_kitkat_card=0x7f02008a;
-        public static final int undobar=0x7f02008b;
-        public static final int undobar_button_focused=0x7f02008c;
-        public static final int undobar_button_pressed=0x7f02008d;
-        public static final int undobar_divider=0x7f02008e;
+        public static final int map_placeholder=0x7f020081;
+        public static final int me=0x7f020082;
+        public static final int native_card_selector=0x7f020083;
+        public static final int pc_kia_sportage=0x7f020084;
+        public static final int pc_login_logo=0x7f020085;
+        public static final int pc_map=0x7f020086;
+        public static final int pc_my_vehicle=0x7f020087;
+        public static final int powered_by_google_dark=0x7f020088;
+        public static final int powered_by_google_light=0x7f020089;
+        public static final int pressed_background_card=0x7f02008a;
+        public static final int pressed_background_kitkat_card=0x7f02008b;
+        public static final int undobar=0x7f02008c;
+        public static final int undobar_button_focused=0x7f02008d;
+        public static final int undobar_button_pressed=0x7f02008e;
+        public static final int undobar_divider=0x7f02008f;
     }
     public static final class id {
         public static final int accident_information_button=0x7f090089;
