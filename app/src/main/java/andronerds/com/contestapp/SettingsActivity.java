@@ -16,7 +16,7 @@ import butterknife.InjectView;
  */
 public class SettingsActivity extends NavDrawerActivity
 {
-    private CharSequence mTitle = "Connect an OBD";
+    private CharSequence mTitle = "Settings";
 
     @InjectView(R.id.settings_toolbar)Toolbar mToolbar;
 

@@ -17,6 +17,7 @@
     <string name="accident_info_button">Report An Accident</string>
     <string name="settings_menu">Settings</string>
     <string name="sign_out_button">Sign out</string>
+    <string name="bluetooth_connect_title">Bluetooth Connection</string>
 
     <string-array name="nav_drawer_titles">
         <item name="userName"> Header PlaceHolder</item>
@@ -27,6 +28,10 @@
         <item>Insurance Info</item>
         <item>Emergency</item>
         <item>Settings</item>
+    </string-array>
+    
+    <string-array name="settings_menu_rows">
+        <item>Bluetooth Status</item>
     </string-array>
 
     <string name="drawer_open">drawer_open</string>
