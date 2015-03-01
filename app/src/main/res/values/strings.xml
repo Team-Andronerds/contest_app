@@ -37,6 +37,6 @@
     <string name="drawer_open">drawer_open</string>
     <string name="drawer_closed">drawer_closed</string>
 
-    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity1</string>
 
 </resources>
