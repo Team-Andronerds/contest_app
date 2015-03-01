@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="toolbar_color" type="color">#4CAF50</item>
+    <item name="item_selected_text_color" type="color">#4CAF50</item>
+    <item name="item_selected_color" type="color">#AAAAAA</item>
     <item name="status_bar_color" type="color">#388E3C</item>
     <item name="black" type="color">#000000</item>
     <item name="white" type="color">#FFFFFF</item>
+    <item name="navDrawerText" type="color">#AAAAAA</item>
 </resources>

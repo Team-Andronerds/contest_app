@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
@@ -37,10 +38,11 @@ public abstract class NavDrawerActivity extends ActionBarActivity
 {
     private final String ACTION_HOME = "Home";
     private final String ACTION_DRIVE_TO_WIN = "Drive To Win";
-    private final String ACTION_MY_TRIPS = "My Trips";
-    private final String ACTION_MY_VEHICLE = "My Vehicle";
+    private final String ACTION_MY_TRIPS = "Trips";
+    private final String ACTION_MY_VEHICLE = "Vehicles";
     private final String ACTION_INSURANCE_INFO = "Insurance Info";
     private final String ACTION_EMERGENCY = "Emergency";
+    private final String ACTION_ACHIEVEMENTS = "Achievements";
 
     private ActionBarDrawerToggle mDrawerToggle;
     private Toolbar mToolbar;
@@ -48,10 +50,15 @@ public abstract class NavDrawerActivity extends ActionBarActivity
     private ArrayList<NavDrawerItem> mNavDrawerItems;
     private Context mContext = this;
 
+    private static int mCurrentSelectionIndex = 1;
+
     abstract protected Toolbar init();
 
     @InjectView(R.id.nav_drawer_layout)DrawerLayout mDrawerLayout;
     @InjectView(R.id.left_drawer)ListView mDrawerList;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +104,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         SystemBarTintManager tintManager = new SystemBarTintManager(this);
         tintManager.setStatusBarTintColor(this.getResources().getColor(R.color.status_bar_color));
         tintManager.setStatusBarTintEnabled(true);
+
+        mDrawerList.setItemChecked(this.mCurrentSelectionIndex,true);
     }
 
     @Override
@@ -123,8 +132,14 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         @Override
         public void onItemClick(AdapterView parent, View view, int position, long id) {
             Log.i("sel", "onClick");
+
+
             //drawerItemLayout.setBackgroundColor(getResources().getColor(R.color.background_material_light));
             mDrawerLayout.closeDrawer(mDrawerList);
+            mCurrentSelectionIndex = position;
+            mDrawerList.setSelected(true);
+            //TextView tv = (TextView)view.findViewById(R.id.nav_drawer_text);
+            //tv.setTextColor(getResources().getColor(R.color.item_selected_text_color));
 
             Intent intent = null;
             Log.d("NAV DRAWER ITEM POS", mNavDrawerItems.get(position).getMenuItemName());
@@ -136,6 +151,9 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                     break;
                 case ACTION_DRIVE_TO_WIN:
                     Log.d("ACTIVITY_DRIVE", "Drive to win activity initiated.");
+                    intent = new Intent(mContext, DriveToWinActivity.class);
+                    break;
+                case ACTION_ACHIEVEMENTS:
                     intent = new Intent(mContext, DriveToWinActivity.class);
                     break;
                 case ACTION_MY_TRIPS:
@@ -158,12 +176,17 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                     break;
             }
 
+
+
             if(intent != null)
             {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
                 finish();
+
             }
+
+            Log.d("fuck", String.format("%d",mDrawerList.getCheckedItemPosition()));
         }
     }
 

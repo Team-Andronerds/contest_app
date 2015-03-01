@@ -4,6 +4,8 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 
+import andronerds.com.contestapp.cards.AchievementCard;
+import andronerds.com.contestapp.fragments.AchievementsFragment;
 import andronerds.com.contestapp.fragments.DriveToWinFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
 import butterknife.ButterKnife;
@@ -16,7 +18,7 @@ import butterknife.InjectView;
  */
 public class DriveToWinActivity extends NavDrawerActivity
 {
-    private CharSequence mTitle = "Drive To Win";
+    private CharSequence mTitle = "Achievements";
 
     @InjectView(R.id.drive_to_win_toolbar)Toolbar mToolbar;
 
@@ -28,8 +30,8 @@ public class DriveToWinActivity extends NavDrawerActivity
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        DriveToWinFragment driveFragment = new DriveToWinFragment();
-        fragmentTransaction.add(R.id.drive_to_win_fragment_container, driveFragment);
+        AchievementsFragment achieveFrag = new AchievementsFragment();
+        fragmentTransaction.add(R.id.drive_to_win_fragment_container,achieveFrag);
         fragmentTransaction.commit();
 
         mToolbar.showOverflowMenu();

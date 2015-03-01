@@ -4,6 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/nav_drawer_item_selected</item>
     </style>
 
     <style name="noAnimTheme" parent="android:Theme">

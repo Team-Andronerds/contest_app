@@ -6,7 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 import andronerds.com.contestapp.R;
+import andronerds.com.contestapp.cards.AchievementCard;
+import butterknife.ButterKnife;
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardGridArrayAdapter;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
@@ -15,11 +21,8 @@ import andronerds.com.contestapp.R;
  */
 public class DriveToWinFragment extends Fragment
 {
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState)
-    {
-        View view = inflater.inflate(R.layout.fragment_drive_to_win, container, false);
-        return view;
-    }
+    private ArrayList<Card> mAchievementList = new ArrayList<>();
+    private CardGridArrayAdapter mAchievementsGridAdapter;
+
+
 }

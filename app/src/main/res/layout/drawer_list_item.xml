@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
-    android:background="?android:attr/activatedBackgroundIndicator"
+    android:background="@drawable/nav_drawer_item_selected"
     android:id="@+id/nav_drawer">
 
     <ImageView android:layout_height="50dp"
@@ -23,6 +23,6 @@
         android:paddingLeft="16dp"
         android:textSize="16sp"
         android:paddingRight="16dp"
-        android:textColor="@color/black"
+        android:textColor="@color/navDrawerText"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"/>
 </LinearLayout>

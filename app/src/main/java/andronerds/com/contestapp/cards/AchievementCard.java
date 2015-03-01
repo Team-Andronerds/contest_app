@@ -13,18 +13,16 @@ import butterknife.InjectView;
 import it.gmariotti.cardslib.library.internal.Card;
 
 /**
- * @author Aaron Weaver         (waaronl@okstate.edu)
- * @version ContestApp v0.1A
- * @since 2/20/15
+ * Created by Chris on 2/22/2015.
  */
-public class MyTripsTripCard extends Card
-{
-    @InjectView(R.id.trip_map)ImageView mTripMapView;
-    @InjectView(R.id.more_details_image)ImageView mMoreDetailsImage;
+public class AchievementCard extends Card {
 
-    public MyTripsTripCard(Context context)
+    @InjectView(R.id.achievement_image)ImageView mAchievementImage;
+
+
+    public AchievementCard(Context context)
     {
-        super(context, R.layout.card_my_trips_trip);
+        super(context, R.layout.card_achievement);
     }
 
     @Override
@@ -39,7 +37,7 @@ public class MyTripsTripCard extends Card
                 //.load(R.drawable.map_placeholder)
                 .load(R.drawable.ic_launcher)
                 .fit()
-                .into(mTripMapView);
+                .into(mAchievementImage);
 
         /*Picasso.with(this.getContext())
                 .load(R.drawable.ic_chevron_right_grey600_24dp)
@@ -47,4 +45,5 @@ public class MyTripsTripCard extends Card
                 .fit()
                 .into(mMoreDetailsImage);*/
     }
+
 }

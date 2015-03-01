@@ -19,6 +19,7 @@ public class NavDrawerAdapter extends BaseAdapter {
 
     private Context navDrawerContext;
     private ArrayList<NavDrawerItem> menuDrawerItems;
+    private String[] menuDrawerItemTypes;
 
     public NavDrawerAdapter() {}
 
@@ -26,6 +27,7 @@ public class NavDrawerAdapter extends BaseAdapter {
     {
         this.menuDrawerItems = drawerItems;
         this.navDrawerContext = context;
+        this.menuDrawerItemTypes = navDrawerContext.getResources().getStringArray(R.array.nav_drawer_types);
     }
 
     public View getView(int x, View v, ViewGroup vg)
@@ -43,11 +45,29 @@ public class NavDrawerAdapter extends BaseAdapter {
         }
         else
         {
-            v = inflater.inflate(R.layout.drawer_list_item, null, false);
-            TextView title = (TextView) v.findViewById(R.id.nav_drawer_text);
-            ImageView icon = (ImageView) v.findViewById(R.id.drawer_icon);
-            title.setText(this.menuDrawerItems.get(x).getMenuItemName());
-            icon.setImageDrawable(this.menuDrawerItems.get(x).getMenuIcon());
+            if(this.menuDrawerItemTypes[x].equals("Activity"))
+            {
+                v = inflater.inflate(R.layout.drawer_list_item, null, false);
+                TextView title = (TextView) v.findViewById(R.id.nav_drawer_text);
+                ImageView icon = (ImageView) v.findViewById(R.id.drawer_icon);
+                title.setText(this.menuDrawerItems.get(x).getMenuItemName());
+                icon.setImageDrawable(this.menuDrawerItems.get(x).getMenuIcon());
+            }
+            else if(this.menuDrawerItemTypes[x].equals("Header"))
+            {
+                v = inflater.inflate(R.layout.list_header, null, false);
+                TextView title = (TextView) v.findViewById(R.id.header_text);
+                title.setText(this.menuDrawerItems.get(x).getMenuItemName());
+            }
+            else
+            {
+                v = inflater.inflate(R.layout.drawer_list_item, null, false);
+                TextView title = (TextView) v.findViewById(R.id.nav_drawer_text);
+                ImageView icon = (ImageView) v.findViewById(R.id.drawer_icon);
+                title.setText(this.menuDrawerItems.get(x).getMenuItemName());
+                icon.setImageDrawable(this.menuDrawerItems.get(x).getMenuIcon());
+
+            }
         }
 
         return v;
