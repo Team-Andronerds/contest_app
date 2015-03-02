@@ -22,6 +22,12 @@
             android:id="@+id/drive_to_win_fragment_container">
         </FrameLayout>
 
+        <android.support.v4.view.ViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/drive_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

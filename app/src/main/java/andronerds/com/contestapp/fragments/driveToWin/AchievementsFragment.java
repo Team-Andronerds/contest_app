@@ -1,6 +1,6 @@
-package andronerds.com.contestapp.fragments;
+package andronerds.com.contestapp.fragments.driveToWin;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +20,21 @@ import it.gmariotti.cardslib.library.view.CardListView;
  * Created by Chris on 2/22/2015.
  */
 public class AchievementsFragment extends Fragment{
+
+    // Store instance variables
+    private String title;
+    private int page;
+
+    // newInstance constructor for creating fragment with arguments
+    public static AchievementsFragment newInstance(int page, String title) {
+        AchievementsFragment achievementsFragment = new AchievementsFragment();
+        Bundle args = new Bundle();
+        args.putInt("someInt", page);
+        args.putString("someTitle", title);
+        achievementsFragment.setArguments(args);
+        return achievementsFragment;
+    }
+
 
     @InjectView(R.id.achievements_list_view)CardListView mAchievementsListView;
 
