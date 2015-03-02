@@ -3,6 +3,7 @@ package andronerds.com.contestapp;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
@@ -21,6 +22,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.HashMap;
 
+import andronerds.com.contestapp.fragments.LoadingFragment;
 import andronerds.com.contestapp.fragments.LoginFragment;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
@@ -39,6 +41,8 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
     private ConnectionResult mConnectionResult;
     private static final int RC_SIGN_IN = 0;
 
+    private ProgressDialog progressDialog;
+
     private static final int PROFILE_PIC_SIZE = 300;
     private HashMap<String, String> friendsList;
     private boolean signOut = false;
@@ -51,6 +55,12 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.inject(this);
+
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        LoadingFragment loadingFragment = new LoadingFragment();
+        fragmentTransaction.replace(R.id.login_fragment_container, loadingFragment);
+        fragmentTransaction.commit();
 
         Intent intent = getIntent();
         Bundle bundle = null;
@@ -79,12 +89,6 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
                 .addScope(Plus.SCOPE_PLUS_PROFILE)
                 .build();
 
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        LoginFragment driveFragment = new LoginFragment();
-        fragmentTransaction.add(R.id.login_fragment_container, driveFragment);
-        fragmentTransaction.commit();
-
         SystemBarTintManager tintManager = new SystemBarTintManager(this);
         tintManager.setStatusBarTintColor(this.getResources().getColor(R.color.toolbar_color));
         tintManager.setStatusBarTintEnabled(true);
@@ -107,6 +111,9 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
 
     public void resolveSignInError()
     {
+        progressDialog = ProgressDialog.show(this, "Signing in",
+                "Signing you in...", true);
+
         if(mConnectionResult.hasResolution())
         {
             try
@@ -124,7 +131,16 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
     @Override
     public void onConnectionFailed(ConnectionResult result)
     {
+        //fragmentTransaction.commit();
+
         Log.i("CONNECT FAILED", "Connection to GPlus failed");
+
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        LoginFragment loginFragment = new LoginFragment();
+        fragmentTransaction.replace(R.id.login_fragment_container, loginFragment);
+        fragmentTransaction.commit();
+
         if(!mIntentInProgress)
         {
             mConnectionResult = result;
@@ -162,6 +178,8 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         }
         else
         {
+            if(progressDialog != null)
+                progressDialog.dismiss();
             Intent intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);

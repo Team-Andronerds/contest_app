@@ -9,7 +9,7 @@
     <color name="button_red">#C0392B</color>
     <color name="green_button">#2E7D32</color>
     <color name="green_button_pressed">#388E3C</color>
-    <item name="navDrawerText" type="color">#AAAAAA</item>
+    <item name="navDrawerText" type="color">#666666</item>
     <item name="item_selected_text_color" type="color">#4CAF50</item>
     <item name="item_selected_color" type="color">#EEEEEE</item>
 </resources>

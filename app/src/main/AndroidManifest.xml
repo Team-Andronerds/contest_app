@@ -16,7 +16,8 @@
                    android:value="@integer/google_play_services_version" />
         <activity
             android:name=".LoginActivity"
-            android:label="Login">
+            android:label="Login"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

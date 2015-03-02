@@ -1,19 +1,22 @@
 package andronerds.com.contestapp.navDrawer;
 
-import android.graphics.drawable.Drawable;
-
 /**
  * Created by Chris on 1/28/2015.
  */
 public class NavDrawerItem {
 
     private String menuItemName;
-    private Drawable menuIcon;
+    private int menuIcon;
 
-    public NavDrawerItem(String title, Drawable draw)
+    public NavDrawerItem(String title, int draw)
     {
         this.menuItemName = title;
         this.menuIcon = draw;
+    }
+
+    public NavDrawerItem(String title)
+    {
+        this.menuItemName = title;
     }
 
     /*
@@ -25,7 +28,7 @@ public class NavDrawerItem {
         return this.menuItemName;
     }
 
-    public Drawable getMenuIcon()
+    public int getMenuIcon()
     {
         return this.menuIcon;
     }
@@ -39,7 +42,7 @@ public class NavDrawerItem {
         this.menuItemName = newName;
     }
 
-    public void setMenuIcon(Drawable newIcon)
+    public void setMenuIcon(int newIcon)
     {
         this.menuIcon = newIcon;
     }

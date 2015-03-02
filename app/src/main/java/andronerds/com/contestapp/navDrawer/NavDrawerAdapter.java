@@ -55,7 +55,6 @@ public class NavDrawerAdapter extends BaseAdapter {
                     .fit()
                     .into(profilePic);
             //profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));
-
         }
         else
         {
@@ -70,13 +69,18 @@ public class NavDrawerAdapter extends BaseAdapter {
                     v.setBackgroundColor(navDrawerContext.getResources().getColor(R.color.item_selected_color));
                 }
                 title.setText(this.menuDrawerItems.get(x).getMenuItemName());
-                icon.setImageDrawable(this.menuDrawerItems.get(x).getMenuIcon());
+                Picasso.with(v.getContext())
+                        .load(menuDrawerItems.get(x).getMenuIcon())
+                        .fit()
+                        .into(icon);
             }
             else if(this.menuDrawerItemTypes[x].equals("Header"))
             {
                 v = inflater.inflate(R.layout.list_header, null, false);
                 TextView title = (TextView) v.findViewById(R.id.header_text);
                 title.setText(this.menuDrawerItems.get(x).getMenuItemName());
+                v.setClickable(false);
+                v.setOnClickListener(null);
             }
             else
             {
@@ -89,8 +93,10 @@ public class NavDrawerAdapter extends BaseAdapter {
                     v.setBackgroundColor(navDrawerContext.getResources().getColor(R.color.item_selected_color));
                 }
                 title.setText(this.menuDrawerItems.get(x).getMenuItemName());
-                icon.setImageDrawable(this.menuDrawerItems.get(x).getMenuIcon());
-
+                Picasso.with(v.getContext())
+                        .load(menuDrawerItems.get(x).getMenuIcon())
+                        .fit()
+                        .into(icon);
             }
         }
 
