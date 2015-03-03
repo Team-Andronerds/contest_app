@@ -71,13 +71,15 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
             if(bundle != null)
             {
                 String signOutStr = bundle.getString(IdentityStrings.BUNDLE_SIGN_OUT);
-                if(signOutStr.equals(IdentityStrings.BUNDLE_SIGN_OUT))
+                if(signOutStr != null)
                 {
-                    signOut = true;
-                }
-                else
-                {
-                    signOut = false;
+                    if (signOutStr.equals(IdentityStrings.BUNDLE_SIGN_OUT))
+                    {
+                        signOut = true;
+                    } else
+                    {
+                        signOut = false;
+                    }
                 }
             }
         }
@@ -134,6 +136,11 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         //fragmentTransaction.commit();
 
         Log.i("CONNECT FAILED", "Connection to GPlus failed");
+
+        if(progressDialog != null)
+        {
+            progressDialog.dismiss();
+        }
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
