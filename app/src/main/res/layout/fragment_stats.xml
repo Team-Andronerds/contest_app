@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_marginLeft="25dip"
+            android:layout_marginTop="20dip"
+            android:id="@+id/stats_profile_pic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/stats_profile_pic"
+            android:id="@+id/stats_current_points_label"
+            android:text="@string/drive_current_points"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="40dip"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/stats_profile_pic"
+            android:layout_below="@+id/stats_current_points_label"
+            android:id="@+id/stats_points"
+            android:textSize="40sp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/drive_points_placeholder"
+            android:layout_marginLeft="30dip"/>
+
+        <andronerds.com.contestapp.views.ProgressWheel
+            android:id="@+id/stats_pie_chart"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_marginLeft="50dip"
+            android:layout_below="@+id/stats_points"
+            android:layout_toRightOf="@+id/stats_profile_pic"
+            ProgressWheel:text="Authenticating..."
+            ProgressWheel:textColor="#222"
+            ProgressWheel:textSize="18sp"
+            ProgressWheel:rimColor="@color/light_green_body_color"
+            ProgressWheel:barLength="100dp"
+            ProgressWheel:barColor="@color/status_bar_color"
+            ProgressWheel:barWidth="8dp"
+            ProgressWheel:rimWidth="8dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -264,13 +264,14 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
                 SharedPreferences settings = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
                 SharedPreferences.Editor editor = settings.edit();
 
+                personPhotoUrl = personPhotoUrl.substring(0, personPhotoUrl.length() -2) + PROFILE_PIC_SIZE;
+
                 editor.putString(IdentityStrings.USER_NAME, personName);
                 editor.putString(IdentityStrings.USER_PROFILE_PIC, personPhotoUrl);
                 editor.putString(IdentityStrings.USER_G_PLUS_PROFILE, personGooglePlusProfile);
                 editor.putString(IdentityStrings.USER_EMAIL, personEmail);
                 editor.commit();
 
-                personPhotoUrl = personPhotoUrl.substring(0, personPhotoUrl.length() -2) + PROFILE_PIC_SIZE;
                 Log.i(LOG_TAG, "Photo URL Length: " + personPhotoUrl.length());
             }
         } catch (Exception ex) {

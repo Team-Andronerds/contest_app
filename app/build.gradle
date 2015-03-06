@@ -20,6 +20,10 @@ android {
     }
 }
 
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -43,4 +47,7 @@ dependencies {
 
     //Google Play Services
     compile 'com.google.android.gms:play-services:6.5.87'
+
+    //Chart library for Android
+    compile 'com.github.PhilJay:MPAndroidChart:v2.0.7'
 }

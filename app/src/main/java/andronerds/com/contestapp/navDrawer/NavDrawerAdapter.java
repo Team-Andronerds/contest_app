@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.utils.IdentityStrings;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by Chris on 1/28/2015.
@@ -46,7 +47,7 @@ public class NavDrawerAdapter extends BaseAdapter {
         {
             v = inflater.inflate(R.layout.header, null, false);
             TextView name = (TextView) v.findViewById(R.id.name);
-            ImageView profilePic = (ImageView) v.findViewById(R.id.profile_pic);
+            CircleImageView profilePic = (CircleImageView) v.findViewById(R.id.profile_pic);
             userProfilePrefs = navDrawerContext.getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
 
             name.setText(userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
@@ -54,6 +55,9 @@ public class NavDrawerAdapter extends BaseAdapter {
                     .load(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, ""))
                     .fit()
                     .into(profilePic);
+
+            profilePic.setBorderColor(navDrawerContext.getResources().getColor(R.color.black));
+            profilePic.setBorderWidth(1);
             //profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));
         }
         else
@@ -116,5 +120,15 @@ public class NavDrawerAdapter extends BaseAdapter {
     public int getCount()
     {
         return this.menuDrawerItems.size();
+    }
+
+    public void setDrawerItems(ArrayList<NavDrawerItem> navItems)
+    {
+        this.menuDrawerItems = navItems;
+    }
+
+    public void setCurrentlySelected(int currentlySelected)
+    {
+        this.mCurrentlySelected = currentlySelected;
     }
 }

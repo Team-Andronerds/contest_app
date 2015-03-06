@@ -26,7 +26,6 @@ import andronerds.com.contestapp.MyTripsActivity;
 import andronerds.com.contestapp.MyVehicleActivity;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.SettingsActivity;
-import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.InjectView;
 
 /**
@@ -36,22 +35,23 @@ import butterknife.InjectView;
  */
 public abstract class NavDrawerActivity extends ActionBarActivity
 {
-    private final String ACTION_HOME = "Home";
-    private final String ACTION_STATS = "Stats";
-    private final String ACTION_LEADERBOARDS = "Leaderboards";
-    private final String ACTION_MILESTONES = "Milestones";
-    private final String ACTION_MY_TRIPS = "Trips";
-    private final String ACTION_MY_VEHICLE = "Vehicle";
-    private final String ACTION_INSURANCE_INFO = "Insurance Info";
-    private final String ACTION_EMERGENCY = "Emergency";
-    private final String ACTION_SETTINGS = "Settings";
-    private final String ACTION_ACHIEVEMENTS = "Achievements";
+    public final String ACTION_HOME = "Home";
+    public final String ACTION_STATS = "Stats";
+    public final String ACTION_LEADERBOARDS = "Leaderboards";
+    public final String ACTION_MILESTONES = "Milestones";
+    public final String ACTION_MY_TRIPS = "Trips";
+    public final String ACTION_MY_VEHICLE = "Vehicle";
+    public final String ACTION_INSURANCE_INFO = "Insurance Info";
+    public final String ACTION_EMERGENCY = "Emergency";
+    public final String ACTION_SETTINGS = "Settings";
+    public final String ACTION_ACHIEVEMENTS = "Achievements";
 
     private ActionBarDrawerToggle mDrawerToggle;
     private Toolbar mToolbar;
     private CharSequence mTitle;
     private ArrayList<NavDrawerItem> mNavDrawerItems;
     private Context mContext = this;
+    private NavDrawerAdapter mNavDrawerAdapter;
 
     private static int mCurrentSelectionIndex = 1;
 
@@ -73,7 +73,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mNavDrawerItems = getNavDrawerItems();
-        mDrawerList.setAdapter(new NavDrawerAdapter(mNavDrawerItems, this, mCurrentSelectionIndex));
+        mNavDrawerAdapter = new NavDrawerAdapter(mNavDrawerItems, this, mCurrentSelectionIndex);
+        mDrawerList.setAdapter(mNavDrawerAdapter);
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         mDrawerToggle = new ActionBarDrawerToggle(
@@ -149,20 +150,20 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 case ACTION_ACHIEVEMENTS:
                     Log.d("ACTIVITY_ACHIEVEMENTS", "Achievements activity initiated.");
                     intent = new Intent(mContext, DriveToWinActivity.class);
-                    intent.putExtra(IdentityStrings.INTENT_EXTRA_DRIVE, ACTION_ACHIEVEMENTS);
+                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_ACHIEVEMENTS);
                     break;
                 case ACTION_LEADERBOARDS:
                     Log.d("ACTIVITY_LEADERBOARDS", "Drive to win activity initiated.");
                     intent = new Intent(mContext, DriveToWinActivity.class);
-                    intent.putExtra(IdentityStrings.INTENT_EXTRA_DRIVE, ACTION_LEADERBOARDS);
+                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_LEADERBOARDS);
                     break;
                 case ACTION_STATS:
                     intent = new Intent(mContext, DriveToWinActivity.class);
-                    intent.putExtra(IdentityStrings.INTENT_EXTRA_DRIVE, ACTION_STATS);
+                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_STATS);
                     break;
                 case ACTION_MILESTONES:
                     intent = new Intent(mContext, DriveToWinActivity.class);
-                    intent.putExtra(IdentityStrings.INTENT_EXTRA_DRIVE, ACTION_MILESTONES);
+                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_MILESTONES);
                     break;
                 case ACTION_MY_TRIPS:
                     Log.d("ACTIVITY_TRIPS", "My trips activity initiated.");
@@ -171,12 +172,12 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 case ACTION_MY_VEHICLE:
                     Log.d("ACTIVITY_VEHICLE", "My vehicle activity initiated.");
                     intent = new Intent(mContext, MyVehicleActivity.class);
-                    intent.putExtra(IdentityStrings.INTENT_EXTRA_VEHICLE, ACTION_MY_VEHICLE);
+                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_MY_VEHICLE);
                     break;
                 case ACTION_INSURANCE_INFO:
                     Log.d("ACTIVITY_INSURANCE", "Insurance info activity initiated.");
                     intent = new Intent(mContext, InsuranceInfoActivity.class);
-                    intent.putExtra(IdentityStrings.INTENT_EXTRA_VEHICLE, ACTION_INSURANCE_INFO);
+                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_INSURANCE_INFO);
                     break;
                 case ACTION_EMERGENCY:
                     Log.d("ACTIVITY_EMERGENCY", "Emergency activity initiated.");
@@ -208,69 +209,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         for(int i = 0; i < drawerTitles.length; i++ )
         {
             navItem = new NavDrawerItem(drawerTitles[i]);
-            switch(drawerTitles[i])
-            {
-                case ACTION_HOME:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_home_green;
-                    else
-                        imageResource = R.drawable.nav_home_gray;
-                    break;
-                case ACTION_ACHIEVEMENTS:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_achievements_green;
-                    else
-                        imageResource = R.drawable.nav_achievements_gray;
-                    break;
-                case ACTION_STATS:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_stats_green;
-                    else
-                        imageResource = R.drawable.nav_stats_gray;
-                    break;
-                case ACTION_LEADERBOARDS:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_leaderboards_green;
-                    else
-                        imageResource = R.drawable.nav_leaderboards_gray;
-                    break;
-                case ACTION_MILESTONES:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_milestone_green;
-                    else
-                        imageResource = R.drawable.nav_milestone_gray;
-                    break;
-                case ACTION_MY_TRIPS:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_trips_green;
-                    else
-                        imageResource = R.drawable.nav_trips_gray;
-                    break;
-                case ACTION_MY_VEHICLE:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_vehicle_green;
-                    else
-                        imageResource = R.drawable.nav_vehicle_gray;
-                    break;
-                case ACTION_INSURANCE_INFO:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_insurance_green;
-                    else
-                        imageResource = R.drawable.nav_insurance_gray;
-                    break;
-                case ACTION_EMERGENCY:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_emergency_green;
-                    else
-                        imageResource = R.drawable.nav_emergency_gray;
-                    break;
-                case ACTION_SETTINGS:
-                    if(mCurrentSelectionIndex == i)
-                        imageResource = R.drawable.nav_settings_green;
-                    else
-                        imageResource = R.drawable.nav_settings_gray;
-                    break;
-            }
+            imageResource = setImageResource(i, drawerTitles);
+
             if(imageResource != 0)
             {
                 navItem.setMenuIcon(imageResource);
@@ -278,5 +218,118 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             aList.add(navItem);
         }
         return aList;
+    }
+
+    public void setCurrentItemHighlighted(String title)
+    {
+        int imageResource = 0;
+        switch(title)
+        {
+            case ACTION_ACHIEVEMENTS:
+                imageResource = R.drawable.nav_achievements_green;
+                break;
+            case ACTION_STATS:
+                imageResource = R.drawable.nav_stats_green;
+                break;
+            case ACTION_LEADERBOARDS:
+                imageResource = R.drawable.nav_leaderboards_green;
+                break;
+            case ACTION_MILESTONES:
+                imageResource = R.drawable.nav_milestone_green;
+                break;
+        }
+    }
+
+    public int setImageResource(int position, String[] drawerTitles)
+    {
+        int imageResource = 0;
+        switch(drawerTitles[position])
+        {
+            case ACTION_HOME:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_home_green;
+                else
+                    imageResource = R.drawable.nav_home_gray;
+                break;
+            case ACTION_ACHIEVEMENTS:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_achievements_green;
+                else
+                    imageResource = R.drawable.nav_achievements_gray;
+                break;
+            case ACTION_STATS:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_stats_green;
+                else
+                    imageResource = R.drawable.nav_stats_gray;
+                break;
+            case ACTION_LEADERBOARDS:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_leaderboards_green;
+                else
+                    imageResource = R.drawable.nav_leaderboards_gray;
+                break;
+            case ACTION_MILESTONES:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_milestone_green;
+                else
+                    imageResource = R.drawable.nav_milestone_gray;
+                break;
+            case ACTION_MY_TRIPS:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_trips_green;
+                else
+                    imageResource = R.drawable.nav_trips_gray;
+                break;
+            case ACTION_MY_VEHICLE:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_vehicle_green;
+                else
+                    imageResource = R.drawable.nav_vehicle_gray;
+                break;
+            case ACTION_INSURANCE_INFO:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_insurance_green;
+                else
+                    imageResource = R.drawable.nav_insurance_gray;
+                break;
+            case ACTION_EMERGENCY:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_emergency_green;
+                else
+                    imageResource = R.drawable.nav_emergency_gray;
+                break;
+            case ACTION_SETTINGS:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_settings_green;
+                else
+                    imageResource = R.drawable.nav_settings_gray;
+                break;
+        }
+
+        return imageResource;
+    }
+
+    public void setSelectedDrawerItem(String title)
+    {
+        Log.d("SELECT DRAWER ITEM", "setSelected... being called " + title);
+        for(int i = 0; i < mNavDrawerItems.size(); i++)
+        {
+            if(mNavDrawerItems.get(i).getMenuItemName().equals(title))
+            {
+                Log.d("TITLE PAGE", title + " index " + i);
+                mCurrentSelectionIndex = i;
+                break;
+            }
+        }
+        mNavDrawerItems = getNavDrawerItems();
+        mNavDrawerAdapter.setDrawerItems(mNavDrawerItems);
+        mNavDrawerAdapter.setCurrentlySelected(mCurrentSelectionIndex);
+        mNavDrawerAdapter.notifyDataSetChanged();
+    }
+
+    public void setNavDrawerTitle(String title)
+    {
+        this.mTitle = title;
     }
 }
