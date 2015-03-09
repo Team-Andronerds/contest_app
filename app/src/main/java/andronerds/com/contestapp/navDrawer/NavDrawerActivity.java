@@ -220,26 +220,6 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         return aList;
     }
 
-    public void setCurrentItemHighlighted(String title)
-    {
-        int imageResource = 0;
-        switch(title)
-        {
-            case ACTION_ACHIEVEMENTS:
-                imageResource = R.drawable.nav_achievements_green;
-                break;
-            case ACTION_STATS:
-                imageResource = R.drawable.nav_stats_green;
-                break;
-            case ACTION_LEADERBOARDS:
-                imageResource = R.drawable.nav_leaderboards_green;
-                break;
-            case ACTION_MILESTONES:
-                imageResource = R.drawable.nav_milestone_green;
-                break;
-        }
-    }
-
     public int setImageResource(int position, String[] drawerTitles)
     {
         int imageResource = 0;

@@ -52,7 +52,7 @@ public class NavDrawerAdapter extends BaseAdapter {
 
             name.setText(userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
             Picasso.with(navDrawerContext)
-                    .load(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, ""))
+                    .load(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, Integer.toString(R.drawable.ic_profile_null)))
                     .fit()
                     .into(profilePic);
 

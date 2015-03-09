@@ -15,7 +15,4 @@ public class IdentityStrings
     public static final String USER_PROFILE_PIC = "user_profile_pic";
 
     public static final String BUNDLE_SIGN_OUT = "sign_out";
-
-    public static final String INTENT_EXTRA_DRIVE = "drive_intent_extras";
-    public static final String INTENT_EXTRA_VEHICLE = "vehicle_intent_extras";
 }
