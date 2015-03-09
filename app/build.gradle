@@ -50,4 +50,7 @@ dependencies {
 
     //Chart library for Android
     compile 'com.github.PhilJay:MPAndroidChart:v2.0.7'
+
+    //Sugar ORM for managing database in Android
+    compile 'com.github.satyan:sugar:1.3'
 }

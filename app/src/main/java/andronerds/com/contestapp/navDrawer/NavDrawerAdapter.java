@@ -51,10 +51,23 @@ public class NavDrawerAdapter extends BaseAdapter {
             userProfilePrefs = navDrawerContext.getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
 
             name.setText(userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
-            Picasso.with(navDrawerContext)
-                    .load(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, Integer.toString(R.drawable.ic_profile_null)))
-                    .fit()
-                    .into(profilePic);
+
+            if(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, "") != "")
+            {
+                Picasso.with(navDrawerContext)
+                        .load(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, ""))
+                        .placeholder(R.drawable.ic_profile_null)
+                        .fit()
+                        .into(profilePic);
+            }
+            else
+            {
+                Picasso.with(navDrawerContext)
+                        .load(R.drawable.ic_profile_null)
+                        .placeholder(R.drawable.ic_profile_null)
+                        .fit()
+                        .into(profilePic);
+            }
 
             profilePic.setBorderColor(navDrawerContext.getResources().getColor(R.color.black));
             profilePic.setBorderWidth(1);
