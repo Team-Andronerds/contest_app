@@ -19,7 +19,6 @@ public class AchievementCard extends Card {
 
     @InjectView(R.id.achievement_image)ImageView mAchievementImage;
 
-
     public AchievementCard(Context context)
     {
         super(context, R.layout.card_achievement);

@@ -65,10 +65,32 @@ public class StatsFragment extends Fragment
         mPointsChart.setProgress(circlePercent);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
-        Picasso.with(this.getActivity())
-                .load(sharedPreferences.getString(IdentityStrings.USER_PROFILE_PIC, ""))
-                .fit()
-                .into(mProfilePic);
+
+        int profilePicInt = 0;
+        String profilePicString = "";
+
+        try {
+            Log.d("STATS FRAGMENT", sharedPreferences.getString(IdentityStrings.USER_PROFILE_PIC, ""));
+            profilePicInt = Integer.parseInt(sharedPreferences.getString(IdentityStrings.USER_PROFILE_PIC, ""));
+        } catch (NumberFormatException e) {
+            System.out.println("Wrong number");
+            profilePicString = sharedPreferences.getString(IdentityStrings.USER_PROFILE_PIC, "");
+        }
+
+        if(profilePicInt != 0)
+        {
+            Picasso.with(this.getActivity())
+                    .load(profilePicInt)
+                    .fit()
+                    .into(mProfilePic);
+        }
+        else
+        {
+            Picasso.with(this.getActivity())
+                    .load(profilePicString)
+                    .fit()
+                    .into(mProfilePic);
+        }
 
         mProfilePic.setBorderWidth(3);
         mProfilePic.setBorderColor(getActivity().getResources().getColor(R.color.black));

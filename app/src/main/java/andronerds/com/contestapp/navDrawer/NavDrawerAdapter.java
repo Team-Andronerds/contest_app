@@ -2,6 +2,7 @@ package andronerds.com.contestapp.navDrawer;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,11 +53,28 @@ public class NavDrawerAdapter extends BaseAdapter {
 
             name.setText(userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
 
-            if(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, "") != "")
+            int profilePicInt = 0;
+            String profilePicString = "";
+
+            try {
+                Log.d("STATS FRAGMENT", userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, ""));
+                profilePicInt = Integer.parseInt(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, ""));
+            } catch (NumberFormatException e) {
+                System.out.println("Wrong number");
+                profilePicString = userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, "");
+            }
+
+            if(profilePicInt != 0)
             {
                 Picasso.with(navDrawerContext)
-                        .load(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, ""))
-                        .placeholder(R.drawable.ic_profile_null)
+                        .load(profilePicInt)
+                        .fit()
+                        .into(profilePic);
+            }
+            else if(profilePicString != "")
+            {
+                Picasso.with(navDrawerContext)
+                        .load(profilePicString)
                         .fit()
                         .into(profilePic);
             }

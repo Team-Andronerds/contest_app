@@ -9,6 +9,7 @@ import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.CommonStatusCodes;
@@ -21,9 +22,12 @@ import com.google.android.gms.plus.model.people.PersonBuffer;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.HashMap;
+import java.util.List;
 
+import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.fragments.LoadingFragment;
 import andronerds.com.contestapp.fragments.LoginFragment;
+import andronerds.com.contestapp.fragments.SignUpFragment;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 
@@ -47,7 +51,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
     private HashMap<String, String> friendsList;
     private boolean signOut = false;
 
-    private static final String LOG_TAG = "GPLUS_LOG";
+    private static final String LOG_TAG = "LOGIN ACTIVITY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -146,6 +150,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         LoginFragment loginFragment = new LoginFragment();
         fragmentTransaction.replace(R.id.login_fragment_container, loginFragment);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
         if(!mIntentInProgress)
@@ -177,7 +182,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
     public void onConnected(Bundle connectionHint) {
         mSignInClicked = false;
         Plus.PeopleApi.loadVisible(mGoogleServices, null).setResultCallback(this);
-        addProfileToSharedPrefs();
+        addGoogleProfileToSharedPrefs();
         if(signOut)
         {
             signOutGPlus();
@@ -246,7 +251,70 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         editor.commit();
     }
 
-    public void addProfileToSharedPrefs()
+    public void switchSignUpFragment()
+    {
+        Log.d("LOGIN_ACTIVITY", "Replacing fragments on login");
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        SignUpFragment signUpFragment = new SignUpFragment();
+        fragmentTransaction.replace(R.id.login_fragment_container, signUpFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
+    //TODO: Hash actual user passwords, plaintext pass is for filling test data
+    public void signUpProcess(String email, String username, String password)
+    {
+        if (User.find(User.class, "email = ?", email).isEmpty())
+        {
+            User user = new User();
+            user.setEmail(email);
+            user.setName(username);
+            user.setPassword(password);
+            user.setProfileImage(Integer.toString(R.drawable.ic_profile_null));
+            user.save();
+        }
+        else
+        {
+            Log.i("LOGIN_ACTIVITY", "That email is already registered.");
+            Toast.makeText(this, "Email already registered", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void signInProcess(String userName, String password)
+    {
+        List<User> userList = User.find(User.class, "name = ? and password = ?", userName, password);
+        if(userList.size() == 1)
+        {
+            Log.d(LOG_TAG, "Logging you in");
+            standardProfileToSharedPrefs(userList.get(0));
+
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent);
+            finish();
+        }
+        else if(userList.isEmpty())
+        {
+            Log.d(LOG_TAG, "The username or password entered does not match any known users");
+            Toast.makeText(this, "Username or password are not correct", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void standardProfileToSharedPrefs(User user)
+    {
+        SharedPreferences settings = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+        SharedPreferences.Editor editor = settings.edit();
+
+        Log.d(LOG_TAG, "NAME: " + user.getName() + " PROFILE PIC: " + user.getProfileImage() + " EMAIL: " + user.getEmail());
+
+        editor.putString(IdentityStrings.USER_NAME, user.getName());
+        editor.putString(IdentityStrings.USER_PROFILE_PIC, user.getProfileImage());
+        editor.putString(IdentityStrings.USER_EMAIL, user.getEmail());
+        editor.commit();
+    }
+
+    public void addGoogleProfileToSharedPrefs()
     {
         try {
             if(Plus.PeopleApi.getCurrentPerson(mGoogleServices) != null) {

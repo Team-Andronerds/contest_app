@@ -32,6 +32,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener
     @InjectView(R.id.login_sign_in)Button mLoginSignIn;
     @InjectView(R.id.login_sign_up)Button mLoginSignUp;
 
+    private static final String LOG_TAG = "LOGIN FRAGMENT";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
@@ -46,6 +48,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener
 
         mGPlusSignIn.setSize(SignInButton.SIZE_WIDE);
         mGPlusSignIn.setOnClickListener(this);
+        mLoginSignUp.setOnClickListener(this);
+        mLoginSignIn.setOnClickListener(this);
 
         return view;
     }
@@ -54,14 +58,25 @@ public class LoginFragment extends Fragment implements View.OnClickListener
     public void onClick(View v)
     {
         LoginActivity loginActivity = (LoginActivity) this.getActivity();
-        Log.d("ON CLICK", "GPlus button clicked");
+        Log.d(LOG_TAG, "GPlus button clicked");
 
-        if(v.getId() == R.id.sign_in_button
+        if(v.getId() == mGPlusSignIn.getId()
                 && !loginActivity.getGoogleServices().isConnecting())
         {
-            Log.d("SIGNING IN", "Attempting to sign in to GPlus");
+            Log.d(LOG_TAG, "Attempting to sign in to GPlus");
             loginActivity.setSignInClicked(true);
             loginActivity.resolveSignInError();
+        }
+        else if(v.getId() == mLoginSignUp.getId())
+        {
+            Log.d(LOG_TAG, "Sign up clicked");
+            loginActivity.switchSignUpFragment();
+        }
+        else if(v.getId() == mLoginSignIn.getId())
+        {
+            Log.d(LOG_TAG, "Sign in clicked");
+            loginActivity.signInProcess(mLoginUsername.getText().toString(),
+                    mLoginPassword.getText().toString());
         }
     }
 }

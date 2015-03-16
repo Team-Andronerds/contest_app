@@ -6,28 +6,28 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="150dip"
+        android:layout_height="140dip"
         android:id="@+id/trip_map"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dip"
+        android:layout_height="35dip"
         android:background="@color/status_bar_color">
 
         <TextView
             android:layout_width="0dip"
             android:layout_weight="0.8"
             android:layout_height="match_parent"
-            android:textSize="12sp"
+            android:textSize="16sp"
             android:gravity="center_vertical|center_horizontal"
             android:textColor="@color/white"
-            android:text="Click for more details"/>
+            android:text="Click for details"/>
 
         <ImageView
             android:layout_width="0dip"
             android:layout_weight="0.2"
             android:layout_height="match_parent"
-            android:layout_marginRight="15dip"
+            android:layout_marginRight="10dip"
             android:id="@+id/more_details_image"/>
 
     </LinearLayout>
