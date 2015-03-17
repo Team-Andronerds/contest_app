@@ -15,6 +15,7 @@ import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.data.Vehicle;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.Optional;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
@@ -25,6 +26,13 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class InsuranceVehicleListFragment extends Fragment implements ListView.OnItemClickListener
 {
     @InjectView(R.id.insurance_vehicle_list)ListView mVehicleList;
+
+    @Optional
+    @InjectView(R.id.vehicle_picture)CircleImageView mVehiclePicture;
+    @Optional
+    @InjectView(R.id.vehicle_model_year)TextView mVehicleModelYear;
+    @Optional
+    @InjectView(R.id.vehicle_make)TextView mVehicleMake;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,10 +55,6 @@ public class InsuranceVehicleListFragment extends Fragment implements ListView.O
 
     private class VehicleListAdapter extends ArrayAdapter<Vehicle>
     {
-        @InjectView(R.id.vehicle_picture)CircleImageView mVehiclePicture;
-        @InjectView(R.id.vehicle_model_year)TextView mVehicleModelYear;
-        @InjectView(R.id.vehicle_make)TextView mVehicleMake;
-
         public VehicleListAdapter(Context context, int resource)
         {
             super(context, resource);
