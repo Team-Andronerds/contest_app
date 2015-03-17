@@ -57,7 +57,7 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="Connect an OBD">
+            android:label="Settings">
         </activity>
     </application>
 
