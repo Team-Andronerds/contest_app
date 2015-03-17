@@ -4,10 +4,13 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,50 +46,44 @@ public class AchievementsFragment extends Fragment{
 
 
     @InjectView(R.id.achievements_list_view)CardListView mAchievementsListView;
-    @InjectView(R.id.nonachievements_list_view)CardListView mAchievementsNotEarnedListView;
 
 
     private ArrayList<Card> mAchievementList;
     private CardArrayAdapter mAchievementsAdapter;
-
-    private ArrayList<Card> mAchievementsNotEarnedList;
-    private CardArrayAdapter mAchievementsNotEarnedAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_achievement, container, false);
         ButterKnife.inject(this, view);
-        mAchievementsNotEarnedList = new ArrayList<>();
         mAchievementList = new ArrayList<>();
+        ArrayList<Card>tempAchieveList = new ArrayList<>();
         SharedPreferences userProfilePrefs = view.getContext().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
         List<Achievements> achList = Achievements.find(Achievements.class, "name = ?", userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
         AchievementCard ac;
+        LinearLayout ll;
+        TextView tv;
 
 
         for (Achievements achieve : achList) {
             if (achieve.didAchieve()) {
               mAchievementList.add(new AchievementCard(view.getContext(), achieve));
             }
-            else {
-               achieve.setAchievementImage(R.drawable.ic_no_achievement);
-               ac = new AchievementCard(view.getContext(), achieve);
-               mAchievementsNotEarnedList.add(ac);
+            else if(!achieve.didAchieve()){
+                achieve.setAchievementImage(R.drawable.nav_insurance_gray);
+                ac = new AchievementCard(view.getContext(), achieve);
+                tempAchieveList.add(ac);
             }
         }
 
-        mAchievementsListView.getLayoutParams().height = 370 * mAchievementList.size();
-        mAchievementsNotEarnedListView.getLayoutParams().height = 370 * mAchievementsNotEarnedList.size();
+        mAchievementList.addAll(tempAchieveList);
+        tempAchieveList = null;
 
         mAchievementsAdapter = new CardArrayAdapter(getActivity(),mAchievementList);
         mAchievementsAdapter.setCardListView(mAchievementsListView);
         mAchievementsListView.setAdapter(mAchievementsAdapter);
 
-        mAchievementsNotEarnedAdapter = new CardArrayAdapter(getActivity(),mAchievementsNotEarnedList);
-        mAchievementsNotEarnedAdapter.setCardListView(mAchievementsNotEarnedListView);
-        mAchievementsNotEarnedListView.setAdapter(mAchievementsNotEarnedAdapter);
         mAchievementList = null;
-        mAchievementsNotEarnedList = null;
         return view;
     }
 }

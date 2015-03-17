@@ -36,4 +36,42 @@
 
     </LinearLayout>
 
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dip"
+        android:layout_marginLeft="20dip">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vin #: "
+            android:textSize="12sp">
+        </TextView>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:id="@+id/vinNum">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="20dip">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color: "
+            android:textSize="12sp">
+        </TextView>
+
+        <View
+            android:layout_height="20dip"
+            android:layout_width="200dip"
+            android:id="@+id/Num"
+            android:layout_marginLeft="20dip">
+        </View>
+    </LinearLayout>
+
 </LinearLayout>

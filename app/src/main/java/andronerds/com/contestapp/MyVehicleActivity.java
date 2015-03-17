@@ -38,4 +38,7 @@ public class MyVehicleActivity extends NavDrawerActivity
 
         return mToolbar;
     }
+
+    public Toolbar getToolbar() { return mToolbar;}
+
 }

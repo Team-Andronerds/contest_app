@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
  */
 public class Vehicle extends User {
 
-    private Color color;
+    private String color;
     private Drawable carImage;
     private String make;
     private String model;
@@ -21,7 +21,7 @@ public class Vehicle extends User {
 
     }
 
-    public Vehicle(String make, String model, String vin, String year, Drawable carImage, Color color, String name)
+    public Vehicle(String make, String model, String vin, String year, Drawable carImage, String color, String name)
     {
         this.make = make;
         this.model = model;
@@ -52,7 +52,7 @@ public class Vehicle extends User {
         return this.vin;
     }
 
-    public Color getColor()
+    public String getColor()
     {
         return this.color;
     }

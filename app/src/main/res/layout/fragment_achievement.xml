@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:fillViewport="true">
 
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
     <it.gmariotti.cardslib.library.view.CardListView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:columnWidth="140dip"
         android:numColumns="auto_fit"
         android:verticalSpacing="3dp"
@@ -21,28 +17,7 @@
         android:paddingTop="10dip"
         android:clipToPadding="false"
         android:id="@+id/achievements_list_view">
-    </it.gmariotti.cardslib.library.view.CardListView>
 
-    <View android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:id="@+id/divider"
-        android:background="@color/toolbar_color">
-    </View>
-
-    <it.gmariotti.cardslib.library.view.CardListView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:columnWidth="140dip"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="3dp"
-        android:horizontalSpacing="2dp"
-        android:stretchMode="columnWidth"
-        android:gravity="center"
-        android:paddingTop="10dip"
-        android:clipToPadding="false"
-        android:id="@+id/nonachievements_list_view">
     </it.gmariotti.cardslib.library.view.CardListView>
 
 </LinearLayout>
-
-</ScrollView>

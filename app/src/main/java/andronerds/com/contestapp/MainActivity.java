@@ -61,17 +61,16 @@ public class MainActivity extends NavDrawerActivity
     {
         //Achievements.deleteAll(Achievements.class);
 
+
         SharedPreferences userProfilePrefs = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+        //Achievements.executeQuery("CREATE TABLE IF NOT EXISTS Achievements");
         List<Achievements> achList = Achievements.find(Achievements.class, "name = ?", userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
         List<String> achTitles =  Arrays.asList(getResources().getStringArray(R.array.achievement_title));
-
         if(achList.size() == 0)
         {
             String[] achDesc = getResources().getStringArray(R.array.achievement_description);
             String[] earned = getResources().getStringArray(R.array.achievement_have_earned);
             Achievements ach;
-
-            Log.d("ID CHECK MAIN","ID = " + R.drawable.ic_profile_null);
 
             for(int i = 0; i < achTitles.size(); i++)
             {
