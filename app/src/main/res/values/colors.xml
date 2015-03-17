@@ -12,4 +12,5 @@
     <item name="navDrawerText" type="color">#666666</item>
     <item name="item_selected_text_color" type="color">#4CAF50</item>
     <item name="item_selected_color" type="color">#EEEEEE</item>
+    <item name="non_achievement_color" type="color">#AAAAAA</item>
 </resources>

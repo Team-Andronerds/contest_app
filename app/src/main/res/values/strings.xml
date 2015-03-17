@@ -51,20 +51,38 @@
 
     <string-array name="achievement_description">
         <item name="firstDrive">You Went on Your First Drive</item>
+        <item name="fiveDrives">You Drove Five Times!</item>
         <item name="firstSafeDrive">Drove Safely for the First Time!</item>
         <item name="fiveSafeDrive">Drove Safely 5 Times!</item>
         <item name="tenSafeDrive">Drove Safely 10 Times!</item>
         <item name="twentyFiveSafeDrive">Drove Safely 25 Times!</item>
         <item name="fiftySafeDrive">Drove Safely 50 Times!</item>
+        <item name="google+">You Logged In With Google+</item>
+        <item name="obdConnect">You Connected to Your On Board Device!</item>
     </string-array>
 
     <string-array name="achievement_title">
         <item name="firstDriveTitle">First Drive</item>
+        <item name="fiveDrivesTitle">Five Drives</item>
         <item name="firstSafeDriveTitle">First Safe Drive</item>
         <item name="fiveSafeDriveTitle">Five Safe Drives</item>
         <item name="tenSafeDriveTitle">Ten Safe Drives</item>
         <item name="twentySafeDriveTitle">Twenty Safe Drives</item>
         <item name="fiftySafeDriveTitle">Fifty Safe Drives</item>
+        <item name="loggedInWithGoogle+">Google+</item>
+        <item name="connectedToOBD">Connected to OBD</item>
+    </string-array>
+
+    <string-array name="achievement_have_earned">
+        <item name="hasFirstDriveTitle">true</item>
+        <item name="hasFiveDrives">true</item>
+        <item name="hasFirstSafeDrive">true</item>
+        <item name="hasFiveSafeDrive">false</item>
+        <item name="hasTenSafeDrive">true</item>
+        <item name="hasTwentySafeDrive">false</item>
+        <item name="hasFiftySafeDrive">false</item>
+        <item name="hasGoogle+">true</item>
+        <item name="connectedToOBD">true</item>
     </string-array>
     
     <string-array name="settings_menu_rows">
