@@ -1,6 +1,7 @@
 package andronerds.com.contestapp.fragments;
 
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,11 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.List;
+
 import andronerds.com.contestapp.R;
+import andronerds.com.contestapp.data.Vehicle;
+import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -36,7 +41,12 @@ public class MyVehicleFragment extends Fragment
             .fit()
             .into(mVehicleImage);
 
-        mVehicleInfo.setText("Kia Sportage 2003");
+        /*SharedPreferences userProfilePrefs = view.getContext().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+        List<Vehicle> myVehicles = Vehicle.find(Vehicle.class, "name = ?", userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
+
+        if(myVehicles.size() == 0) {
+            mVehicleInfo.setText("Kia Sportage 2003");
+        }*/
         return view;
     }
 
