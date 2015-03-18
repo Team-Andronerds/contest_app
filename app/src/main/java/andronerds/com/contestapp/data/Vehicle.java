@@ -3,10 +3,12 @@ package andronerds.com.contestapp.data;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 
+import java.io.Serializable;
+
 /**
  * Created by Chris on 3/16/2015.
  */
-public class Vehicle extends User {
+public class Vehicle extends User implements Serializable {
 
     private Color color;
     private Drawable carImage;
@@ -14,6 +16,7 @@ public class Vehicle extends User {
     private String model;
     private String vin;
     private String year;
+    private int imageResource;
 
 
     public Vehicle()
@@ -57,4 +60,48 @@ public class Vehicle extends User {
         return this.color;
     }
 
+    public int getImageResource()
+    {
+        return imageResource;
+    }
+
+    public Drawable getCarImage()
+    {
+        return carImage;
+    }
+
+    public void setColor(Color color)
+    {
+        this.color = color;
+    }
+
+    public void setCarImage(Drawable carImage)
+    {
+        this.carImage = carImage;
+    }
+
+    public void setMake(String make)
+    {
+        this.make = make;
+    }
+
+    public void setModel(String model)
+    {
+        this.model = model;
+    }
+
+    public void setVin(String vin)
+    {
+        this.vin = vin;
+    }
+
+    public void setYear(String year)
+    {
+        this.year = year;
+    }
+
+    public void setImageResource(int imageResource)
+    {
+        this.imageResource = imageResource;
+    }
 }

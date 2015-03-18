@@ -4,4 +4,46 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dip"
+        android:id="@+id/detail_vehicle_picture"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dip"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dip"
+            android:textSize="18sp"
+            android:text="2003"
+            android:id="@+id/detail_vehicle_year"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="Sportage"
+            android:id="@+id/detail_vehicle_model"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dip"
+        android:textSize="24sp"
+        android:text="Kia"
+        android:id="@+id/detail_vehicle_make"/>
+
 </LinearLayout>

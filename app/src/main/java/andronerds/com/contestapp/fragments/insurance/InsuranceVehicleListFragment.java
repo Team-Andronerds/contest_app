@@ -1,22 +1,25 @@
 package andronerds.com.contestapp.fragments.insurance;
 
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.data.Vehicle;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import butterknife.Optional;
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
@@ -27,13 +30,6 @@ public class InsuranceVehicleListFragment extends Fragment implements ListView.O
 {
     @InjectView(R.id.insurance_vehicle_list)ListView mVehicleList;
 
-    @Optional
-    @InjectView(R.id.vehicle_picture)CircleImageView mVehiclePicture;
-    @Optional
-    @InjectView(R.id.vehicle_model_year)TextView mVehicleModelYear;
-    @Optional
-    @InjectView(R.id.vehicle_make)TextView mVehicleMake;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
@@ -41,7 +37,15 @@ public class InsuranceVehicleListFragment extends Fragment implements ListView.O
         View view = inflater.inflate(R.layout.fragment_vehicle_list, container, false);
         ButterKnife.inject(this, view);
 
+        Vehicle newVehicle = new Vehicle();
+        newVehicle.setYear("2003");
+        newVehicle.setMake("Kia");
+        newVehicle.setModel("Sportage");
+        newVehicle.setCarImage(getResources().getDrawable(R.drawable.nav_vehicle_gray));
+        newVehicle.setImageResource(R.drawable.nav_vehicle_gray);
+
         VehicleListAdapter vehicleListAdapter = new VehicleListAdapter(getActivity(), R.layout.row_vehicle_info);
+        vehicleListAdapter.add(newVehicle);
 
         mVehicleList.setAdapter(vehicleListAdapter);
         mVehicleList.setOnItemClickListener(this);
@@ -51,6 +55,16 @@ public class InsuranceVehicleListFragment extends Fragment implements ListView.O
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
+        Vehicle passVehicle = (Vehicle) parent.getItemAtPosition(position);
+        Bundle args = new Bundle();
+        args.putSerializable(Intent.EXTRA_TEXT, passVehicle);
+
+        FragmentTransaction fragmentTransaction = getActivity().getFragmentManager().beginTransaction();;
+        InsuranceInfoFragment insuranceInfoFragment = new InsuranceInfoFragment();
+        insuranceInfoFragment.setArguments(args);
+        fragmentTransaction.replace(R.id.insurance_info_fragment_container, insuranceInfoFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     private class VehicleListAdapter extends ArrayAdapter<Vehicle>
@@ -61,32 +75,26 @@ public class InsuranceVehicleListFragment extends Fragment implements ListView.O
         }
 
         @Override
-        public int getCount()
-        {
-            return 0;
-        }
-
-        @Override
-        public Vehicle getItem(int position)
-        {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position)
-        {
-            return 0;
-        }
-
-        @Override
         public View getView(int position, View convertView, ViewGroup parent)
         {
-            ButterKnife.inject(this, convertView);
             Vehicle vehicle = getItem(position);
-            mVehicleModelYear.setText(vehicle.getModel() + " " + vehicle.getYear());
-            mVehicleMake.setText(vehicle.getMake());
-            mVehiclePicture.setImageResource(R.drawable.nav_home_gray);
-            return convertView;
+
+            LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View row = inflater.inflate(R.layout.row_vehicle_info, null);
+
+            TextView vehicleModelYear = (TextView) row.findViewById(R.id.vehicle_model_year);
+            TextView vehicleMake = (TextView) row.findViewById(R.id.vehicle_make);
+            ImageView vehiclePicture = (ImageView) row.findViewById(R.id.vehicle_picture);
+
+            vehicleModelYear.setText(vehicle.getYear() + " " + vehicle.getModel());
+            vehicleMake.setText(vehicle.getMake());
+
+            Picasso.with(getContext())
+                    .load(vehicle.getImageResource())
+                    .into(vehiclePicture);
+
+            //vehiclePicture.setImageResource(R.drawable.nav_vehicle_gray);
+            return row;
         }
     }
 }

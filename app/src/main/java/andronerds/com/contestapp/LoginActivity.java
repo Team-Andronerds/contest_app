@@ -150,7 +150,6 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         LoginFragment loginFragment = new LoginFragment();
         fragmentTransaction.replace(R.id.login_fragment_container, loginFragment);
-        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
         if(!mIntentInProgress)
@@ -273,6 +272,12 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
             user.setPassword(password);
             user.setProfileImage(Integer.toString(R.drawable.ic_profile_null));
             user.save();
+
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            LoginFragment loginFragment = new LoginFragment();
+            fragmentTransaction.replace(R.id.login_fragment_container, loginFragment);
+            fragmentTransaction.commit();
         }
         else
         {
