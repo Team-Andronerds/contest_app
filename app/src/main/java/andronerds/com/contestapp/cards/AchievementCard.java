@@ -74,6 +74,8 @@ public class AchievementCard extends Card {
         {
             ll.setBackgroundColor(view.getResources().getColor(R.color.non_achievement_color));
             desc.setText("");
+            Log.i("fuck","fuck");
+
         }
 
     }
