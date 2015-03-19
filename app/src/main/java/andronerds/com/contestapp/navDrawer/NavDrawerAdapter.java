@@ -9,8 +9,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
+
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;

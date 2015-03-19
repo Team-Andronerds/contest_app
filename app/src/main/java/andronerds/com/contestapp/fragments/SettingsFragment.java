@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import andronerds.com.contestapp.LoginActivity;
+import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
+import andronerds.com.contestapp.OBD.RefreshThread;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.adapters.SettingsListAdapter;
 import andronerds.com.contestapp.utils.IdentityStrings;
@@ -29,8 +31,9 @@ public class SettingsFragment extends Fragment implements View.OnClickListener
     private int mNumRows;
     private ArrayList<String> mSettingsRows;
 
-    @InjectView(R.id.sign_out_button)Button mSignOutButton;
     @InjectView(R.id.settings_list)ListView mSettingsList;
+    @InjectView(R.id.sign_out_button)Button mSignOutButton;
+    @InjectView(R.id.connect_button)Button mConnectButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,8 +44,13 @@ public class SettingsFragment extends Fragment implements View.OnClickListener
         mSettingsRows = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.settings_menu_rows)));
 
         SettingsListAdapter listAdapter = new SettingsListAdapter(this.getActivity(), R.layout.adapter_settings, mSettingsRows);
-        mSignOutButton.setOnClickListener(this);
         mSettingsList.setAdapter(listAdapter);
+        mSignOutButton.setOnClickListener(this);
+        if(OnBoardDiagnostic.isActive()){
+            mConnectButton.setText("Disconnect from OBD");
+            mConnectButton.setBackgroundColor(0xFFC0392B);
+        }
+        mConnectButton.setOnClickListener(this);
         return view;
     }
 
@@ -59,6 +67,23 @@ public class SettingsFragment extends Fragment implements View.OnClickListener
                 intent.putExtras(bundle);
                 startActivity(intent);
                 getActivity().finish();
+                break;
+            case R.id.connect_button:
+
+                if(OnBoardDiagnostic.isActive()){
+                    OnBoardDiagnostic.disconnect();
+                    mConnectButton.setText("Connect to OBD");
+                    mConnectButton.setBackgroundColor(0xFF436EEE);
+                    //OnBoardDiagnostic.refresh((NavDrawerActivity)this.getActivity());
+                    /*
+                    Intent i = this.getActivity().getBaseContext().getPackageManager()
+                            .getLaunchIntentForPackage( this.getActivity().getBaseContext().getPackageName() );
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(i);
+                    */
+                }else {
+                    new RefreshThread(this).execute(this);
+                }
                 break;
         }
     }

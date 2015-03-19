@@ -3,6 +3,7 @@
 
     <string name="app_name">ContestApp</string>
     <string name="hello_world">Hello world!</string>
+    <string name="obd_select">Select Your OBD</string>
     <string name="action_settings">Settings</string>
     <string name="drive_current_points">Current Points</string>
     <string name="drive_points_placeholder">40 / 100</string>
@@ -93,5 +94,6 @@
     <string name="drawer_closed">drawer_closed</string>
 
     <string name="title_activity_nav_drawer">NavDrawerActivity1</string>
+    <string name="loading">Loading...</string>
 
 </resources>
