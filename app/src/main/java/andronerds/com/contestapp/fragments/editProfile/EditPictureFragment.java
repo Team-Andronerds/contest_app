@@ -1,6 +1,7 @@
 package andronerds.com.contestapp.fragments.editProfile;
 
 import android.app.Fragment;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
@@ -21,8 +22,6 @@ import android.widget.Button;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.List;
-
-import javax.xml.transform.Result;
 
 import andronerds.com.contestapp.MyVehicleActivity;
 import andronerds.com.contestapp.R;
@@ -93,9 +92,13 @@ public class EditPictureFragment extends Fragment implements View.OnClickListene
     }
 
    private String saveToInternalStorage(Bitmap bitmapImage){
+
+
+
         SharedPreferences shPref = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
         String path = shPref.getString(IdentityStrings.USER_PROFILE_PIC,"");
         File tempDir = new File(path);
+
 
         bitmapImage = Bitmap.createScaledBitmap(bitmapImage,bitmapImage.getWidth()/2,bitmapImage.getHeight()/2,false);
 
@@ -118,9 +121,6 @@ public class EditPictureFragment extends Fragment implements View.OnClickListene
         catch (Exception e) {
 
         }
-
-
-
 
         ContextWrapper cw = new ContextWrapper(getActivity().getApplicationContext());
         // path to /data/data/yourapp/app_data/imageDir
@@ -196,7 +196,18 @@ public class EditPictureFragment extends Fragment implements View.OnClickListene
 
     private class PictureThread extends AsyncTask<Bitmap,Void,Void> {
 
+        private ProgressDialog dialog;
+
+        protected void onPreExecute()
+        {
+            dialog = new ProgressDialog(getActivity());
+            dialog.setMessage("Loading Picture");
+            dialog.setCancelable(false);
+            dialog.show();
+        }
+
         protected Void doInBackground(Bitmap...bitmapImage) {
+            //Looper.prepare();
             SharedPreferences shPref = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
 
             String path = shPref.getString(IdentityStrings.USER_PROFILE_PIC, "");
@@ -253,6 +264,7 @@ public class EditPictureFragment extends Fragment implements View.OnClickListene
             List<User> user = User.find(User.class,"name = ?",shPref.getString(IdentityStrings.USER_NAME,""));
             user.get(0).setProfileImage(shPref.getString(IdentityStrings.USER_PROFILE_PIC, ""));
             user.get(0).save();
+            dialog.dismiss();
             getActivity().onBackPressed();
         }
     }
