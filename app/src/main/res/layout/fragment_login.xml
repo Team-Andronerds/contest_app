@@ -50,6 +50,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dip"
             android:hint="username"
+            android:fontFamily="sans-serif"
             android:id="@+id/login_username"/>
 
         <EditText
@@ -58,6 +59,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dip"
             android:hint="password"
+            android:fontFamily="sans-serif"
             android:password="true"
             android:id="@+id/login_password"/>
         

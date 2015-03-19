@@ -62,6 +62,7 @@ public class InsuranceVehicleListFragment extends Fragment implements ListView.O
         FragmentTransaction fragmentTransaction = getActivity().getFragmentManager().beginTransaction();;
         InsuranceInfoFragment insuranceInfoFragment = new InsuranceInfoFragment();
         insuranceInfoFragment.setArguments(args);
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.replace(R.id.insurance_info_fragment_container, insuranceInfoFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

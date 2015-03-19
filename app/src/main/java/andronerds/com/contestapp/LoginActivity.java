@@ -80,6 +80,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
                     if (signOutStr.equals(IdentityStrings.BUNDLE_SIGN_OUT))
                     {
                         signOut = true;
+                        removeProfileFromSharedPrefs();
                     } else
                     {
                         signOut = false;
@@ -91,7 +92,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         SharedPreferences settings = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
         if(!settings.getAll().isEmpty() && !signOut)
         {
-            if(!settings.getBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, true))
+            if(settings.getBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, true) == false)
             {
                 moveToHomeActivity();
             }
@@ -270,6 +271,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         SignUpFragment signUpFragment = new SignUpFragment();
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.replace(R.id.login_fragment_container, signUpFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

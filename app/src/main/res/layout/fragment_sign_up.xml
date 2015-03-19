@@ -41,6 +41,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dip"
             android:hint="e-mail"
+            android:fontFamily="sans-serif"
             android:inputType="textEmailAddress"
             android:id="@+id/sign_up_email"/>
 
@@ -50,6 +51,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dip"
             android:hint="username"
+            android:fontFamily="sans-serif"
             android:id="@+id/sign_up_username"/>
 
         <EditText
@@ -58,6 +60,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dip"
             android:hint="password"
+            android:fontFamily="sans-serif"
             android:password="true"
             android:inputType="textPassword"
             android:id="@+id/sign_up_password"/>
@@ -69,6 +72,7 @@
             android:layout_marginTop="10dip"
             android:hint="confirm password"
             android:password="true"
+            android:fontFamily="sans-serif"
             android:inputType="textPassword"
             android:id="@+id/sign_up_confirm_password"/>
 
