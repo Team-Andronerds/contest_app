@@ -150,18 +150,9 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                     intent = new Intent(mContext, DriveToWinActivity.class);
                     intent.putExtra(Intent.EXTRA_TEXT, ACTION_ACHIEVEMENTS);
                     break;
-                case ACTION_LEADERBOARDS:
-                    Log.d("ACTIVITY_LEADERBOARDS", "Drive to win activity initiated.");
-                    intent = new Intent(mContext, DriveToWinActivity.class);
-                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_LEADERBOARDS);
-                    break;
                 case ACTION_STATS:
                     intent = new Intent(mContext, DriveToWinActivity.class);
                     intent.putExtra(Intent.EXTRA_TEXT, ACTION_STATS);
-                    break;
-                case ACTION_MILESTONES:
-                    intent = new Intent(mContext, DriveToWinActivity.class);
-                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_MILESTONES);
                     break;
                 case ACTION_MY_TRIPS:
                     Log.d("ACTIVITY_TRIPS", "My trips activity initiated.");
@@ -241,18 +232,6 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 else
                     imageResource = R.drawable.nav_stats_gray;
                 break;
-            case ACTION_LEADERBOARDS:
-                if(mCurrentSelectionIndex == position)
-                    imageResource = R.drawable.nav_leaderboards_green;
-                else
-                    imageResource = R.drawable.nav_leaderboards_gray;
-                break;
-            case ACTION_MILESTONES:
-                if(mCurrentSelectionIndex == position)
-                    imageResource = R.drawable.nav_milestone_green;
-                else
-                    imageResource = R.drawable.nav_milestone_gray;
-                break;
             case ACTION_MY_TRIPS:
                 if(mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_trips_green;
@@ -263,7 +242,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 if (mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_profile_green;
                 else
-                    imageResource = R.drawable.nav_vehicle_gray;
+                    imageResource = R.drawable.nav_profile_gray;
                 break;
             case ACTION_INSURANCE_INFO:
                 if(mCurrentSelectionIndex == position)

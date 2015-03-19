@@ -1,6 +1,5 @@
 package andronerds.com.contestapp.data;
 
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 
 import java.io.Serializable;
@@ -70,7 +69,7 @@ public class Vehicle extends User implements Serializable {
         return carImage;
     }
 
-    public void setColor(Color color)
+    public void setColor(String color)
     {
         this.color = color;
     }

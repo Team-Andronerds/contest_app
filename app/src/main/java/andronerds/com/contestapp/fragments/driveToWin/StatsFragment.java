@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import andronerds.com.contestapp.R;
+import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import andronerds.com.contestapp.views.ProgressWheel;
 import butterknife.ButterKnife;
@@ -65,7 +66,7 @@ public class StatsFragment extends Fragment
         mPointsChart.setProgress(circlePercent);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
-        boolean usingGooglePlus = sharedPreferences.getBoolean(IdentityStrings.USER_GPLUS, false);
+        boolean usingGooglePlus = sharedPreferences.getBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, false);
 
         int profilePicInt = 0;
         String profilePicString = "";

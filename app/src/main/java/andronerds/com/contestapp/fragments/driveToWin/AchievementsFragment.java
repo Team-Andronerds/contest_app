@@ -1,13 +1,14 @@
 package andronerds.com.contestapp.fragments.driveToWin;
 
 import android.content.SharedPreferences;
-import android.graphics.drawable.ColorDrawable;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +45,6 @@ public class AchievementsFragment extends Fragment{
 
     @InjectView(R.id.achievements_list_view)CardListView mAchievementsListView;
 
-
     private ArrayList<Card> mAchievementList;
     private CardArrayAdapter mAchievementsAdapter;
 
@@ -75,7 +75,6 @@ public class AchievementsFragment extends Fragment{
 
         int cardSize = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 125, getResources().getDisplayMetrics()));
         mAchievementsListView.getLayoutParams().height = cardSize * mAchievementList.size();
-        mAchievementsNotEarnedListView.getLayoutParams().height = cardSize * mAchievementsNotEarnedList.size();
         mAchievementList.addAll(tempAchieveList);
         tempAchieveList = null;
 

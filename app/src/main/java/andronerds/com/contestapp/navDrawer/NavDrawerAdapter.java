@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import andronerds.com.contestapp.R;
-import andronerds.com.contestapp.pictureUtils.PictureUtil;
+import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import de.hdodenhof.circleimageview.CircleImageView;
 /**
@@ -25,6 +25,7 @@ public class NavDrawerAdapter extends BaseAdapter {
     private SharedPreferences userProfilePrefs;
     private String[] menuDrawerItemTypes;
     private int mCurrentlySelected;
+    private boolean usingGooglePlus;
 
     public NavDrawerAdapter() {}
 
@@ -47,6 +48,7 @@ public class NavDrawerAdapter extends BaseAdapter {
             TextView name = (TextView) v.findViewById(R.id.name);
             CircleImageView profilePic = (CircleImageView) v.findViewById(R.id.profile_pic);
             userProfilePrefs = navDrawerContext.getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+            usingGooglePlus = userProfilePrefs.getBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, false);
 
             name.setText(userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
             int profilePicInt = 0;
@@ -84,7 +86,7 @@ public class NavDrawerAdapter extends BaseAdapter {
             }
             profilePic.setBorderColor(navDrawerContext.getResources().getColor(R.color.black));
             profilePic.setBorderWidth(1);
-//profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));
+        //profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));
         } else {
             if (this.menuDrawerItemTypes[x].equals("Activity")) {
                 v = inflater.inflate(R.layout.drawer_list_item, null, false);

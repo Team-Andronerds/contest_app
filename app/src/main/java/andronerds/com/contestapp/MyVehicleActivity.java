@@ -7,18 +7,15 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 
 import andronerds.com.contestapp.fragments.MyVehicleFragment;
 import andronerds.com.contestapp.fragments.editProfile.EditPictureFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
-import andronerds.com.contestapp.pictureUtils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import andronerds.com.contestapp.utils.IntUtils;
 import butterknife.ButterKnife;

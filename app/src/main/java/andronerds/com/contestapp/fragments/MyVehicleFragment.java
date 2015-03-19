@@ -1,31 +1,24 @@
 package andronerds.com.contestapp.fragments;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import andronerds.com.contestapp.MyVehicleActivity;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.data.Vehicle;
-import andronerds.com.contestapp.pictureUtils.PictureUtil;
+import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -62,7 +55,7 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
         String profileName = sharedPreferences.getString(IdentityStrings.USER_NAME,"");
         String profilePic = sharedPreferences.getString(IdentityStrings.USER_PROFILE_PIC,"");
         String profileEmail = sharedPreferences.getString(IdentityStrings.USER_EMAIL,"");
-        boolean usingGooglePlus = sharedPreferences.getBoolean(IdentityStrings.USER_GPLUS,false);
+        boolean usingGooglePlus = sharedPreferences.getBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS,false);
         email = profileEmail;
 
         Log.d("Pic Test", profilePic);

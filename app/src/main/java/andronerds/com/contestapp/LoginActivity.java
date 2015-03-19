@@ -9,6 +9,7 @@ import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.CommonStatusCodes;
@@ -21,9 +22,12 @@ import com.google.android.gms.plus.model.people.PersonBuffer;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.HashMap;
+import java.util.List;
 
+import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.fragments.LoadingFragment;
 import andronerds.com.contestapp.fragments.LoginFragment;
+import andronerds.com.contestapp.fragments.SignUpFragment;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 
