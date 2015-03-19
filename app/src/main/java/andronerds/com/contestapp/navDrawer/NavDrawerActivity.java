@@ -1,5 +1,4 @@
 package andronerds.com.contestapp.navDrawer;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import com.readystatesoftware.systembartint.SystemBarTintManager;
-
 import java.util.ArrayList;
-
 import andronerds.com.contestapp.DriveToWinActivity;
 import andronerds.com.contestapp.EmergencyActivity;
 import andronerds.com.contestapp.InsuranceInfoActivity;
@@ -27,56 +23,48 @@ import andronerds.com.contestapp.MyVehicleActivity;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.SettingsActivity;
 import butterknife.InjectView;
-
 /**
  * @author Chris Portokalis
  * @version ContestApp v0.1A
  * @since 2/19/15
  */
-public abstract class NavDrawerActivity extends ActionBarActivity
-{
+public abstract class NavDrawerActivity extends ActionBarActivity {
     public final String ACTION_HOME = "Home";
     public final String ACTION_STATS = "Stats";
-    public final String ACTION_LEADERBOARDS = "Leaderboards";
-    public final String ACTION_MILESTONES = "Milestones";
     public final String ACTION_MY_TRIPS = "Trips";
-    public final String ACTION_MY_VEHICLE = "Vehicle";
+    public final String ACTION_MY_VEHICLE = "Profile";
     public final String ACTION_INSURANCE_INFO = "Insurance Info";
     public final String ACTION_EMERGENCY = "Emergency";
     public final String ACTION_SETTINGS = "Settings";
     public final String ACTION_ACHIEVEMENTS = "Achievements";
-
     private ActionBarDrawerToggle mDrawerToggle;
     private Toolbar mToolbar;
     private CharSequence mTitle;
     private ArrayList<NavDrawerItem> mNavDrawerItems;
     private Context mContext = this;
     private NavDrawerAdapter mNavDrawerAdapter;
-
     private static int mCurrentSelectionIndex = 1;
 
     abstract protected Toolbar init();
 
-    @InjectView(R.id.nav_drawer_layout)DrawerLayout mDrawerLayout;
-    @InjectView(R.id.left_drawer)ListView mDrawerList;
+    @InjectView(R.id.nav_drawer_layout)
+    DrawerLayout mDrawerLayout;
+    @InjectView(R.id.left_drawer)
+    ListView mDrawerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        /* Init sets content view and
-        other specifics based on activity implementation */
+/* Init sets content view and
+other specifics based on activity implementation */
         mToolbar = init();
-
         mTitle = mToolbar.getTitle();
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         mNavDrawerItems = getNavDrawerItems();
         mNavDrawerAdapter = new NavDrawerAdapter(mNavDrawerItems, this, mCurrentSelectionIndex);
         mDrawerList.setAdapter(mNavDrawerAdapter);
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
         mDrawerToggle = new ActionBarDrawerToggle(
                 this,
                 mDrawerLayout,
@@ -84,7 +72,6 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 R.string.drawer_open,
                 R.string.drawer_closed
         ) {
-
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
                 getSupportActionBar().setTitle(mTitle);
@@ -97,36 +84,33 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 supportInvalidateOptionsMenu();
             }
         };
-
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
-
         SystemBarTintManager tintManager = new SystemBarTintManager(this);
         tintManager.setStatusBarTintColor(this.getResources().getColor(R.color.status_bar_color));
         tintManager.setStatusBarTintEnabled(true);
-
-        //mDrawerList.setItemChecked(this.mCurrentSelectionIndex, true);
+//mDrawerList.setItemChecked(this.mCurrentSelectionIndex, true);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-    //Inflate the menu; this adds items to the action bar if it is present.
+//Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_nav_drawer, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+// Handle action bar item clicks here. The action bar will
+// automatically handle clicks on the Home/Up button, so long
+// as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
-        switch(id) {
+//noinspection SimplifiableIfStatement
+        switch (id) {
             case R.id.action_settings:
                 Log.d("MENU", "Action settings clicked");
                 break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -134,15 +118,13 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         @Override
         public void onItemClick(AdapterView parent, View view, int position, long id) {
             Log.i("sel", "onClick");
-            //drawerItemLayout.setBackgroundColor(getResources().getColor(R.color.background_material_light));
+//drawerItemLayout.setBackgroundColor(getResources().getColor(R.color.background_material_light));
             mDrawerLayout.closeDrawer(mDrawerList);
             mCurrentSelectionIndex = position;
-            //mDrawerList.setSelected(true);
-
+//mDrawerList.setSelected(true);
             Intent intent = null;
             Log.d("NAV DRAWER ITEM POS", mNavDrawerItems.get(position).getMenuItemName());
-
-            switch(mNavDrawerItems.get(position).getMenuItemName()) {
+            switch (mNavDrawerItems.get(position).getMenuItemName()) {
                 case ACTION_HOME:
                     Log.d("ACTIVITY_HOME", "Home activity initiated.");
                     intent = new Intent(mContext, MainActivity.class);
@@ -152,18 +134,9 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                     intent = new Intent(mContext, DriveToWinActivity.class);
                     intent.putExtra(Intent.EXTRA_TEXT, ACTION_ACHIEVEMENTS);
                     break;
-                case ACTION_LEADERBOARDS:
-                    Log.d("ACTIVITY_LEADERBOARDS", "Drive to win activity initiated.");
-                    intent = new Intent(mContext, DriveToWinActivity.class);
-                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_LEADERBOARDS);
-                    break;
                 case ACTION_STATS:
                     intent = new Intent(mContext, DriveToWinActivity.class);
                     intent.putExtra(Intent.EXTRA_TEXT, ACTION_STATS);
-                    break;
-                case ACTION_MILESTONES:
-                    intent = new Intent(mContext, DriveToWinActivity.class);
-                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_MILESTONES);
                     break;
                 case ACTION_MY_TRIPS:
                     Log.d("ACTIVITY_TRIPS", "My trips activity initiated.");
@@ -190,9 +163,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 default:
                     break;
             }
-
-            if(intent != null)
-            {
+            if (intent != null) {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
                 finish();
@@ -200,19 +171,15 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         }
     }
 
-    private ArrayList<NavDrawerItem> getNavDrawerItems()
-    {
+    private ArrayList<NavDrawerItem> getNavDrawerItems() {
         String[] drawerTitles = getResources().getStringArray(R.array.nav_drawer_titles);
         ArrayList<NavDrawerItem> aList = new ArrayList<NavDrawerItem>();
         int imageResource = 0;
         NavDrawerItem navItem = null;
-        for(int i = 0; i < drawerTitles.length; i++ )
-        {
+        for (int i = 0; i < drawerTitles.length; i++) {
             navItem = new NavDrawerItem(drawerTitles[i]);
             imageResource = setImageResource(i, drawerTitles);
-
-            if(imageResource != 0)
-            {
+            if (imageResource != 0) {
                 navItem.setMenuIcon(imageResource);
             }
             aList.add(navItem);
@@ -220,83 +187,65 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         return aList;
     }
 
-    public int setImageResource(int position, String[] drawerTitles)
-    {
+    public int setImageResource(int position, String[] drawerTitles) {
         int imageResource = 0;
-        switch(drawerTitles[position])
-        {
+        switch (drawerTitles[position]) {
             case ACTION_HOME:
-                if(mCurrentSelectionIndex == position)
+                if (mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_home_green;
                 else
                     imageResource = R.drawable.nav_home_gray;
                 break;
             case ACTION_ACHIEVEMENTS:
-                if(mCurrentSelectionIndex == position)
+                if (mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_achievements_green;
                 else
                     imageResource = R.drawable.nav_achievements_gray;
                 break;
             case ACTION_STATS:
-                if(mCurrentSelectionIndex == position)
+                if (mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_stats_green;
                 else
                     imageResource = R.drawable.nav_stats_gray;
                 break;
-            case ACTION_LEADERBOARDS:
-                if(mCurrentSelectionIndex == position)
-                    imageResource = R.drawable.nav_leaderboards_green;
-                else
-                    imageResource = R.drawable.nav_leaderboards_gray;
-                break;
-            case ACTION_MILESTONES:
-                if(mCurrentSelectionIndex == position)
-                    imageResource = R.drawable.nav_milestone_green;
-                else
-                    imageResource = R.drawable.nav_milestone_gray;
-                break;
             case ACTION_MY_TRIPS:
-                if(mCurrentSelectionIndex == position)
+                if (mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_trips_green;
                 else
                     imageResource = R.drawable.nav_trips_gray;
                 break;
             case ACTION_MY_VEHICLE:
-                if(mCurrentSelectionIndex == position)
-                    imageResource = R.drawable.nav_vehicle_green;
+                if (mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_profile_green;
                 else
-                    imageResource = R.drawable.nav_vehicle_gray;
+                    imageResource = R.drawable.nav_profile_gray;
                 break;
             case ACTION_INSURANCE_INFO:
-                if(mCurrentSelectionIndex == position)
+                if (mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_insurance_green;
                 else
                     imageResource = R.drawable.nav_insurance_gray;
                 break;
             case ACTION_EMERGENCY:
-                if(mCurrentSelectionIndex == position)
+                if (mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_emergency_green;
                 else
                     imageResource = R.drawable.nav_emergency_gray;
                 break;
             case ACTION_SETTINGS:
-                if(mCurrentSelectionIndex == position)
+                if (mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_settings_green;
                 else
                     imageResource = R.drawable.nav_settings_gray;
                 break;
         }
-
         return imageResource;
     }
 
-    public void setSelectedDrawerItem(String title)
-    {
+    public void setSelectedDrawerItem(String title) {
         Log.d("SELECT DRAWER ITEM", "setSelected... being called " + title);
-        for(int i = 0; i < mNavDrawerItems.size(); i++)
-        {
-            if(mNavDrawerItems.get(i).getMenuItemName().equals(title))
-            {
+        for (int i = 0; i < mNavDrawerItems.size(); i++) {
+            if (mNavDrawerItems.get(i).getMenuItemName().equals(title)) {
                 Log.d("TITLE PAGE", title + " index " + i);
                 mCurrentSelectionIndex = i;
                 break;
@@ -308,8 +257,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         mNavDrawerAdapter.notifyDataSetChanged();
     }
 
-    public void setNavDrawerTitle(String title)
-    {
+    public void setNavDrawerTitle(String title) {
         this.mTitle = title;
     }
 }

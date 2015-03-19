@@ -15,6 +15,12 @@ public class User extends SugarRecord<User>
     private String hashedPassword;
     private String salt;
 
+    /*
+    This is for adding in a default user only.
+    Make sure to hash all real user passwords.
+    */
+    private String password;
+
     public User()
     {
 
@@ -53,5 +59,40 @@ public class User extends SugarRecord<User>
     public void setSalt(String salt)
     {
         this.salt = salt;
+    }
+
+    public void setPassword(String password)
+    {
+        this.password = password;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public String getEmail()
+    {
+        return email;
+    }
+
+    public String getProfileImage()
+    {
+        return profileImage;
+    }
+
+    public String getHashedPassword()
+    {
+        return hashedPassword;
+    }
+
+    public String getSalt()
+    {
+        return salt;
+    }
+
+    public String getPassword()
+    {
+        return password;
     }
 }

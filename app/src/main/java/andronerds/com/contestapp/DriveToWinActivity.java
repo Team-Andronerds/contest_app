@@ -7,8 +7,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 
 import andronerds.com.contestapp.fragments.driveToWin.AchievementsFragment;
-import andronerds.com.contestapp.fragments.driveToWin.LeaderboardsFragment;
-import andronerds.com.contestapp.fragments.driveToWin.MilestonesFragment;
 import andronerds.com.contestapp.fragments.driveToWin.StatsFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
 import butterknife.ButterKnife;
@@ -22,11 +20,8 @@ import butterknife.InjectView;
 public class DriveToWinActivity extends NavDrawerActivity implements ViewPager.OnPageChangeListener
 {
     private final int POSITION_STATS = 0;
-    private final int POSITION_LEADERBOARDS = 1;
-    private final int POSITION_ACHIEVEMENTS = 2;
-    private final int POSITION_MILESTONES = 3;
+    private final int POSITION_ACHIEVEMENTS = 1;
 
-    private CharSequence mTitle = "Drive To Win";
     private DrivePagerAdapter adapterViewPager;
     private int mInitialPosition;
 
@@ -39,15 +34,7 @@ public class DriveToWinActivity extends NavDrawerActivity implements ViewPager.O
         setContentView(R.layout.activity_drive_to_win);
         ButterKnife.inject(this);
 
-        /*
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        DriveToWinFragment driveFragment = new DriveToWinFragment();
-        fragmentTransaction.add(R.id.drive_to_win_fragment_container, driveFragment);
-        fragmentTransaction.commit();
-        */
-
-       String startFrag = getIntent().getExtras().getString(Intent.EXTRA_TEXT);
+        String startFrag = getIntent().getExtras().getString(Intent.EXTRA_TEXT);
         if(startFrag != null)
         {
             switch(startFrag)
@@ -55,14 +42,8 @@ public class DriveToWinActivity extends NavDrawerActivity implements ViewPager.O
                 case ACTION_STATS:
                     mInitialPosition = POSITION_STATS;
                     break;
-                case ACTION_LEADERBOARDS:
-                    mInitialPosition = POSITION_LEADERBOARDS;
-                    break;
                 case ACTION_ACHIEVEMENTS:
                     mInitialPosition = POSITION_ACHIEVEMENTS;
-                    break;
-                case ACTION_MILESTONES:
-                    mInitialPosition = POSITION_MILESTONES;
                     break;
                 default:
                     mInitialPosition = POSITION_STATS;
@@ -116,12 +97,8 @@ public class DriveToWinActivity extends NavDrawerActivity implements ViewPager.O
             {
                 case POSITION_STATS:
                     return StatsFragment.newInstance(POSITION_STATS, ACTION_STATS);
-                case POSITION_LEADERBOARDS:
-                    return LeaderboardsFragment.newInstance(POSITION_LEADERBOARDS, ACTION_LEADERBOARDS);
                 case POSITION_ACHIEVEMENTS:
                     return AchievementsFragment.newInstance(POSITION_ACHIEVEMENTS, ACTION_ACHIEVEMENTS);
-                case POSITION_MILESTONES:
-                    return MilestonesFragment.newInstance(POSITION_MILESTONES, ACTION_MILESTONES);
             }
             return null;
         }
@@ -129,7 +106,7 @@ public class DriveToWinActivity extends NavDrawerActivity implements ViewPager.O
         @Override
         public int getCount()
         {
-            return 4;
+            return 2;
         }
 
         @Override
@@ -138,12 +115,8 @@ public class DriveToWinActivity extends NavDrawerActivity implements ViewPager.O
             {
                 case POSITION_STATS:
                     return ACTION_STATS;
-                case POSITION_LEADERBOARDS:
-                    return ACTION_LEADERBOARDS;
                 case POSITION_ACHIEVEMENTS:
                     return ACTION_ACHIEVEMENTS;
-                case POSITION_MILESTONES:
-                    return ACTION_MILESTONES;
             }
             return null;
         }

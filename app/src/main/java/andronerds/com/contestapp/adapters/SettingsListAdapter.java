@@ -33,6 +33,7 @@ public class SettingsListAdapter extends ArrayAdapter
         View row = convertView;
         LayoutInflater inflater = null;
         int type = getItemViewType(position);
+
         if(row == null)
         {
             if(type == BLUETOOTH_CONNECTION_ROW)
@@ -50,6 +51,7 @@ public class SettingsListAdapter extends ArrayAdapter
         }
         return row;
     }
+
 
     @Override
     public int getItemViewType(int position)

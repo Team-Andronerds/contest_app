@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import andronerds.com.contestapp.R;
+import andronerds.com.contestapp.pictureUtils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import andronerds.com.contestapp.views.ProgressWheel;
 import butterknife.ButterKnife;
@@ -65,10 +66,46 @@ public class StatsFragment extends Fragment
         mPointsChart.setProgress(circlePercent);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
-        Picasso.with(this.getActivity())
-                .load(sharedPreferences.getString(IdentityStrings.USER_PROFILE_PIC, ""))
-                .fit()
-                .into(mProfilePic);
+        boolean usingGooglePlus = sharedPreferences.getBoolean(IdentityStrings.USER_GPLUS, false);
+
+        int profilePicInt = 0;
+        String profilePicString = "";
+
+        try {
+            Log.d("STATS FRAGMENT", sharedPreferences.getString(IdentityStrings.USER_PROFILE_PIC, ""));
+            profilePicInt = Integer.parseInt(sharedPreferences.getString(IdentityStrings.USER_PROFILE_PIC, ""));
+        } catch (NumberFormatException e) {
+            System.out.println("Wrong number");
+            profilePicString = sharedPreferences.getString(IdentityStrings.USER_PROFILE_PIC, "");
+        }
+
+        if(profilePicInt != 0)
+        {
+            Picasso.with(this.getActivity())
+                    .load(profilePicInt)
+                    .fit()
+                    .into(mProfilePic);
+        }
+        else if(!profilePicString.equals(""))
+        {
+            if(usingGooglePlus) {
+                Picasso.with(this.getActivity())
+                        .load(profilePicString)
+                        .fit()
+                        .into(mProfilePic);
+            }
+            else
+            {
+                mProfilePic.setImageBitmap(PictureUtil.loadImageFromStorage(profilePicString));
+            }
+        }
+        else
+        {
+            Picasso.with(this.getActivity())
+                    .load(R.drawable.ic_profile_null)
+                    .fit()
+                    .into(mProfilePic);
+        }
 
         mProfilePic.setBorderWidth(3);
         mProfilePic.setBorderColor(getActivity().getResources().getColor(R.color.black));

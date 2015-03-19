@@ -1,4 +1,4 @@
-package andronerds.com.contestapp.fragments;
+package andronerds.com.contestapp.fragments.insurance;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import andronerds.com.contestapp.R;
+import butterknife.ButterKnife;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
@@ -20,6 +21,7 @@ public class InsuranceInfoFragment extends Fragment
                              Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_insurance_info, container, false);
+        ButterKnife.inject(this, view);
         return view;
     }
 }

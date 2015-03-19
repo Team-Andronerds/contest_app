@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="150dip">
+
+    <CircleImageView
+        android:layout_weight="0.4"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:id="@+id/vehicle_picture"
+        android:layout_marginLeft="10dip"/>
+
+    <LinearLayout
+        android:layout_weight="0.6"
+        android:layout_width="0dip"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:textSize="16sp"
+            android:id="@+id/vehicle_model_year"
+            android:text="LOL"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:id="@+id/vehicle_make"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
