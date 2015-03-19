@@ -68,7 +68,7 @@ public class NavDrawerAdapter extends BaseAdapter {
                         .load(profilePicInt)
                         .fit()
                         .into(profilePic);
-            } else if (profilePicString != "") {
+            } else if (!profilePicString.equals("")) {
 
                 if(usingGooglePlus) {
                     Picasso.with(navDrawerContext)

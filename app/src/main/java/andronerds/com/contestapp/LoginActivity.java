@@ -286,7 +286,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
             user.setEmail(email);
             user.setName(username);
             user.setPassword(password);
-            user.setProfileImage(Integer.toString(R.drawable.ic_profile_null));
+            user.setProfileImage("");
             user.save();
 
             FragmentManager fragmentManager = getFragmentManager();
