@@ -39,6 +39,7 @@ public class InsuranceInfoFragment extends Fragment
         infoVehicle = (Vehicle) args.getSerializable(Intent.EXTRA_TEXT);
         ButterKnife.inject(this, view);
         setViews();
+
         return view;
     }
 

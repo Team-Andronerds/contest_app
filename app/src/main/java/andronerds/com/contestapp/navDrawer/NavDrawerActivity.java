@@ -302,4 +302,14 @@ public abstract class NavDrawerActivity extends ActionBarActivity
     {
         this.mTitle = title;
     }
+
+    public Toolbar getToolbar()
+    {
+        return mToolbar;
+    }
+
+    public ActionBarDrawerToggle getDrawerToggle()
+    {
+        return mDrawerToggle;
+    }
 }
