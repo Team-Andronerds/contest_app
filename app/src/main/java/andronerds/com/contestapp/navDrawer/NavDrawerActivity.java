@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
@@ -24,6 +25,7 @@ import andronerds.com.contestapp.InsuranceInfoActivity;
 import andronerds.com.contestapp.MainActivity;
 import andronerds.com.contestapp.MyTripsActivity;
 import andronerds.com.contestapp.MyVehicleActivity;
+import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.SettingsActivity;
 import andronerds.com.contestapp.utils.IdentityStrings;
@@ -63,6 +65,13 @@ public abstract class NavDrawerActivity extends ActionBarActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(OnBoardDiagnostic.isInitialized()){
+
+        }else{
+            OnBoardDiagnostic.initialize(this);
+            OnBoardDiagnostic.refresh(this);
+        }
 
         /* Init sets content view and
         other specifics based on activity implementation */
@@ -278,5 +287,42 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             aList.add(navItem);
         }
         return aList;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        try {
+            OnBoardDiagnostic.unregReceiver(this);
+        }catch(IllegalArgumentException e){
+
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        try {
+            OnBoardDiagnostic.unregReceiver(this);
+        }catch(IllegalArgumentException e){
+
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        OnBoardDiagnostic.refresh(this);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_CANCELED){
+            Toast.makeText(getApplicationContext(), "Some Features Require Bluetooth To Work Correctly", Toast.LENGTH_LONG).show();
+            OnBoardDiagnostic.setState(false);
+        }if(resultCode == RESULT_OK){
+            OnBoardDiagnostic.setState(true);
+        }
     }
 }

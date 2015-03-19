@@ -50,11 +50,11 @@ public class NavDrawerAdapter extends BaseAdapter {
             userProfilePrefs = navDrawerContext.getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
 
             name.setText(userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
-            Picasso.with(navDrawerContext)
-                    .load(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, ""))
-                    .fit()
-                    .into(profilePic);
-            //profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.me));
+//            Picasso.with(navDrawerContext)
+//                    .load(userProfilePrefs.getString(IdentityStrings.USER_PROFILE_PIC, ""))
+//                    .fit()
+//                    .into(profilePic);
+            profilePic.setImageDrawable(v.getResources().getDrawable(R.drawable.qt_grill));
         }
         else
         {

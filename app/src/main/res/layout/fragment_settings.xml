@@ -11,6 +11,19 @@
         android:clipToPadding="false">
     </ListView>
 
+
+    <Button
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="Connect to OBD"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/connect_button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/generic_blue_button"/>
+
     <Button
         android:layout_width="300dip"
         android:layout_height="wrap_content"
