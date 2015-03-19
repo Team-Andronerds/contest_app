@@ -3,7 +3,6 @@ package andronerds.com.contestapp.navDrawer;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -39,7 +38,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
     public final String ACTION_HOME = "Home";
     public final String ACTION_STATS = "Stats";
     public final String ACTION_MY_TRIPS = "Trips";
-    public final String ACTION_MY_VEHICLE = "Vehicle";
+    public final String ACTION_MY_VEHICLE = "Profile";
     public final String ACTION_INSURANCE_INFO = "Insurance Info";
     public final String ACTION_EMERGENCY = "Emergency";
     public final String ACTION_SETTINGS = "Settings";
@@ -151,9 +150,18 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                     intent = new Intent(mContext, DriveToWinActivity.class);
                     intent.putExtra(Intent.EXTRA_TEXT, ACTION_ACHIEVEMENTS);
                     break;
+                case ACTION_LEADERBOARDS:
+                    Log.d("ACTIVITY_LEADERBOARDS", "Drive to win activity initiated.");
+                    intent = new Intent(mContext, DriveToWinActivity.class);
+                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_LEADERBOARDS);
+                    break;
                 case ACTION_STATS:
                     intent = new Intent(mContext, DriveToWinActivity.class);
                     intent.putExtra(Intent.EXTRA_TEXT, ACTION_STATS);
+                    break;
+                case ACTION_MILESTONES:
+                    intent = new Intent(mContext, DriveToWinActivity.class);
+                    intent.putExtra(Intent.EXTRA_TEXT, ACTION_MILESTONES);
                     break;
                 case ACTION_MY_TRIPS:
                     Log.d("ACTIVITY_TRIPS", "My trips activity initiated.");
@@ -233,6 +241,18 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 else
                     imageResource = R.drawable.nav_stats_gray;
                 break;
+            case ACTION_LEADERBOARDS:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_leaderboards_green;
+                else
+                    imageResource = R.drawable.nav_leaderboards_gray;
+                break;
+            case ACTION_MILESTONES:
+                if(mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_milestone_green;
+                else
+                    imageResource = R.drawable.nav_milestone_gray;
+                break;
             case ACTION_MY_TRIPS:
                 if(mCurrentSelectionIndex == position)
                     imageResource = R.drawable.nav_trips_green;
@@ -240,8 +260,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                     imageResource = R.drawable.nav_trips_gray;
                 break;
             case ACTION_MY_VEHICLE:
-                if(mCurrentSelectionIndex == position)
-                    imageResource = R.drawable.nav_vehicle_green;
+                if (mCurrentSelectionIndex == position)
+                    imageResource = R.drawable.nav_profile_green;
                 else
                     imageResource = R.drawable.nav_vehicle_gray;
                 break;
@@ -286,30 +306,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         mNavDrawerAdapter.notifyDataSetChanged();
     }
 
-    @Override
-    public void onBackPressed()
-    {
-        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
-            mDrawerLayout.closeDrawer(GravityCompat.START);
-        } else if (getFragmentManager().getBackStackEntryCount() > 0) {
-            getFragmentManager().popBackStack();
-        } else {
-            super.onBackPressed();
-        }
-    }
-
     public void setNavDrawerTitle(String title)
     {
         this.mTitle = title;
-    }
-
-    public Toolbar getToolbar()
-    {
-        return mToolbar;
-    }
-
-    public ActionBarDrawerToggle getDrawerToggle()
-    {
-        return mDrawerToggle;
     }
 }

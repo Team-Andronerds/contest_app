@@ -9,7 +9,6 @@ import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.CommonStatusCodes;
@@ -22,12 +21,9 @@ import com.google.android.gms.plus.model.people.PersonBuffer;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.HashMap;
-import java.util.List;
 
-import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.fragments.LoadingFragment;
 import andronerds.com.contestapp.fragments.LoginFragment;
-import andronerds.com.contestapp.fragments.SignUpFragment;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 
@@ -51,7 +47,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
     private HashMap<String, String> friendsList;
     private boolean signOut = false;
 
-    private static final String LOG_TAG = "LOGIN ACTIVITY";
+    private static final String LOG_TAG = "GPLUS_LOG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

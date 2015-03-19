@@ -65,6 +65,7 @@ public class StatsFragment extends Fragment
         mPointsChart.setProgress(circlePercent);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+        boolean usingGooglePlus = sharedPreferences.getBoolean(IdentityStrings.USER_GPLUS, false);
 
         int profilePicInt = 0;
         String profilePicString = "";
@@ -84,10 +85,23 @@ public class StatsFragment extends Fragment
                     .fit()
                     .into(mProfilePic);
         }
+        else if(!profilePicString.equals(""))
+        {
+            if(usingGooglePlus) {
+                Picasso.with(this.getActivity())
+                        .load(profilePicString)
+                        .fit()
+                        .into(mProfilePic);
+            }
+            else
+            {
+                mProfilePic.setImageBitmap(PictureUtil.loadImageFromStorage(profilePicString));
+            }
+        }
         else
         {
             Picasso.with(this.getActivity())
-                    .load(profilePicString)
+                    .load(R.drawable.ic_profile_null)
                     .fit()
                     .into(mProfilePic);
         }

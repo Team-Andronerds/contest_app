@@ -6,12 +6,14 @@ import android.content.SharedPreferences;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import andronerds.com.contestapp.data.Achievements;
 import andronerds.com.contestapp.fragments.HomeFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
+import andronerds.com.contestapp.data.Achievements;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -59,8 +61,8 @@ public class MainActivity extends NavDrawerActivity
     private void initAchievements()
     {
         //Achievements.deleteAll(Achievements.class);
-        SharedPreferences userProfilePrefs = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
 
+        SharedPreferences userProfilePrefs = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
         List<Achievements> achList = Achievements.find(Achievements.class, "name = ?", userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
         List<String> achTitles =  Arrays.asList(getResources().getStringArray(R.array.achievement_title));
 

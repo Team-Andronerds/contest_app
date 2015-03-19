@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_profile_email_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dip"
+        android:text="CHANGE EMAIL"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/generic_green_button">
+    </Button>
+    <Button android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_profile_password_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dip"
+        android:text="CHANGE PASSWORD"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/generic_green_button">
+    </Button>
+    <Button android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_profile_username_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dip"
+        android:text="CHANGE USERNAME"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/generic_green_button">
+    </Button>
+
+    <Button android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_profile_picture_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dip"
+        android:text="EDIT PICTURE"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/generic_green_button">
+    </Button>
+
+
+</LinearLayout>

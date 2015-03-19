@@ -27,6 +27,8 @@ public class AchievementCard extends Card {
     @InjectView(R.id.achievement_image)ImageView mAchievementImage;
 
     private Achievements achieve;
+    private Boolean didAchieve;
+    private View cardView;
 
     public AchievementCard(Context context) {
         super(context, R.layout.card_achievement);
@@ -36,8 +38,12 @@ public class AchievementCard extends Card {
     {
         super(context, R.layout.card_achievement);
         this.achieve = achieve;
+        this.didAchieve = achieve.didAchieve();
+    }
 
-        //this.hasAchieved = achieved;
+    public AchievementCard(Context context, Achievements achieve, String bgColor)
+    {
+        super(context,R.layout.card_achievement);
     }
 
     @Override
@@ -46,11 +52,6 @@ public class AchievementCard extends Card {
         super.setupInnerViewElements(parent, view);
         ButterKnife.inject(this, view);
 
-        //mTripMapView.setImageDrawable(getContext().getResources().getDrawable(R.drawable.map_placeholder));
-
-
-        Log.d("Drawable int check", "ID = " + Integer.toString(achieve.getAchievementImage() ));
-
         Picasso.with(this.getContext())
                 //.load(R.drawable.map_placeholder)
                 //.load(R.drawable.ic_launcher)
@@ -58,28 +59,35 @@ public class AchievementCard extends Card {
                 .fit()
                 .into(mAchievementImage);
 
-        /*Picasso.with(this.getContext())
-                .load(R.drawable.ic_chevron_right_grey600_24dp)
-                .centerInside()
-                .fit()
-                .into(mMoreDetailsImage);*/
-
+        LinearLayout ll = (LinearLayout) view.findViewById(R.id.achievement_card_bg);
         TextView title = (TextView) view.findViewById(R.id.achievement_title);
         title.setText(achieve.getTitle());
         TextView desc = (TextView) view.findViewById(R.id.achievement_description);
         desc.setText(achieve.getDescription());
 
-        if(!this.achieve.didAchieve())
+        if(achieve.didAchieve())
         {
-            LinearLayout ll = (LinearLayout) view.findViewById(R.id.achievement_card_bg);
+
+            ll.setBackgroundColor(view.getResources().getColor(R.color.white));
+        }
+        else
+        {
             ll.setBackgroundColor(view.getResources().getColor(R.color.non_achievement_color));
             desc.setText("");
+            Log.i("fuck","fuck");
+
         }
+
     }
 
     public Achievements getAchievement()
     {
         return this.achieve;
+    }
+
+    public View getCardV()
+    {
+        return this.cardView;
     }
 
 }

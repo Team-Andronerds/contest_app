@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 public class Vehicle extends User implements Serializable {
 
-    private Color color;
+    private String color;
     private Drawable carImage;
     private String make;
     private String model;
@@ -24,7 +24,7 @@ public class Vehicle extends User implements Serializable {
 
     }
 
-    public Vehicle(String make, String model, String vin, String year, Drawable carImage, Color color, String name)
+    public Vehicle(String make, String model, String vin, String year, Drawable carImage, String color, String name)
     {
         this.make = make;
         this.model = model;
@@ -55,7 +55,7 @@ public class Vehicle extends User implements Serializable {
         return this.vin;
     }
 
-    public Color getColor()
+    public String getColor()
     {
         return this.color;
     }
