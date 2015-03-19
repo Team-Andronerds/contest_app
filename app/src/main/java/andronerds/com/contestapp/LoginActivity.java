@@ -88,6 +88,15 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
             }
         }
 
+        SharedPreferences settings = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+        if(!settings.getAll().isEmpty() && !signOut)
+        {
+            if(!settings.getBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, true))
+            {
+                moveToHomeActivity();
+            }
+        }
+
         mGoogleServices = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this).addApi(Plus.API)
@@ -191,11 +200,16 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         {
             if(progressDialog != null)
                 progressDialog.dismiss();
-            Intent intent = new Intent(this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            startActivity(intent);
-            finish();
+            moveToHomeActivity();
         }
+    }
+
+    public void moveToHomeActivity()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
     }
 
     @Override
@@ -316,6 +330,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         editor.putString(IdentityStrings.USER_NAME, user.getName());
         editor.putString(IdentityStrings.USER_PROFILE_PIC, user.getProfileImage());
         editor.putString(IdentityStrings.USER_EMAIL, user.getEmail());
+        editor.putBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, false);
         editor.commit();
     }
 
@@ -343,6 +358,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
                 editor.putString(IdentityStrings.USER_PROFILE_PIC, personPhotoUrl);
                 editor.putString(IdentityStrings.USER_G_PLUS_PROFILE, personGooglePlusProfile);
                 editor.putString(IdentityStrings.USER_EMAIL, personEmail);
+                editor.putBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, true);
                 editor.commit();
 
                 Log.i(LOG_TAG, "Photo URL Length: " + personPhotoUrl.length());

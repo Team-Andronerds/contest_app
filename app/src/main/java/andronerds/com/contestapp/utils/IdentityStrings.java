@@ -11,6 +11,7 @@ public class IdentityStrings
 
     public static final String USER_NAME = "user_name";
     public static final String USER_G_PLUS_PROFILE = "user_g_plus_profile";
+    public static final String USER_IS_GOOGLE_PLUS = "user_is_google_plus";
     public static final String USER_EMAIL = "user_email";
     public static final String USER_PROFILE_PIC = "user_profile_pic";
 
