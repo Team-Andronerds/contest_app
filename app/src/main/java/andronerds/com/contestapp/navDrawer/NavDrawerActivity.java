@@ -28,7 +28,6 @@ import andronerds.com.contestapp.MyVehicleActivity;
 import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.SettingsActivity;
-import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.InjectView;
 
 /**

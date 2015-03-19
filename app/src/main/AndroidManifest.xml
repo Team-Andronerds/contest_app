@@ -28,7 +28,7 @@
 
         <activity
             android:name=".LoginActivity"
-            android:label="Login"
+            android:label="Drive to Win"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
