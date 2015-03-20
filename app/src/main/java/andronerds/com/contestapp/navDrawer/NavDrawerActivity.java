@@ -26,9 +26,9 @@ import andronerds.com.contestapp.InsuranceInfoActivity;
 import andronerds.com.contestapp.MainActivity;
 import andronerds.com.contestapp.MyTripsActivity;
 import andronerds.com.contestapp.MyVehicleActivity;
-import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.SettingsActivity;
+import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import butterknife.InjectView;
 
 /**
@@ -194,8 +194,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 intent.addFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+
                 startActivity(intent);
-                finish();
             }
         }
     }
@@ -320,6 +320,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             getFragmentManager().popBackStack();
         } else {
             super.onBackPressed();
+            finish();
         }
     }
 

@@ -54,7 +54,6 @@ public class MyTripsActivity extends NavDrawerActivity implements OnMapReadyCall
         return mToolbar;
     }
 
-
     public void testGMaps()
     {
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();

@@ -6,14 +6,12 @@ import android.content.SharedPreferences;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import andronerds.com.contestapp.data.Achievements;
 import andronerds.com.contestapp.fragments.HomeFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
-import andronerds.com.contestapp.data.Achievements;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -51,7 +49,6 @@ public class MainActivity extends NavDrawerActivity
         /*
             Testing sugar for achievements
          */
-
 
 
         Log.d("NAV_DRAWER", "Activating nav drawer activity");
