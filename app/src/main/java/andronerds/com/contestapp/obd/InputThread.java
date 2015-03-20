@@ -1,4 +1,4 @@
-package andronerds.com.contestapp.OBD;
+package andronerds.com.contestapp.obd;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothServerSocket;

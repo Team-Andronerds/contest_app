@@ -1,4 +1,4 @@
-package andronerds.com.contestapp.OBD;
+package andronerds.com.contestapp.obd;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -20,7 +20,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Set;
 
-import andronerds.com.contestapp.fragments.SettingsConnectFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
 
 /**

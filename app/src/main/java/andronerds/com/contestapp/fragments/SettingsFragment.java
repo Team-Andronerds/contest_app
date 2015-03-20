@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import andronerds.com.contestapp.LoginActivity;
-import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
-import andronerds.com.contestapp.OBD.RefreshThread;
+import andronerds.com.contestapp.obd.OnBoardDiagnostic;
+import andronerds.com.contestapp.obd.RefreshThread;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.adapters.SettingsListAdapter;
 import andronerds.com.contestapp.utils.IdentityStrings;
