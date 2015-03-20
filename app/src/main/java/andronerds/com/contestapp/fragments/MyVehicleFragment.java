@@ -15,11 +15,12 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.data.Vehicle;
-import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;
+import andronerds.com.contestapp.utils.PictureUtil;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -62,6 +63,10 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
 
         List<Vehicle> myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
         List<User> users = User.find(User.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, ""));
+
+        if(OnBoardDiagnostic.isActive()){
+            myVehicles.add(OnBoardDiagnostic.getVehicle());
+        }
 
         if(!profileName.equals("")) {
             mProfileName.setText(sharedPreferences.getString(IdentityStrings.USER_NAME, ""));

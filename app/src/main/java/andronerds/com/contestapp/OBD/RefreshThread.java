@@ -3,6 +3,7 @@ package andronerds.com.contestapp.OBD;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.bluetooth.BluetoothAdapter;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -27,12 +28,13 @@ public class RefreshThread extends AsyncTask<Fragment, Integer, Void> {
         FragmentManager fm = parent.getActivity().getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         connectFrag = new PairedListLoadingFragment();
+        ft.addToBackStack(null);
         ft.replace(R.id.settings_fragment_container, connectFrag);
         ft.commit();
     }
 
     protected Void doInBackground(Fragment... params){
-        while(OnBoardDiagnostic.isDiscovering()){}
+        while(BluetoothAdapter.getDefaultAdapter().isDiscovering()){}
         Log.d("Loading", "DONE");
         return null;
     }

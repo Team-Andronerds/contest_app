@@ -2,12 +2,14 @@ package andronerds.com.contestapp.fragments;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,6 +19,7 @@ import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
 import andronerds.com.contestapp.OBD.RefreshThread;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.adapters.SettingsListAdapter;
+import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -70,19 +73,17 @@ public class SettingsFragment extends Fragment implements View.OnClickListener
                 break;
             case R.id.connect_button:
 
-                if(OnBoardDiagnostic.isActive()){
+                if(OnBoardDiagnostic.isActive() && !OnBoardDiagnostic.getDriveMode()){
                     OnBoardDiagnostic.disconnect();
                     mConnectButton.setText("Connect to OBD");
                     mConnectButton.setBackgroundColor(0xFF436EEE);
-                    //OnBoardDiagnostic.refresh((NavDrawerActivity)this.getActivity());
-                    /*
-                    Intent i = this.getActivity().getBaseContext().getPackageManager()
-                            .getLaunchIntentForPackage( this.getActivity().getBaseContext().getPackageName() );
-                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(i);
-                    */
-                }else {
-                    new RefreshThread(this).execute(this);
+
+                }else if(OnBoardDiagnostic.getDriveMode()){
+                    Toast.makeText(getActivity().getApplicationContext(), "Please turn off drive mode before disconnecting", Toast.LENGTH_SHORT).show();
+                }else{
+                    OnBoardDiagnostic.refresh((NavDrawerActivity)this.getActivity());
+                    //this.getFragmentManager().saveFragmentInstanceState(this);
+                    new RefreshThread(this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, this);
                 }
                 break;
         }

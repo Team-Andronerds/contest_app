@@ -95,5 +95,7 @@
 
     <string name="title_activity_nav_drawer">NavDrawerActivity1</string>
     <string name="loading">Loading...</string>
+    <string name="drive_mode">Drive Mode</string>
+    <string name="drive_mode_on">Drive Mode On</string>
 
 </resources>

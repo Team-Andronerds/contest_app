@@ -33,14 +33,16 @@ public class InputThread extends AsyncTask<JSONObject, Integer, Void>  {
                     String readmsg = new String(readbuf);
                     JSONObject job;
                     Log.d("Message is: ", "" + readmsg);
+                    Message msg1 = Message.obtain();
+                    Bundle b = new Bundle();
                     try {
                         job = new JSONObject(readmsg);
                         Log.d("JSON is: ", job.toString());
                         switch(job.getString("Purpose")){
                             case "HANDSHAKE":
                                 Log.d("FROM: ", job.getString("From"));
-                                Message msg1 = Message.obtain();
-                                Bundle b = new Bundle();
+                                msg1 = Message.obtain();
+                                b = new Bundle();
                                 b.putString("Purpose","HANDSHAKE_SUCCESS");
                                 b.putString("From",job.getString("From"));
                                 msg1.setData(b);
@@ -48,6 +50,18 @@ public class InputThread extends AsyncTask<JSONObject, Integer, Void>  {
 
                             case "DISCONNECT":
                                 waitingOnResponse = false;
+                                break;
+                            case "Driving":
+                                msg1 = Message.obtain();
+                                b = new Bundle();
+                                b.putString("Purpose","Driving");
+                                b.putString("Event",job.getString("Event"));
+                                msg1.setData(b);
+                                OnBoardDiagnostic.mHandler.sendMessage(msg1);
+                                break;
+                            case "CAR":
+                                Log.d("CAR","Handler input");
+                                OnBoardDiagnostic.setVehicle(job);
                                 break;
                         }
                     }catch(JSONException e){
@@ -88,17 +102,12 @@ public class InputThread extends AsyncTask<JSONObject, Integer, Void>  {
 
         // Keep listening until exception occurs or a socket is returned
         while(mmServerSocket==null);
-        Message msg = Message.obtain();
-        Bundle b = new Bundle();
-        b.putString("Purpose","ESTABLISH");
-        msg.setData(b);
-        OnBoardDiagnostic.mHandler.sendMessage(msg);
 
-        while(waitingOnResponse && !OnBoardDiagnostic.isPitching()) {
+        while(OnBoardDiagnostic.isActive()) {
 
             try {
                 Log.d("Run", "trying accept");
-                if (waitingOnResponse & !OnBoardDiagnostic.isPitching()) {
+                if (OnBoardDiagnostic.isActive()) {
                     socket = mmServerSocket.accept();
                     Log.d("Run:", "mmSeverSocket accept SUCCESS");
                 }else{
@@ -120,6 +129,12 @@ public class InputThread extends AsyncTask<JSONObject, Integer, Void>  {
                     mHandler.obtainMessage(MESSAGE_READ, bytes, -1, buffer).sendToTarget();
                 } catch (IOException e) {
                     Log.d("Run", "Socket Empty");
+                    OnBoardDiagnostic.setWaitingOnBluetooth(false);
+                    Message msg = Message.obtain();
+                    Bundle b = new Bundle();
+                    b.putString("Purpose","FAILED");
+                    msg.setData(b);
+                    OnBoardDiagnostic.mHandler.sendMessage(msg);
                 }
 
             }
