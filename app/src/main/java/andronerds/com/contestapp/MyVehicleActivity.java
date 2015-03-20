@@ -16,7 +16,7 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 
-import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
+import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.fragments.MyVehicleFragment;
 import andronerds.com.contestapp.fragments.editProfile.EditPictureFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;

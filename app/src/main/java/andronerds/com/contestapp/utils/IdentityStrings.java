@@ -16,4 +16,7 @@ public class IdentityStrings
     public static final String USER_PROFILE_PIC = "user_profile_pic";
 
     public static final String BUNDLE_SIGN_OUT = "sign_out";
+
+    public static final String FROM_HOME = "from_home";
+    public static final String FROM_TRIPS = "from_trips";
 }

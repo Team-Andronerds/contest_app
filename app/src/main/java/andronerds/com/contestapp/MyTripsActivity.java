@@ -82,11 +82,11 @@ public class MyTripsActivity extends NavDrawerActivity implements OnMapReadyCall
 
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(mTrip.getmTripStartLat(), mTrip.getmTripStartLong()))
-                .title(mTrip.getmTripStart()));
+                .title("Start: " + mTrip.getmTripStart()));
 
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(mTrip.getmTripEndLat(), mTrip.getmTripEndLong()))
-                .title(mTrip.getmTripEnd()));
+                .title("End: " + mTrip.getmTripEnd()));
 
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
         builder.include(new LatLng(mTrip.getmTripStartLat(), mTrip.getmTripStartLong()));

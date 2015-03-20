@@ -330,7 +330,7 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
         android.app.ProgressDialog progress;
         progress = android.app.ProgressDialog.show(parent.getActivity(), null,
                 "Connecting to " + name, true);
-        new ProgressDialog().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, progress);
+        new ProgressDialogBluetooth().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, progress);
         adapt.cancelDiscovery();
         setState(true);
         JSONObject job = new JSONObject();

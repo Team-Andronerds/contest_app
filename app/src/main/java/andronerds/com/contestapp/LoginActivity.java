@@ -24,6 +24,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import java.util.HashMap;
 import java.util.List;
 
+import andronerds.com.contestapp.data.Trip;
 import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.fragments.LoadingFragment;
 import andronerds.com.contestapp.fragments.LoginFragment;
@@ -334,6 +335,8 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         editor.putString(IdentityStrings.USER_EMAIL, user.getEmail());
         editor.putBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, false);
         editor.commit();
+
+        setTestTrip();
     }
 
     public void addGoogleProfileToSharedPrefs()
@@ -368,5 +371,31 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
+        setTestTrip();
+    }
+
+    //FOR TESTING ONLY
+    public void setTestTrip()
+    {
+        SharedPreferences settings = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+        String userName = settings.getString(IdentityStrings.USER_NAME, "");
+
+        Trip trip = new Trip();
+        trip.setmTripMap(R.drawable.pc_map);
+        trip.setmTripStart("Oklahoma City, OK");
+        trip.setmTripEnd("Stillwater, OK");
+        trip.setPoints(73);
+        trip.setTripMileageCount(112);
+        trip.setHarshAccelCount(2);
+        trip.setHarshBrakeCount(3);
+        trip.setHarshTurnCount(1);
+        trip.setSpeedingCount(6);
+        trip.setmTripStartLat(35.4822);
+        trip.setmTripStartLong(-97.5350);
+        trip.setmTripEndLat(36.1157);
+        trip.setmTripEndLong(-97.0586);
+        trip.setName(userName);
+        trip.save();
     }
 }

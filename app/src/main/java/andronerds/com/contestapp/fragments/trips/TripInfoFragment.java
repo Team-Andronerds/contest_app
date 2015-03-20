@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import andronerds.com.contestapp.MainActivity;
 import andronerds.com.contestapp.MyTripsActivity;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.cards.MapLogoCard;
 import andronerds.com.contestapp.data.Trip;
+import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import it.gmariotti.cardslib.library.view.CardView;
@@ -27,6 +29,7 @@ public class TripInfoFragment extends Fragment implements View.OnClickListener
     private static final String POSTFIX_MILES = "miles";
 
     private Trip currentTrip;
+    private String mFromActivity;
 
     @InjectView(R.id.info_from_text)TextView mFromText;
     @InjectView(R.id.info_to_text)TextView mToText;
@@ -48,6 +51,7 @@ public class TripInfoFragment extends Fragment implements View.OnClickListener
         ButterKnife.inject(this, view);
         Bundle args = getArguments();
         currentTrip = (Trip) args.getSerializable(Intent.EXTRA_TEXT);
+        mFromActivity = args.getString(Intent.EXTRA_KEY_EVENT);
 
         MapLogoCard mapLogoCard = new MapLogoCard(getActivity());
         mMapCard.setCard(mapLogoCard);
@@ -71,7 +75,15 @@ public class TripInfoFragment extends Fragment implements View.OnClickListener
     public void onClick(View v)
     {
         Log.d("CARD CLICKED", "Map view card clicked");
-        MyTripsActivity activity = (MyTripsActivity) getActivity();
-        activity.openGMaps(currentTrip);
+        if(mFromActivity.equals(IdentityStrings.FROM_TRIPS))
+        {
+            MyTripsActivity activity = (MyTripsActivity) getActivity();
+            activity.openGMaps(currentTrip);
+        }
+        if(mFromActivity.equals(IdentityStrings.FROM_HOME))
+        {
+            MainActivity activity = (MainActivity) getActivity();
+            activity.openGMaps(currentTrip);
+        }
     }
 }

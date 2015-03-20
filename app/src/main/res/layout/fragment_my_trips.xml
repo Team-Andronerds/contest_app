@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:id="@+id/trips_layout">
 
         <it.gmariotti.cardslib.library.view.CardListView
             android:layout_width="match_parent"
@@ -18,5 +19,16 @@
             android:clipToPadding="false"
             android:id="@+id/trips_grid_view">
         </it.gmariotti.cardslib.library.view.CardListView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No recent trips"
+            android:textSize="24sp"
+            android:textColor="#555555"
+            android:layout_marginTop="20dip"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:id="@+id/no_recent_trips"/>
 
 </LinearLayout>

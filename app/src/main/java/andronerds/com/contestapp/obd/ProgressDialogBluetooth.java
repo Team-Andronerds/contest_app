@@ -11,7 +11,7 @@ import android.os.Message;
 /**
  * Created by Dilancuan on 3/20/2015.
  */
-public class ProgressDialog extends AsyncTask<android.app.ProgressDialog, Integer, Void> {
+public class ProgressDialogBluetooth extends AsyncTask<ProgressDialog, Integer, Void> {
     @Override
     protected Void doInBackground(android.app.ProgressDialog... params) {
         android.app.ProgressDialog progress = params[0];
