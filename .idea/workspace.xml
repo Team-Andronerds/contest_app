@@ -18,7 +18,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad2629cd-8a7c-44eb-951a-811f7e12cb2c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ec83f3bb-4ad7-4f79-8a29-3996ce1556c9" name="Failed commit: Default" comment="Merge remote-tracking branch 'origin/FEAT-CP-00' into develop&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;app/app.iml&#10;&#9;app/build.gradle&#10;&#9;app/build/generated/source/r/debug/android/support/v7/appcompat/R.java&#10;&#9;app/build/generated/source/r/debug/andronerds/com/contestapp/R.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/MainActivity.java&#10;&#9;app/src/main/res/layout/activity_main.xml&#10;" />
@@ -46,11 +45,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.52080625">
       <split-first>
         <leaf>
-          <file leaf-file-name="MyTripsFragment.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="MyTripsFragment.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/trips/MyTripsFragment.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.1076924" vertical-offset="270" max-vertical-offset="2592">
-                  <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+                <state vertical-scroll-proportion="0.6923077" vertical-offset="54" max-vertical-offset="2592">
+                  <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -166,7 +165,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="LoginActivity.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="LoginActivity.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/LoginActivity.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.3353846" vertical-offset="5830" max-vertical-offset="7164">
@@ -2323,7 +2322,11 @@
       <created>1426890236773</created>
       <updated>1426890236773</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Made sure fake data wasn't recreated every time user logged in.">
+      <created>1426890623826</created>
+      <updated>1426890623826</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2399,7 +2402,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="You can now sign out... I mean... If that is something you wanna do..." />
     <MESSAGE value="Merge remote-tracking branch 'origin/FEAT-CP-02' into develop&#10;" />
     <MESSAGE value="Merge to develop" />
     <MESSAGE value="New branch FEAT-AW-02&#10;" />
@@ -2424,7 +2426,8 @@
     <MESSAGE value="Added new info screen for trips. Added ability to see map of trip." />
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/FEAT-AM-02' into develop" />
     <MESSAGE value="Added recent trips to home screen.&#10;Fake test data added on login." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added recent trips to home screen.&#10;Fake test data added on login." />
+    <MESSAGE value="Made sure fake data wasn't recreated every time user logged in." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made sure fake data wasn't recreated every time user logged in." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2837,18 +2840,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/trips/MyTripsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1076924" vertical-offset="270" max-vertical-offset="2592">
-          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3353846" vertical-offset="5830" max-vertical-offset="7164">
           <caret line="366" column="23" selection-start-line="366" selection-start-column="23" selection-end-line="366" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/trips/MyTripsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6923077" vertical-offset="54" max-vertical-offset="2592">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
           <folding />
         </state>
       </provider>
