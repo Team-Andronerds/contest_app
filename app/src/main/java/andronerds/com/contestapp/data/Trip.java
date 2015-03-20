@@ -1,13 +1,13 @@
 package andronerds.com.contestapp.data;
 
-import java.util.HashMap;
+import java.io.Serializable;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
  * @version ContestApp v1.0
  * @since 2/22/15
  */
-public class Trip extends User
+public class Trip extends User implements Serializable
 {
     private String mTripStart;
     private String mTripEnd;
@@ -20,6 +20,11 @@ public class Trip extends User
     private int mHarshAccelCount = 0;
     private int mHarshTurnCount = 0;
     private int mPoints = 0;
+
+    private double mTripStartLat;
+    private double mTripStartLong;
+    private double mTripEndLat;
+    private double mTripEndLong;
 
     public Trip() {}
 
@@ -72,6 +77,46 @@ public class Trip extends User
         //this.mTripIssues = mTripIssues;
         this.setName(userName);
     }*/
+
+    public double getmTripStartLat()
+    {
+        return mTripStartLat;
+    }
+
+    public void setmTripStartLat(double mTripStartLat)
+    {
+        this.mTripStartLat = mTripStartLat;
+    }
+
+    public double getmTripStartLong()
+    {
+        return mTripStartLong;
+    }
+
+    public void setmTripStartLong(double mTripStartLong)
+    {
+        this.mTripStartLong = mTripStartLong;
+    }
+
+    public double getmTripEndLat()
+    {
+        return mTripEndLat;
+    }
+
+    public void setmTripEndLat(double mTripEndLat)
+    {
+        this.mTripEndLat = mTripEndLat;
+    }
+
+    public double getmTripEndLong()
+    {
+        return mTripEndLong;
+    }
+
+    public void setmTripEndLong(double mTripEndLong)
+    {
+        this.mTripEndLong = mTripEndLong;
+    }
 
     public String getmTripStart()
     {

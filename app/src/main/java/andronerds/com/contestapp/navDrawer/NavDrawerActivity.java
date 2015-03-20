@@ -352,11 +352,4 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             OnBoardDiagnostic.setState(true);
         }
     }
-
-    @Override
-    public void onBackPressed()
-    {
-        mNavDrawerAdapter.setCurrentlySelected(1);
-        super.onBackPressed();
-    }
 }

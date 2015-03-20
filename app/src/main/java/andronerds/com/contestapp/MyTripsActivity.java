@@ -93,11 +93,6 @@ public class MyTripsActivity extends NavDrawerActivity implements OnMapReadyCall
         builder.include(new LatLng(mTrip.getmTripEndLat(), mTrip.getmTripEndLong()));
         LatLngBounds bounds = builder.build();
 
-        double middleLat = mTrip.getmTripStartLat() + mTrip.getmTripEndLat();
-        middleLat = middleLat / 2;
-        double middleLong = mTrip.getmTripStartLong() + mTrip.getmTripEndLong();
-        middleLong = middleLong / 2;
-
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngBounds(bounds, 200);
 
         map.animateCamera(cameraUpdate);
