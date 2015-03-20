@@ -4,7 +4,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 
-import andronerds.com.contestapp.fragments.MyTripsFragment;
+import andronerds.com.contestapp.fragments.trips.MyTripsFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
 import butterknife.ButterKnife;
 import butterknife.InjectView;

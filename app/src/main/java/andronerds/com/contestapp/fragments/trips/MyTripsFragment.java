@@ -1,6 +1,8 @@
-package andronerds.com.contestapp.fragments;
+package andronerds.com.contestapp.fragments.trips;
 
 import android.app.Fragment;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -81,5 +83,15 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
     {
         Log.d("TRIP SELECTED", "You have selected a new trip");
         MyTripsTripCard tripCard = (MyTripsTripCard) card;
+        Bundle args = new Bundle();
+        args.putSerializable(Intent.EXTRA_TEXT, tripCard.getTrip());
+
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        TripInfoFragment infoFragment = new TripInfoFragment();
+        infoFragment.setArguments(args);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.replace(R.id.my_trips_fragment_container, infoFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

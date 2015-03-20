@@ -1,5 +1,8 @@
 package andronerds.com.contestapp.data;
 
+import com.google.android.gms.maps.model.LatLng;
+
+import java.io.Serializable;
 import java.util.HashMap;
 
 /**
@@ -7,7 +10,7 @@ import java.util.HashMap;
  * @version ContestApp v1.0
  * @since 2/22/15
  */
-public class Trip extends User
+public class Trip extends User implements Serializable
 {
     private String mTripStart;
     private String mTripEnd;

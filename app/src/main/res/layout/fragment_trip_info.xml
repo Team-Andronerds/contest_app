@@ -1,20 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <it.gmariotti.cardslib.library.view.CardView
-        android:layout_width="150dip"
-        android:layout_height="170dip"
-        android:layout_marginTop="10dip"
-        android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Stillwater, OK"
-        android:textSize="20sp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_green_body_color">
 
-</LinearLayout>
+            <it.gmariotti.cardslib.library.view.CardView
+                android:layout_width="170dip"
+                android:layout_height="170dip"
+                android:layout_marginTop="10dip"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/map_view_card"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dip"
+                android:text="Stillwater, OK"
+                android:textSize="20sp"
+                android:id="@+id/info_from_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="to"
+                android:layout_marginBottom="5dip"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dip"
+                android:text="Oklahoma City, OK"
+                android:textSize="20sp"
+                android:id="@+id/info_to_text"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/dark_gray"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

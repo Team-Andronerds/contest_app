@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="170dip"
+              android:layout_height="170dip">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dip"
+        android:id="@+id/maps_logo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:background="@color/toolbar_color"
+        android:textSize="18sp"
+        android:text="Click to see map"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal|center_vertical"/>
+
+</LinearLayout>
