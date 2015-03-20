@@ -56,7 +56,7 @@ public class MyTripsTripCard extends Card
 
 
         Picasso.with(this.getContext())
-                .load(R.drawable.ph_map_marker)
+                .load(R.drawable.map_placeholder)
                 .fit()
                 .into(mCardImage);
 

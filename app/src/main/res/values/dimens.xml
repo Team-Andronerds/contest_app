@@ -6,4 +6,5 @@
     <dimen name="profile_info">16sp</dimen>
     <dimen name="profile_info_spacing">40dip</dimen>
     <dimen name="stats_info_spacing">20dip</dimen>
+    <dimen name="stats_info_right_spacing">40dip</dimen>
 </resources>

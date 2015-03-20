@@ -3,22 +3,17 @@ package andronerds.com.contestapp.fragments.trips;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.cards.MyTripsTripCard;
 import andronerds.com.contestapp.data.Trip;
-import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import it.gmariotti.cardslib.library.internal.Card;
@@ -36,8 +31,6 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
     private static final String MAP_URI_POSTFIX = "&zoom=15&size=200x200&sensor=false";
 
     @InjectView(R.id.trips_grid_view)CardListView mTripsListView;
-    @InjectView(R.id.no_recent_trips)TextView mNoRecentTrips;
-    @InjectView(R.id.trips_layout)LinearLayout mTripsLayout;
 
     private ArrayList<Card> mTripCardsList = new ArrayList<>();
     private ArrayList<Trip> mTripsList = new ArrayList<>();
@@ -48,8 +41,6 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
-        /*
         for(int i = 0; i < 3; i++)
         {
             Trip trip = new Trip();
@@ -85,17 +76,12 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
                 trip.setmTripEndLat(36.2903);
                 trip.setmTripEndLong(-95.8286);
             }
-
-
             mTripsList.add(trip);
             MyTripsTripCard card = new MyTripsTripCard(getActivity(), mTripsList.get(i));
             card.setClickable(true);
             card.setOnClickListener(this);
             mTripCardsList.add(card);
         }
-        */
-
-        addAllTrips();
 
         mTripsAdapter = new CardArrayAdapter(getActivity(), mTripCardsList);
         mTripsAdapter.setCardListView(mTripsListView);
@@ -107,37 +93,8 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
     {
         View view = inflater.inflate(R.layout.fragment_my_trips, container, false);
         ButterKnife.inject(this, view);
-
-        if(mTripCardsList.size() > 0)
-        {
-            mNoRecentTrips.setVisibility(View.GONE);
-        }
-        if(mTripCardsList.size() == 0)
-        {
-            mNoRecentTrips.setVisibility(View.VISIBLE);
-        }
-
         mTripsListView.setAdapter(mTripsAdapter);
         return view;
-    }
-
-    public void addAllTrips()
-    {
-        SharedPreferences settings = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
-        String userName = settings.getString(IdentityStrings.USER_NAME, "");
-
-        List<Trip> recentTrips = Trip.find(Trip.class, "name = ?", userName);
-
-        if (recentTrips.size() > 0)
-        {
-            for (int i = 0; i < recentTrips.size(); i++)
-            {
-                MyTripsTripCard tripCard = new MyTripsTripCard(getActivity(), recentTrips.get(i));
-                tripCard.setClickable(true);
-                tripCard.setOnClickListener(this);
-                mTripCardsList.add(tripCard);
-            }
-        }
     }
 
     @Override
@@ -147,8 +104,7 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
         MyTripsTripCard tripCard = (MyTripsTripCard) card;
         Bundle args = new Bundle();
         Trip trip = tripCard.getTrip();
-        args.putSerializable(Intent.EXTRA_TEXT, trip);
-        args.putString(Intent.EXTRA_KEY_EVENT, IdentityStrings.FROM_TRIPS);
+        //args.putSerializable(Intent.EXTRA_TEXT, trip);
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         TripInfoFragment infoFragment = new TripInfoFragment();

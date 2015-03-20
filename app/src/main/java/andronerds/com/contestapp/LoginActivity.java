@@ -336,7 +336,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         editor.putBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, false);
         editor.commit();
 
-        setTestTrip();
+        //setTestTrip();
     }
 
     public void addGoogleProfileToSharedPrefs()
@@ -372,7 +372,7 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
             ex.printStackTrace();
         }
 
-        setTestTrip();
+        //setTestTrip();
     }
 
     //FOR TESTING ONLY

@@ -33,7 +33,7 @@ public class MapLogoCard extends Card
         ButterKnife.inject(this, view);
 
         Picasso.with(getContext())
-                .load(R.drawable.ic_maps_logo)
+                .load(R.drawable.map_placeholder)
                 .fit()
                 .into(mMapsLogo);
     }
