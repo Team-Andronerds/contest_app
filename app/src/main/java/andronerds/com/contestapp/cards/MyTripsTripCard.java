@@ -4,7 +4,11 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMapOptions;
 import com.squareup.picasso.Picasso;
 
 import andronerds.com.contestapp.R;
@@ -21,9 +25,13 @@ import it.gmariotti.cardslib.library.internal.Card;
 public class MyTripsTripCard extends Card
 {
     private Trip mTrip;
+    private GoogleMap mMap;
 
-    @InjectView(R.id.trip_map)ImageView mTripMapView;
+    @InjectView(R.id.card_trip_image)ImageView mCardImage;
+    @InjectView(R.id.card_trip_from)TextView mFromText;
+    @InjectView(R.id.card_trip_to)TextView mToText;
     @InjectView(R.id.more_details_image)ImageView mMoreDetailsImage;
+    @InjectView(R.id.click_details_view)LinearLayout mMoreDetailsLayout;
 
     public MyTripsTripCard(Context context, Trip trip)
     {
@@ -36,16 +44,26 @@ public class MyTripsTripCard extends Card
     {
         super.setupInnerViewElements(parent, view);
         ButterKnife.inject(this, view);
+        GoogleMapOptions options = new GoogleMapOptions().liteMode(true);
+
+        //mTripMapView.onCreate(null);
+        //mTripMapView.getMapAsync(this);
 
         //mTripMapView.setImageDrawable(getContext().getResources().getDrawable(R.drawable.map_placeholder));
 
-        Picasso.with(this.getContext())
-                .load(mTrip.getmTripMap())
-                .fit()
-                .into(mTripMapView);
+        mFromText.setText(mTrip.getmTripStart());
+        mToText.setText(mTrip.getmTripEnd());
+
 
         Picasso.with(this.getContext())
-                .load(R.drawable.ic_right_white_arrow)
+                .load(R.drawable.ph_map_marker)
+                .fit()
+                .into(mCardImage);
+
+
+        Picasso.with(this.getContext())
+                .load(R.drawable.abc_ic_ab_back_mtrl_am_alpha)
+                .rotate(180)
                 .centerInside()
                 .fit()
                 .into(mMoreDetailsImage);
@@ -55,4 +73,55 @@ public class MyTripsTripCard extends Card
     {
         return this.mTrip;
     }
+
+    public LinearLayout getClickLayout()
+    {
+        return mMoreDetailsLayout;
+    }
+
+    /*
+    @Override
+    public void onSnapshotReady(Bitmap bitmap)
+    {
+        Log.d("SNAPSHOT", "Snapshot is ready");
+        try {
+            //mTripMapView.setImageBitmap(bitmap);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onMapLoaded()
+    {
+        Log.d("MAP LOADED", "Your map has been loaded");
+        mMap.snapshot(this);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap)
+    {
+        mMap = googleMap;
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        mMap.addMarker(new MarkerOptions()
+                .position(mTrip.getmTripStartLatLng())
+                .title("Start"));
+        mMap.addMarker(new MarkerOptions()
+                .position(mTrip.getmTripEndLatLng())
+                .title("End"));
+
+        MapsInitializer.initialize(this.getContext());
+
+        double cameraLat = (mTrip.getmTripStartLatLng().latitude + mTrip.getmTripEndLatLng().latitude);
+        cameraLat = cameraLat / 2;
+        double cameraLong = (mTrip.getmTripStartLatLng().longitude + mTrip.getmTripEndLatLng().longitude);
+        cameraLong = cameraLong / 2;
+
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(cameraLat, cameraLong), 10);
+
+        mMap.moveCamera(cameraUpdate);
+
+        mMap.setOnMapLoadedCallback(this);
+    }
+    */
 }

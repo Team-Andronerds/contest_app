@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dip">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_green_body_color">
+
+            <it.gmariotti.cardslib.library.view.CardView
+                android:layout_width="170dip"
+                android:layout_height="170dip"
+                android:layout_marginTop="10dip"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/map_view_card"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dip"
+                android:text="Stillwater, OK"
+                android:textSize="20sp"
+                android:id="@+id/info_from_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:text="to"
+                android:layout_marginBottom="5dip"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dip"
+                android:text="Oklahoma City, OK"
+                android:textSize="20sp"
+                android:id="@+id/info_to_text"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/dark_gray"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:text="Distance Travelled"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:textSize="26sp"
+            android:id="@+id/distance_travelled_value"
+            android:text="16 Miles"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:text="Points Earned"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:textSize="26sp"
+            android:id="@+id/points_earned_value"
+            android:text="20"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dip"
+                android:text="Trip Issues"
+                android:textColor="@color/button_red"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:id="@+id/issues_title"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/issues_title"
+                android:layout_marginTop="5dip"
+                android:textSize="22sp"
+                android:layout_marginLeft="40dip"
+                android:text="Harsh Brakes"
+                android:id="@+id/harsh_brakes_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/harsh_brakes_label"
+                android:layout_alignBaseline="@+id/harsh_brakes_label"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:layout_marginRight="60dip"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/harsh_brakes_value"
+                android:text="10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dip"
+                android:textSize="22sp"
+                android:layout_alignLeft="@+id/harsh_brakes_label"
+                android:layout_below="@+id/harsh_brakes_label"
+                android:id="@+id/speeding_count_label"
+                android:text="Speeding Counts"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/harsh_brakes_label"
+                android:layout_alignBaseline="@+id/speeding_count_label"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:layout_marginRight="60dip"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/speeding_count_value"
+                android:text="8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dip"
+                android:textSize="22sp"
+                android:layout_below="@+id/speeding_count_label"
+                android:layout_alignLeft="@+id/speeding_count_label"
+                android:id="@+id/harsh_acceleration_label"
+                android:text="Harsh Acceleration"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/harsh_brakes_label"
+                android:layout_alignBaseline="@+id/harsh_acceleration_label"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:layout_marginRight="60dip"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/harsh_acceleration_value"
+                android:text="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dip"
+                android:textSize="22sp"
+                android:layout_alignLeft="@+id/harsh_acceleration_label"
+                android:layout_below="@+id/harsh_acceleration_label"
+                android:id="@+id/harsh_turns_label"
+                android:text="Harsh Turns"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/harsh_brakes_label"
+                android:layout_alignBaseline="@+id/harsh_turns_label"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:layout_marginRight="60dip"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/harsh_turns_value"
+                android:text="3"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

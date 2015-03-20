@@ -3,6 +3,7 @@ package andronerds.com.contestapp.navDrawer;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -25,7 +26,7 @@ import andronerds.com.contestapp.InsuranceInfoActivity;
 import andronerds.com.contestapp.MainActivity;
 import andronerds.com.contestapp.MyTripsActivity;
 import andronerds.com.contestapp.MyVehicleActivity;
-import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
+import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.SettingsActivity;
 import butterknife.InjectView;
@@ -192,6 +193,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             if(intent != null)
             {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                intent.addFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
                 startActivity(intent);
                 finish();
             }
@@ -306,6 +308,18 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             OnBoardDiagnostic.unregReceiver(this);
         }catch(IllegalArgumentException e){
 
+        }
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+            mDrawerLayout.closeDrawer(GravityCompat.START);
+        } else if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
         }
     }
 

@@ -1,7 +1,6 @@
 package andronerds.com.contestapp.fragments;
 
 import android.app.Fragment;
-import android.app.ProgressDialog;
 import android.bluetooth.BluetoothDevice;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,7 +16,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
+import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
