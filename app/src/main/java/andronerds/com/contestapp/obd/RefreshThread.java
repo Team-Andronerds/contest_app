@@ -33,7 +33,7 @@ public class RefreshThread extends AsyncTask<Fragment, Integer, Void> {
     }
 
     protected Void doInBackground(Fragment... params){
-        while(OnBoardDiagnostic.isDiscovering()){}
+        while(BluetoothAdapter.getDefaultAdapter().isDiscovering()){}
         Log.d("Loading", "DONE");
         return null;
     }
