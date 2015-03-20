@@ -6,9 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
@@ -17,26 +16,25 @@ import andronerds.com.contestapp.cards.MyTripsTripCard;
 import andronerds.com.contestapp.data.Trip;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import de.hdodenhof.circleimageview.CircleImageView;
 import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardGridArrayAdapter;
-import it.gmariotti.cardslib.library.view.CardGridView;
+import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
+import it.gmariotti.cardslib.library.view.CardListView;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
  * @version ContestApp v0.1A
  * @since 2/15/15
  */
-public class MyTripsFragment extends Fragment
+public class MyTripsFragment extends Fragment implements Card.OnCardClickListener
 {
-    @InjectView(R.id.trips_grid_view)CardGridView mTripsGridView;
-    @InjectView(R.id.trip_start_text)TextView mTripStartText;
-    @InjectView(R.id.trip_end_text)TextView mTripEndText;
-    @InjectView(R.id.selected_trip_map)CircleImageView mCurrentTripMap;
+    private static final String MAP_URI_PREFIX = "http://maps.google.com/maps/api/staticmap?center=";
+    private static final String MAP_URI_POSTFIX = "&zoom=15&size=200x200&sensor=false";
+
+    @InjectView(R.id.trips_grid_view)CardListView mTripsListView;
 
     private ArrayList<Card> mTripCardsList = new ArrayList<>();
     private ArrayList<Trip> mTripsList = new ArrayList<>();
-    private CardGridArrayAdapter mTripsGridAdapter;
+    private CardArrayAdapter mTripsAdapter;
     private Trip mCurrentTrip;
 
     @Override
@@ -54,48 +52,34 @@ public class MyTripsFragment extends Fragment
                 trip.setmTripMap(R.drawable.pc_map);
                 trip.setmTripStart("Oklahoma City, OK");
                 trip.setmTripEnd("Stillwater, OK");
+                trip.setmTripStartLatLng(new LatLng(35.4822, 97.5350));
+                trip.setmTripEndLatLng(new LatLng(36.1157, 97.0586));
             }
             else
             {
                 trip.setmTripMap(R.drawable.pc_map);
                 trip.setmTripStart("Stillwater, OK");
                 trip.setmTripEnd("Owasso, OK");
+                trip.setmTripStartLatLng(new LatLng(36.1157, 97.0586));
+                trip.setmTripEndLatLng(new LatLng(36.2903, 95.8286));
             }
             mTripsList.add(trip);
             MyTripsTripCard card = new MyTripsTripCard(view.getContext(), mTripsList.get(i));
-            card.setOnClickListener(new Card.OnCardClickListener()
-            {
-                @Override
-                public void onClick(Card card, View view)
-                {
-                    Log.d("TRIP SELECTED", "You have selected a new trip");
-                    MyTripsTripCard tripCard = (MyTripsTripCard) card;
-                    changeCurrentTripView(tripCard.getTrip());
-                }
-            });
+            card.setClickable(true);
+            card.setOnClickListener(this);
             mTripCardsList.add(card);
         }
 
-        if(mCurrentTrip == null)
-        {
-            changeCurrentTripView(mTripsList.get(0));
-        }
-
-        mTripsGridAdapter = new CardGridArrayAdapter(getActivity(), mTripCardsList);
-        mTripsGridAdapter.setCardGridView(mTripsGridView);
-        mTripsGridView.setAdapter(mTripsGridAdapter);
+        mTripsAdapter = new CardArrayAdapter(getActivity(), mTripCardsList);
+        mTripsAdapter.setCardListView(mTripsListView);
+        mTripsListView.setAdapter(mTripsAdapter);
         return view;
     }
 
-    public void changeCurrentTripView(Trip trip)
+    @Override
+    public void onClick(Card card, View view)
     {
-        mCurrentTrip = trip;
-        Picasso.with(getActivity())
-                .load(trip.getmTripMap())
-                .fit()
-                .into(mCurrentTripMap);
-
-        mTripStartText.setText(trip.getmTripStart());
-        mTripEndText.setText(trip.getmTripEnd());
+        Log.d("TRIP SELECTED", "You have selected a new trip");
+        MyTripsTripCard tripCard = (MyTripsTripCard) card;
     }
 }

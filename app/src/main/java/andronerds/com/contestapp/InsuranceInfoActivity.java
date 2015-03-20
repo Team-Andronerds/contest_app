@@ -1,6 +1,5 @@
 package andronerds.com.contestapp;
 
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 
@@ -29,7 +28,6 @@ public class InsuranceInfoActivity extends NavDrawerActivity
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         InsuranceVehicleListFragment vehicleListFragment = new InsuranceVehicleListFragment();
         fragmentTransaction.replace(R.id.insurance_info_fragment_container, vehicleListFragment);
-        fragmentTransaction.addToBackStack("Frag1");
         fragmentTransaction.commit();
 
         mToolbar.showOverflowMenu();

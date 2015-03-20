@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
-              android:layout_width="175dip"
+              android:layout_width="match_parent"
               android:layout_height="175dip">
 
-    <ImageView
-        android:layout_width="match_parent"
+    <LinearLayout
         android:layout_height="140dip"
-        android:id="@+id/trip_map"/>
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="120dip"
+            android:layout_height="120dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="10dip"
+            android:id="@+id/card_trip_image"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dip"
+                android:text="Stillwater, OK"
+                android:lines="1"
+                android:id="@+id/card_trip_from"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:layout_marginTop="10dip"
+                android:text="to"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:id="@+id/card_trip_to"
+                android:textSize="20sp"
+                android:lines="1"
+                android:text="Oklahoma City, OK"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="35dip"
-        android:background="@color/status_bar_color">
+        android:background="@color/status_bar_color"
+        android:id="@+id/click_details_view">
 
         <TextView
             android:layout_width="0dip"
             android:layout_weight="0.8"
             android:layout_height="match_parent"
             android:textSize="16sp"
-            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="20dip"
+            android:gravity="center_vertical"
             android:textColor="@color/white"
             android:text="Click for details"/>
 

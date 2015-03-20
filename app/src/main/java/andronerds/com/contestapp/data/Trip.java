@@ -1,5 +1,8 @@
 package andronerds.com.contestapp.data;
 
+import com.google.android.gms.maps.model.LatLng;
+import com.orm.SugarRecord;
+
 import java.util.HashMap;
 
 /**
@@ -7,10 +10,14 @@ import java.util.HashMap;
  * @version ContestApp v1.0
  * @since 2/22/15
  */
-public class Trip
+public class Trip extends SugarRecord<Trip>
 {
     private String mTripStart;
     private String mTripEnd;
+
+    private LatLng mTripStartLatLng;
+    private LatLng mTripEndLatLng;
+
     private int mTripMap;
     private HashMap<String, String> mTripIssues;
 
@@ -44,6 +51,16 @@ public class Trip
         return mTripIssues;
     }
 
+    public LatLng getmTripStartLatLng()
+    {
+        return mTripStartLatLng;
+    }
+
+    public LatLng getmTripEndLatLng()
+    {
+        return mTripEndLatLng;
+    }
+
     public void setmTripStart(String mTripStart)
     {
         this.mTripStart = mTripStart;
@@ -62,5 +79,15 @@ public class Trip
     public void setmTripIssues(HashMap<String, String> mTripIssues)
     {
         this.mTripIssues = mTripIssues;
+    }
+
+    public void setmTripStartLatLng(LatLng mTripStartLatLng)
+    {
+        this.mTripStartLatLng = mTripStartLatLng;
+    }
+
+    public void setmTripEndLatLng(LatLng mTripEndLatLng)
+    {
+        this.mTripEndLatLng = mTripEndLatLng;
     }
 }

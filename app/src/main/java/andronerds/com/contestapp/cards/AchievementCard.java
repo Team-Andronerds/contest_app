@@ -1,8 +1,6 @@
 package andronerds.com.contestapp.cards;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -10,8 +8,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
-
-import java.io.File;
 
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.data.Achievements;
@@ -73,9 +69,6 @@ public class AchievementCard extends Card {
         else
         {
             ll.setBackgroundColor(view.getResources().getColor(R.color.non_achievement_color));
-            desc.setText("");
-            Log.i("fuck","fuck");
-
         }
 
     }
