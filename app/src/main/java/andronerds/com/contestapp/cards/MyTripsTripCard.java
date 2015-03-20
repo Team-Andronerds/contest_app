@@ -1,22 +1,14 @@
 package andronerds.com.contestapp.cards;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMapOptions;
-import com.google.android.gms.maps.MapsInitializer;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.squareup.picasso.Picasso;
 
 import andronerds.com.contestapp.R;
@@ -30,7 +22,7 @@ import it.gmariotti.cardslib.library.internal.Card;
  * @version ContestApp v0.1A
  * @since 2/20/15
  */
-public class MyTripsTripCard extends Card implements OnMapReadyCallback, GoogleMap.SnapshotReadyCallback, GoogleMap.OnMapLoadedCallback
+public class MyTripsTripCard extends Card
 {
     private Trip mTrip;
     private GoogleMap mMap;
@@ -87,6 +79,7 @@ public class MyTripsTripCard extends Card implements OnMapReadyCallback, GoogleM
         return mMoreDetailsLayout;
     }
 
+    /*
     @Override
     public void onSnapshotReady(Bitmap bitmap)
     {
@@ -130,4 +123,5 @@ public class MyTripsTripCard extends Card implements OnMapReadyCallback, GoogleM
 
         mMap.setOnMapLoadedCallback(this);
     }
+    */
 }

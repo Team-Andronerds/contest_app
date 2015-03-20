@@ -65,6 +65,7 @@
             android:layout_marginLeft="20dip"
             android:gravity="center_vertical"
             android:textColor="@color/white"
+            android:textStyle="bold"
             android:text="Click for details"/>
 
         <ImageView

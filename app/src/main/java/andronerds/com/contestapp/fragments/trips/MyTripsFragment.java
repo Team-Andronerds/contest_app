@@ -9,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.gms.maps.model.LatLng;
-
 import java.util.ArrayList;
 
 import andronerds.com.contestapp.R;
@@ -40,12 +38,9 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
     private Trip mCurrentTrip;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState)
+    public void onCreate(Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.fragment_my_trips, container, false);
-        ButterKnife.inject(this, view);
-
+        super.onCreate(savedInstanceState);
         for(int i = 0; i < 3; i++)
         {
             Trip trip = new Trip();
@@ -54,19 +49,35 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
                 trip.setmTripMap(R.drawable.pc_map);
                 trip.setmTripStart("Oklahoma City, OK");
                 trip.setmTripEnd("Stillwater, OK");
-                trip.setmTripStartLatLng(new LatLng(35.4822, 97.5350));
-                trip.setmTripEndLatLng(new LatLng(36.1157, 97.0586));
+                trip.setPoints(73);
+                trip.setTripMileageCount(112);
+                trip.setHarshAccelCount(2);
+                trip.setHarshBrakeCount(3);
+                trip.setHarshTurnCount(1);
+                trip.setSpeedingCount(6);
+                trip.setmTripStartLat(35.4822);
+                trip.setmTripStartLong(-97.5350);
+                trip.setmTripEndLat(36.1157);
+                trip.setmTripEndLong(-97.0586);
             }
             else
             {
                 trip.setmTripMap(R.drawable.pc_map);
                 trip.setmTripStart("Stillwater, OK");
                 trip.setmTripEnd("Owasso, OK");
-                trip.setmTripStartLatLng(new LatLng(36.1157, 97.0586));
-                trip.setmTripEndLatLng(new LatLng(36.2903, 95.8286));
+                trip.setPoints(18);
+                trip.setTripMileageCount(23);
+                trip.setHarshAccelCount(1);
+                trip.setHarshBrakeCount(0);
+                trip.setHarshTurnCount(2);
+                trip.setSpeedingCount(1);
+                trip.setmTripStartLat(36.1157);
+                trip.setmTripStartLong(-97.0586);
+                trip.setmTripEndLat(36.2903);
+                trip.setmTripEndLong(-95.8286);
             }
             mTripsList.add(trip);
-            MyTripsTripCard card = new MyTripsTripCard(view.getContext(), mTripsList.get(i));
+            MyTripsTripCard card = new MyTripsTripCard(getActivity(), mTripsList.get(i));
             card.setClickable(true);
             card.setOnClickListener(this);
             mTripCardsList.add(card);
@@ -74,6 +85,14 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
 
         mTripsAdapter = new CardArrayAdapter(getActivity(), mTripCardsList);
         mTripsAdapter.setCardListView(mTripsListView);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState)
+    {
+        View view = inflater.inflate(R.layout.fragment_my_trips, container, false);
+        ButterKnife.inject(this, view);
         mTripsListView.setAdapter(mTripsAdapter);
         return view;
     }
@@ -84,7 +103,8 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
         Log.d("TRIP SELECTED", "You have selected a new trip");
         MyTripsTripCard tripCard = (MyTripsTripCard) card;
         Bundle args = new Bundle();
-        args.putSerializable(Intent.EXTRA_TEXT, tripCard.getTrip());
+        Trip trip = tripCard.getTrip();
+        args.putSerializable(Intent.EXTRA_TEXT, trip);
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         TripInfoFragment infoFragment = new TripInfoFragment();

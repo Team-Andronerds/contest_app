@@ -1,9 +1,6 @@
 package andronerds.com.contestapp.data;
 
-import com.google.android.gms.maps.model.LatLng;
-
 import java.io.Serializable;
-import java.util.HashMap;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
@@ -15,11 +12,12 @@ public class Trip extends User implements Serializable
     private String mTripStart;
     private String mTripEnd;
 
-    private LatLng mTripStartLatLng;
-    private LatLng mTripEndLatLng;
+    private double mTripStartLat;
+    private double mTripEndLat;
+    private double mTripStartLong;
+    private double mTripEndLong;
 
     private int mTripMap;
-    private HashMap<String, String> mTripIssues;
     private int mTripMileage = 0;
     private int mHarshBrakeCount = 0;
     private int mSpeedingCount = 0;
@@ -30,13 +28,12 @@ public class Trip extends User implements Serializable
 
     public Trip() {}
 
-    public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues,int mileage,int brakeCount,int speedingCount, int gasCount,
+    public Trip(String mTripStart, String mTripEnd, int mTripMap,int mileage,int brakeCount,int speedingCount, int gasCount,
                 int accelCount, int turnCount, int points, String userName)
     {
         this.mTripStart = mTripStart;
         this.mTripEnd = mTripEnd;
         this.mTripMap = mTripMap;
-        this.mTripIssues = mTripIssues;
         this.mHarshAccelCount = accelCount;
         this.mHarshBrakeCount = brakeCount;
         this.mHarshTurnCount = turnCount;
@@ -47,21 +44,59 @@ public class Trip extends User implements Serializable
         this.setName(userName);
     }
 
-    public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues)
+    public Trip(String mTripStart, String mTripEnd, int mTripMap)
     {
         this.mTripStart = mTripStart;
         this.mTripEnd = mTripEnd;
         this.mTripMap = mTripMap;
-        this.mTripIssues = mTripIssues;
     }
 
-    public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues, String userName)
+    public Trip(String mTripStart, String mTripEnd, int mTripMap, String userName)
     {
         this.mTripStart = mTripStart;
         this.mTripEnd = mTripEnd;
         this.mTripMap = mTripMap;
-        this.mTripIssues = mTripIssues;
         this.setName(userName);
+    }
+
+    public double getmTripStartLat()
+    {
+        return mTripStartLat;
+    }
+
+    public void setmTripStartLat(double mTripStartLat)
+    {
+        this.mTripStartLat = mTripStartLat;
+    }
+
+    public double getmTripEndLat()
+    {
+        return mTripEndLat;
+    }
+
+    public void setmTripEndLat(double mTripEndLat)
+    {
+        this.mTripEndLat = mTripEndLat;
+    }
+
+    public double getmTripStartLong()
+    {
+        return mTripStartLong;
+    }
+
+    public void setmTripStartLong(double mTripStartLong)
+    {
+        this.mTripStartLong = mTripStartLong;
+    }
+
+    public double getmTripEndLong()
+    {
+        return mTripEndLong;
+    }
+
+    public void setmTripEndLong(double mTripEndLong)
+    {
+        this.mTripEndLong = mTripEndLong;
     }
 
     public String getmTripStart()
@@ -77,21 +112,6 @@ public class Trip extends User implements Serializable
     public int getmTripMap()
     {
         return mTripMap;
-    }
-
-    public HashMap<String, String> getmTripIssues()
-    {
-        return mTripIssues;
-    }
-
-    public LatLng getmTripStartLatLng()
-    {
-        return mTripStartLatLng;
-    }
-
-    public LatLng getmTripEndLatLng()
-    {
-        return mTripEndLatLng;
     }
 
     public int getTripMileage() {return this.mTripMileage;}
@@ -121,21 +141,6 @@ public class Trip extends User implements Serializable
     public void setmTripMap(int mTripMap)
     {
         this.mTripMap = mTripMap;
-    }
-
-    public void setmTripIssues(HashMap<String, String> mTripIssues)
-    {
-        this.mTripIssues = mTripIssues;
-    }
-
-    public void setmTripStartLatLng(LatLng mTripStartLatLng)
-    {
-        this.mTripStartLatLng = mTripStartLatLng;
-    }
-
-    public void setmTripEndLatLng(LatLng mTripEndLatLng)
-    {
-        this.mTripEndLatLng = mTripEndLatLng;
     }
 
     public void setTripMileageCount(int miles){this.mTripMileage = miles;}

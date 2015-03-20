@@ -48,31 +48,38 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".DriveToWinActivity"
-            android:label="Drive To Win">
+            android:label="Drive To Win"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".MyTripsActivity"
-            android:label="My Trips">
+            android:label="My Trips"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".MyVehicleActivity"
-            android:label="My Vehicle">
+            android:label="My Vehicle"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".InsuranceInfoActivity"
-            android:label="Insurance Info">
+            android:label="Insurance Info"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".EmergencyActivity"
-            android:label="Emergency">
+            android:label="Emergency"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="Settings">
+            android:label="Settings"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
