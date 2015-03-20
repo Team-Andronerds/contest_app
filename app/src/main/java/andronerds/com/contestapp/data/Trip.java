@@ -21,6 +21,11 @@ public class Trip extends User
     private int mHarshTurnCount = 0;
     private int mPoints = 0;
 
+    private double mTripStartLat;
+    private double mTripStartLong;
+    private double mTripEndLat;
+    private double mTripEndLong;
+
     public Trip() {}
 
   /*  public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues,int mileage,int brakeCount,int speedingCount, int gasCount,
@@ -56,22 +61,38 @@ public class Trip extends User
         this.setName(userName);
     }
 
-    /*public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues)
+    public double getmTripStartLat()
     {
-        this.mTripStart = mTripStart;
-        this.mTripEnd = mTripEnd;
-        this.mTripMap = mTripMap;
-        this.mTripIssues = mTripIssues;
-    }*/
-
-  /*  public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues, String userName)
+        return mTripStartLat;
+    }
+    public void setmTripStartLat(double mTripStartLat)
     {
-        this.mTripStart = mTripStart;
-        this.mTripEnd = mTripEnd;
-        this.mTripMap = mTripMap;
-        //this.mTripIssues = mTripIssues;
-        this.setName(userName);
-    }*/
+        this.mTripStartLat = mTripStartLat;
+    }
+    public double getmTripStartLong()
+    {
+        return mTripStartLong;
+    }
+    public void setmTripStartLong(double mTripStartLong)
+    {
+        this.mTripStartLong = mTripStartLong;
+    }
+    public double getmTripEndLat()
+    {
+        return mTripEndLat;
+    }
+    public void setmTripEndLat(double mTripEndLat)
+    {
+        this.mTripEndLat = mTripEndLat;
+    }
+    public double getmTripEndLong()
+    {
+        return mTripEndLong;
+    }
+    public void setmTripEndLong(double mTripEndLong)
+    {
+        this.mTripEndLong = mTripEndLong;
+    }
 
     public String getmTripStart()
     {

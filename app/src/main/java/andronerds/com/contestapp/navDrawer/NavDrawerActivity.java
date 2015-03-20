@@ -352,10 +352,4 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         }
     }
 
-    @Override
-    public void onBackPressed()
-    {
-        mNavDrawerAdapter.setCurrentlySelected(1);
-        super.onBackPressed();
-    }
 }

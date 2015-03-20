@@ -104,7 +104,7 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
         MyTripsTripCard tripCard = (MyTripsTripCard) card;
         Bundle args = new Bundle();
         Trip trip = tripCard.getTrip();
-        args.putSerializable(Intent.EXTRA_TEXT, trip);
+        //args.putSerializable(Intent.EXTRA_TEXT, trip);
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         TripInfoFragment infoFragment = new TripInfoFragment();

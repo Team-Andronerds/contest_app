@@ -149,9 +149,9 @@ public class StatsFragment extends Fragment
     {
         Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
         temptrip.save();
-        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,150,userName);
+        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,400,userName);
         temptrip2.save();
-        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,100,userName);
+        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,500,userName);
         temptrip3.save();
         List<Trip> userTrips = Trip.find(Trip.class, "name = ?", userName);
 
@@ -219,12 +219,11 @@ public class StatsFragment extends Fragment
 
     public int getTotalPoints(String userName)
     {
-
         Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
         temptrip.save();
-        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,100,userName);
+        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,400,userName);
         temptrip2.save();
-        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,150,userName);
+        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,500,userName);
         temptrip3.save();
         List<Trip> trips = Trip.find(Trip.class,"name = ?",userName);
 
