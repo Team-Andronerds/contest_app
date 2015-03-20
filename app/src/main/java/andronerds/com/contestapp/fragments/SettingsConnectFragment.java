@@ -1,6 +1,7 @@
 package andronerds.com.contestapp.fragments;
 
 import android.app.Fragment;
+import android.app.ProgressDialog;
 import android.bluetooth.BluetoothDevice;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -93,7 +94,9 @@ public class SettingsConnectFragment extends Fragment implements View.OnClickLis
                 address = deviceAddressAdapter.getItem(position);
                 pos = position;
                 Log.d("Address is: ", address);
+                //start progress dialog
                 OnBoardDiagnostic.connect(address);
+
             }else if(position == pos){
                 mDeviceList.setItemChecked(position, false);
                 pos = -1;
@@ -115,4 +118,6 @@ public class SettingsConnectFragment extends Fragment implements View.OnClickLis
             Toast.makeText(this.getActivity().getApplicationContext(), "Device is not paired", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }

@@ -5,4 +5,5 @@
     <dimen name="profile_label">18sp</dimen>
     <dimen name="profile_info">16sp</dimen>
     <dimen name="profile_info_spacing">25dip</dimen>
+    <dimen name="stats_info_spacing">40dip</dimen>
 </resources>

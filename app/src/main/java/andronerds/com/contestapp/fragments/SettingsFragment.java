@@ -87,4 +87,15 @@ public class SettingsFragment extends Fragment implements View.OnClickListener
                 break;
         }
     }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        if(OnBoardDiagnostic.isActive()){
+            mConnectButton.setText("Disconnect from OBD");
+            mConnectButton.setBackgroundColor(0xFFC0392B);
+        }
+
+    }
 }
