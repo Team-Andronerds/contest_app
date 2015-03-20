@@ -26,6 +26,8 @@ public class Trip extends User implements Serializable
     private double mTripEndLat;
     private double mTripEndLong;
 
+    private User user;
+
     public Trip() {}
 
   /*  public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues,int mileage,int brakeCount,int speedingCount, int gasCount,
@@ -46,7 +48,7 @@ public class Trip extends User implements Serializable
     }*/
 
     public Trip(String mTripStart, String mTripEnd, int mTripMap,int mileage,int brakeCount,int speedingCount, int gasCount,
-                int accelCount, int turnCount, int points, String userName)
+                int accelCount, int turnCount, int points, String user)
     {
         this.mTripStart = mTripStart;
         this.mTripEnd = mTripEnd;
@@ -58,7 +60,7 @@ public class Trip extends User implements Serializable
         this.mLowGasCount = gasCount;
         this.mSpeedingCount = speedingCount;
         this.mTripMileage = mileage;
-        this.setName(userName);
+        this.setName(user);
     }
 
     /*public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues)
@@ -77,6 +79,16 @@ public class Trip extends User implements Serializable
         //this.mTripIssues = mTripIssues;
         this.setName(userName);
     }*/
+
+    public User getUser()
+    {
+        return user;
+    }
+
+    public void setUser(User user)
+    {
+        this.user = user;
+    }
 
     public double getmTripStartLat()
     {

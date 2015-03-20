@@ -12,13 +12,12 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
-import java.util.HashMap;
 import java.util.List;
 
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.data.Trip;
-import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;
+import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.views.ProgressWheel;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -149,7 +148,7 @@ public class StatsFragment extends Fragment
     {
         Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
         temptrip.save();
-        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,150,userName);
+        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,50,userName);
         temptrip2.save();
         Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,100,userName);
         temptrip3.save();
@@ -219,10 +218,9 @@ public class StatsFragment extends Fragment
 
     public int getTotalPoints(String userName)
     {
-
         Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
         temptrip.save();
-        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,100,userName);
+        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,50,userName);
         temptrip2.save();
         Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,150,userName);
         temptrip3.save();
@@ -245,7 +243,6 @@ public class StatsFragment extends Fragment
         {
             return 0;
         }
-
 
     }
 
@@ -271,7 +268,7 @@ public class StatsFragment extends Fragment
                 points += i * 100;
             }
             Log.d("MATH CURR LEVEL PROG",Integer.toString(points));
-            return points - mCurrTotalPoints;
+            return mCurrTotalPoints - points;
         }
         else
         {

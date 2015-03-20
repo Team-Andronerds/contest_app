@@ -75,7 +75,7 @@ public class EditUserNameFragment extends Fragment implements View.OnClickListen
                     {
                         for(Trip trip : userTrips)
                         {
-                            trip.setName(userName);
+                            trip.getUser().setName(userName);
                             trip.save();
                         }
                     }
