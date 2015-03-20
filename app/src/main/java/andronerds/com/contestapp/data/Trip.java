@@ -1,13 +1,13 @@
 package andronerds.com.contestapp.data;
 
-import java.util.HashMap;
+import java.io.Serializable;
 
 /**
  * @author Aaron Weaver         (waaronl@okstate.edu)
  * @version ContestApp v1.0
  * @since 2/22/15
  */
-public class Trip extends User
+public class Trip extends User implements Serializable
 {
     private String mTripStart;
     private String mTripEnd;

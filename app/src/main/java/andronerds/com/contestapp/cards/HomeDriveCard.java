@@ -2,12 +2,9 @@ package andronerds.com.contestapp.cards;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -173,7 +170,7 @@ public class HomeDriveCard extends Card
                 points += i * 100;
             }
             Log.d("MATH CURR LEVEL PROG",Integer.toString(points));
-            return points - mCurrTotalPoints;
+            return mCurrTotalPoints - points;
         }
         else
         {
