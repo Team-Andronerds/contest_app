@@ -11,7 +11,12 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
+import java.util.HashMap;
+import java.util.List;
+
 import andronerds.com.contestapp.R;
+import andronerds.com.contestapp.data.Trip;
 import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import andronerds.com.contestapp.views.ProgressWheel;
@@ -32,6 +37,8 @@ public class StatsFragment extends Fragment
 
     private float mCurrentPoints;
     private float mPointsNeeded;
+    private int mCurrLevel;
+    private int mCurrTotalPoints;
 
     // newInstance constructor for creating fragment with arguments
     public static StatsFragment newInstance(int page, String title) {
@@ -43,9 +50,25 @@ public class StatsFragment extends Fragment
         return fragmentFirst;
     }
 
+    @InjectView(R.id.curr_level)TextView mCurrLevelText;
     @InjectView(R.id.stats_profile_pic)CircleImageView mProfilePic;
     @InjectView(R.id.stats_points)TextView mPointsText;
     @InjectView(R.id.stats_pie_chart)ProgressWheel mPointsChart;
+    @InjectView(R.id.stats_text_total_trips)TextView mTotalTrips;
+    @InjectView(R.id.stats_text_total_miles) TextView mTotalMiles;
+    @InjectView(R.id.stats_text_total_points) TextView mTotalPoints;
+    @InjectView(R.id.stats_text_total_harsh_accelerating) TextView mTotalAccel;
+    @InjectView(R.id.stats_text_total_harsh_braking)TextView mTotalBrake;
+    @InjectView(R.id.stats_text_total_harsh_turns) TextView mTotalTurns;
+    @InjectView(R.id.stats_text_total_speeding) TextView mTotalSpeeding;
+    @InjectView(R.id.stats_text_total_gas) TextView mTotalGas;
+    @InjectView(R.id.stats_text_average_miles)TextView mAvgMiles;
+    @InjectView(R.id.stats_text_average_points)TextView mAvgPoints;
+    @InjectView(R.id.stats_average_harsh_accelerating)TextView mAvgAccel;
+    @InjectView(R.id.stats_text_average_harsh_braking)TextView mAvgBrake;
+    @InjectView(R.id.stats_text_average_harsh_turns)TextView mAvgTurns;
+    @InjectView(R.id.stats_text_average_speeding)TextView mAvgSpeeding;
+    @InjectView(R.id.stats_text_average_gas)TextView mAvgGas;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -53,8 +76,17 @@ public class StatsFragment extends Fragment
         View view = inflater.inflate(R.layout.fragment_stats, container, false);
         ButterKnife.inject(this, view);
 
-        mCurrentPoints = 40;
-        mPointsNeeded = 100;
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+        boolean usingGooglePlus = sharedPreferences.getBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, false);
+        String userName = sharedPreferences.getString(IdentityStrings.USER_NAME, "");
+
+        mCurrTotalPoints = getTotalPoints(userName);
+        mCurrLevel = calcLevel(mCurrTotalPoints);
+        mPointsNeeded = mCurrLevel*100;
+        mCurrentPoints = calcCurrPoints();
+        mPointsText.setText(""+mCurrentPoints+" / " + mPointsNeeded);
+        mCurrLevelText.setText("Level " + mCurrLevel);
+
         float percent = (100 * mCurrentPoints) / mPointsNeeded;
 
         Log.d("PERCENT", String.format("%.0f%%", percent));
@@ -64,9 +96,6 @@ public class StatsFragment extends Fragment
         int circlePercent = Math.round((360 * mCurrentPoints) / mPointsNeeded);
 
         mPointsChart.setProgress(circlePercent);
-
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
-        boolean usingGooglePlus = sharedPreferences.getBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, false);
 
         int profilePicInt = 0;
         String profilePicString = "";
@@ -110,6 +139,143 @@ public class StatsFragment extends Fragment
         mProfilePic.setBorderWidth(3);
         mProfilePic.setBorderColor(getActivity().getResources().getColor(R.color.black));
 
+        setupStats(userName);
+
         return view;
+    }
+
+
+    public void setupStats(String userName)
+    {
+        Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
+        temptrip.save();
+        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,150,userName);
+        temptrip2.save();
+        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,100,userName);
+        temptrip3.save();
+        List<Trip> userTrips = Trip.find(Trip.class, "name = ?", userName);
+
+        int tripsCount = userTrips.size();
+
+        if(tripsCount != 0)
+        {
+            Log.d("STATS TRIPS","TRIPS AVAILABLE");
+
+            int miles = 0;
+            int points = 0;
+            int brakes = 0;
+            int turns = 0;
+            int gas = 0;
+            int speeding = 0;
+            int accel = 0;
+
+            for(Trip trip : userTrips)
+            {
+                points += trip.getPoints();
+                miles += trip.getTripMileage();
+                brakes += trip.getHarshBrakeCount();
+                turns += trip.getHarshTurnCount();
+                gas += trip.getLowGasCount();
+                speeding += trip.getSpeedingCount();
+                accel += trip.getHarshAccelCount();
+            }
+
+            float avgPoints = (float)points/(float)tripsCount;
+            float avgMiles = (float)miles/(float)tripsCount;
+            float avgBrakes = (float)brakes/(float)tripsCount;
+            float avgTurns = (float)turns/(float)tripsCount;
+            float avgGas = (float)gas/(float)tripsCount;
+            float avgSpeeding = (float)speeding/(float)tripsCount;
+            float avgAccel = (float)accel/(float)tripsCount;
+
+            mTotalTrips.setText(""+tripsCount);
+            mTotalMiles.setText(""+miles);
+            mTotalPoints.setText(""+points);
+            mTotalBrake.setText(""+brakes);
+            mTotalTurns.setText(""+turns);
+            mTotalGas.setText(""+gas);
+            mTotalSpeeding.setText(""+speeding);
+            mTotalAccel.setText(""+accel);
+
+            DecimalFormat df = new DecimalFormat("0.0");
+
+            mAvgMiles.setText(df.format(avgMiles));
+            mAvgPoints.setText(df.format(avgPoints));
+            mAvgBrake.setText(df.format(avgBrakes));
+            mAvgTurns.setText(df.format(avgTurns));
+            mAvgGas.setText(df.format(avgGas));
+            mAvgSpeeding.setText(df.format(avgSpeeding));
+            mAvgAccel.setText(df.format(avgAccel));
+        }
+        else
+        {
+            Log.d("STATS TRIPS","NO TRIPS AVAILABLE");
+        }
+
+        temptrip.delete();
+        temptrip2.delete();
+        temptrip3.delete();
+    }
+
+    public int getTotalPoints(String userName)
+    {
+
+        Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
+        temptrip.save();
+        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,100,userName);
+        temptrip2.save();
+        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,150,userName);
+        temptrip3.save();
+        List<Trip> trips = Trip.find(Trip.class,"name = ?",userName);
+
+
+        if(trips.size() != 0)
+        {
+            int total = 0;
+            for(Trip trip : trips)
+            {
+                total += trip.getPoints();
+            }
+            temptrip.delete();
+            temptrip2.delete();
+            temptrip3.delete();
+            return total;
+        }
+        else
+        {
+            return 0;
+        }
+
+
+    }
+
+    public int calcLevel(int points)
+    {
+        if(points >= 100) {
+            Log.d("MATH TEST", Double.toString(Math.ceil(1.516408154 * Math.exp(0.001235231805 * points))));
+            return (int) Math.ceil(1.516408154 * Math.exp(0.001235231805 * points));
+        }
+        else
+        {
+            return 1;
+        }
+    }
+
+
+    public int calcCurrPoints()
+    {
+        if(mCurrLevel > 1) {
+            int points = 0;
+            for(int i = mCurrLevel-1; i > 0; i--)
+            {
+                points += i * 100;
+            }
+            Log.d("MATH CURR LEVEL PROG",Integer.toString(points));
+            return points - mCurrTotalPoints;
+        }
+        else
+        {
+            return mCurrTotalPoints;
+        }
     }
 }

@@ -60,8 +60,8 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
 
         Log.d("Pic Test", profilePic);
 
-        List<Vehicle> myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
-        List<User> users = User.find(User.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, ""));
+
+        //List<User> users = User.find(User.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, ""));
 
         if(!profileName.equals("")) {
             mProfileName.setText(sharedPreferences.getString(IdentityStrings.USER_NAME, ""));
@@ -97,13 +97,17 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
         }
 
 
+        Vehicle temp = new Vehicle("2004","Honda","Accord","C3458109094C","#AB09BC",sharedPreferences.getString(IdentityStrings.USER_NAME,""));
+        temp.save();
+        List<Vehicle> myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
+        temp.delete();
         if(myVehicles.size() == 0) {
             mVehicleInfo.setText("YEAR MAKE MODEL");
         }
         else
         {
             Vehicle vehicle = myVehicles.get(0);
-            mVehicleInfo.setText(vehicle.getYear() + " " + vehicle.getModel() + " " + vehicle.getMake());
+            mVehicleInfo.setText(vehicle.getYear() + " " + vehicle.getMake() + " " + vehicle.getModel());
             mVehicleVin.setText(vehicle.getVin());
             mVehicleColor.setBackgroundColor(Color.parseColor(vehicle.getColor()));
         }
@@ -129,6 +133,12 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
                 .commit();
 
         //Toast.makeText(this.getActivity().getApplicationContext(),email,Toast.LENGTH_LONG).show();
+    }
+
+    public void tempVehicles(String userName)
+    {
+
+
     }
 
     @Override

@@ -43,7 +43,7 @@
         android:id="@+id/edit_profile_picture_button"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="60dip"
-        android:text="EDIT PICTURE"
+        android:text="CHANGE PICTURE"
         android:textSize="22dp"
         android:textStyle="bold"
         android:textColor="@color/white"

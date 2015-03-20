@@ -5,8 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="obd_select">Select Your OBD</string>
     <string name="action_settings">Settings</string>
-    <string name="drive_current_points">Current Points</string>
-    <string name="drive_points_placeholder">40 / 100</string>
+    <string name="drive_current_points">Level Progress</string>
+    <string name="drive_points_placeholder">0 / 100</string>
     <string name="from">from:</string>
     <string name="to">to:</string>
     <string name="trip_pts_earned">You earned</string>
@@ -78,8 +78,8 @@
         <item name="hasFirstDriveTitle">true</item>
         <item name="hasFiveDrives">true</item>
         <item name="hasFirstSafeDrive">true</item>
-        <item name="hasFiveSafeDrive">false</item>
-        <item name="hasTenSafeDrive">true</item>
+        <item name="hasFiveSafeDrive">true</item>
+        <item name="hasTenSafeDrive">false</item>
         <item name="hasTwentySafeDrive">false</item>
         <item name="hasFiftySafeDrive">false</item>
         <item name="hasGoogle+">true</item>
