@@ -72,9 +72,6 @@ public class AchievementsFragment extends Fragment{
                 tempAchieveList.add(ac);
             }
         }
-
-        int cardSize = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 125, getResources().getDisplayMetrics()));
-        mAchievementsListView.getLayoutParams().height = cardSize * mAchievementList.size();
         mAchievementList.addAll(tempAchieveList);
         tempAchieveList = null;
 

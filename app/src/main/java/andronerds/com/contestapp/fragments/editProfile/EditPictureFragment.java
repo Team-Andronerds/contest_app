@@ -96,31 +96,6 @@ public class EditPictureFragment extends Fragment implements View.OnClickListene
 
 
         SharedPreferences shPref = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
-        String path = shPref.getString(IdentityStrings.USER_PROFILE_PIC,"");
-        File tempDir = new File(path);
-
-
-        bitmapImage = Bitmap.createScaledBitmap(bitmapImage,bitmapImage.getWidth()/2,bitmapImage.getHeight()/2,false);
-
-        try {
-            ExifInterface exif = new ExifInterface(tempDir.getAbsolutePath());
-            int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, 1);
-            Log.d("EXIF", "Exif: " + orientation);
-            Matrix matrix = new Matrix();
-            if (orientation == 6) {
-                matrix.postRotate(90);
-            }
-            else if (orientation == 3) {
-                matrix.postRotate(180);
-            }
-            else if (orientation == 8) {
-                matrix.postRotate(270);
-            }
-            bitmapImage = Bitmap.createBitmap(bitmapImage, 0, 0, bitmapImage.getWidth(), bitmapImage.getHeight(), matrix, true); // rotating bitmap
-        }
-        catch (Exception e) {
-
-        }
 
         ContextWrapper cw = new ContextWrapper(getActivity().getApplicationContext());
         // path to /data/data/yourapp/app_data/imageDir

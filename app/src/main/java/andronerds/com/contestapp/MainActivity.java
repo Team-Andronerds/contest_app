@@ -76,7 +76,7 @@ public class MainActivity extends NavDrawerActivity
 
             for(int i = 0; i < achTitles.size(); i++)
             {
-                ach = new Achievements(achTitles.get(i),achDesc[i],earned[i].equals("true"),R.drawable.ic_profile_null,userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
+                ach = new Achievements(achTitles.get(i),achDesc[i],earned[i].equals("true"),R.drawable.nav_vehicle_gray,userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
                 ach.save();
             }
         }
@@ -91,7 +91,7 @@ public class MainActivity extends NavDrawerActivity
 
             for(int i = 0; i < achTitles.size(); i++)
             {
-                ach = new Achievements(achTitles.get(i),achDesc[i],earned[i].equals("true"),R.drawable.ic_profile_null,userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
+                ach = new Achievements(achTitles.get(i),achDesc[i],earned[i].equals("true"),R.drawable.nav_vehicle_gray,userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
                 ach.save();
             }
         }

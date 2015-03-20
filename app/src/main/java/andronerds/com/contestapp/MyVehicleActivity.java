@@ -93,7 +93,6 @@ public class MyVehicleActivity extends NavDrawerActivity
             Log.d("CAMERA TEST", data.toString());
             ByteArrayOutputStream byteArrayBitmapStream = new ByteArrayOutputStream();
             Bitmap b = (Bitmap)data.getExtras().get("data");
-            b = Bitmap.createScaledBitmap(b,50,50,false);
 
             if(b != null) {
                 EditPictureFragment pictureFrag = (EditPictureFragment) getFragmentManager().findFragmentByTag("PICS");

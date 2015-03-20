@@ -27,7 +27,8 @@ public class RefreshThread extends AsyncTask<Fragment, Integer, Void> {
         FragmentManager fm = parent.getActivity().getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         connectFrag = new PairedListLoadingFragment();
-        ft.replace(R.id.settings_fragment_container, connectFrag);
+        ft.addToBackStack(null);
+        ft.replace(R.id.settings_fragment_container, connectFrag,"loading");
         ft.commit();
     }
 
@@ -43,7 +44,9 @@ public class RefreshThread extends AsyncTask<Fragment, Integer, Void> {
         FragmentManager fm = connectFrag.getActivity().getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         SettingsConnectFragment connectFrag = new SettingsConnectFragment();
-        ft.replace(R.id.settings_fragment_container, connectFrag);
+
+
+        ft.replace(R.id.settings_fragment_container, connectFrag,"devices");
         ft.commit();
     }
 }
