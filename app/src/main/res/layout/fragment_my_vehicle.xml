@@ -12,7 +12,7 @@
         android:background="@color/toolbar_color">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="150dip"
+            android:layout_width="125dip"
             android:layout_height="125dip"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dip"
@@ -37,119 +37,124 @@
 
     </LinearLayout>
 
-
-    <LinearLayout android:layout_width="wrap_content"
-        android:layout_marginTop="@dimen/profile_info_spacing"
-        android:layout_marginLeft="20dip"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView android:layout_width="wrap_content"
+    <ScrollView android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <LinearLayout android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Make/Model: "
-            android:textSize="@dimen/profile_label"
-            android:textStyle="bold">>
-        </TextView>
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/profile_info"
-            android:id="@+id/my_vehicle_info">
+            android:orientation="vertical">
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/profile_info_spacing"
+                android:layout_marginLeft="20dip"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        </TextView>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make/Model: "
+                    android:textSize="@dimen/profile_label"
+                    android:textStyle="bold">>
+                </TextView>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/profile_info"
+                    android:id="@+id/my_vehicle_info">
 
-    </LinearLayout>
+                </TextView>
 
-    <LinearLayout android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="@dimen/profile_info_spacing"
-        android:layout_marginLeft="20dip">
+            </LinearLayout>
 
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vin #: "
-            android:textSize="@dimen/profile_label"
-            android:textStyle="bold">>
-        </TextView>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/profile_info_spacing"
+                android:layout_marginLeft="20dip">
 
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="@dimen/profile_info"
-            android:id="@+id/my_vehicle_vin">
-        </TextView>
-    </LinearLayout>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vin #: "
+                    android:textSize="@dimen/profile_label"
+                    android:textStyle="bold">>
+                </TextView>
 
-    <LinearLayout android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/profile_info_spacing"
-        android:layout_marginLeft="20dip">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/profile_info"
+                    android:id="@+id/my_vehicle_vin">
+                </TextView>
+            </LinearLayout>
 
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vehicle Color: "
-            android:textSize="@dimen/profile_label"
-            android:textStyle="bold">
-        </TextView>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/profile_info_spacing"
+                android:layout_marginLeft="20dip">
 
-        <RelativeLayout android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="2dip"
-            android:layout_marginLeft="15dip">
-            <View
-                android:layout_height="20dip"
-                android:layout_width="200dip"
-                android:background="@color/black"
-                android:id="@+id/borderBox">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Color: "
+                    android:textSize="@dimen/profile_label"
+                    android:textStyle="bold">
+                </TextView>
 
-            </View>
-            <View android:layout_height="18dip"
-                android:layout_width="198dip"
-                android:background="@color/white"
-                android:layout_alignLeft="@id/borderBox"
-                android:layout_alignTop="@id/borderBox"
-                android:layout_marginTop="1dip"
-                android:layout_marginLeft="1dip"
-                android:id="@+id/my_vehicle_color">
-            </View>
-        </RelativeLayout>
+                <RelativeLayout android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:layout_marginLeft="15dip">
+                    <View
+                        android:layout_height="20dip"
+                        android:layout_width="200dip"
+                        android:background="@color/black"
+                        android:id="@+id/borderBox">
 
-    </LinearLayout>
+                    </View>
+                    <View android:layout_height="18dip"
+                        android:layout_width="198dip"
+                        android:background="@color/white"
+                        android:layout_alignLeft="@id/borderBox"
+                        android:layout_alignTop="@id/borderBox"
+                        android:layout_marginTop="1dip"
+                        android:layout_marginLeft="1dip"
+                        android:id="@+id/my_vehicle_color">
+                    </View>
+                </RelativeLayout>
 
-    <LinearLayout android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="@dimen/profile_info_spacing"
-        android:layout_marginLeft="20dip">
+            </LinearLayout>
 
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="E-Mail: "
-            android:textSize="@dimen/profile_label"
-            android:textStyle="bold">>
-        </TextView>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/profile_info_spacing"
+                android:layout_marginLeft="20dip">
 
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="@dimen/profile_info"
-            android:id="@+id/my_vehicle_email">
-        </TextView>
-    </LinearLayout>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-Mail: "
+                    android:textSize="@dimen/profile_label"
+                    android:textStyle="bold">>
+                </TextView>
 
-
-    <Button android:layout_width="300dip"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_profile_button"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="60dip"
-        android:text="EDIT PROFILE"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:background="@drawable/generic_green_button">
-    </Button>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/profile_info"
+                    android:id="@+id/my_vehicle_email">
+                </TextView>
+            </LinearLayout>
 
 
+            <Button android:layout_width="300dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_profile_button"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dip"
+                android:text="EDIT PROFILE"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/generic_green_button">
+            </Button>
 
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

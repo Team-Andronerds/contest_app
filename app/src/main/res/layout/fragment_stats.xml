@@ -38,7 +38,7 @@
             android:layout_toRightOf="@+id/stats_profile_pic"
             android:layout_below="@+id/stats_current_points_label"
             android:id="@+id/stats_points"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:textColor="@color/white"
             android:layout_gravity="center_horizontal"
             android:text="@string/drive_points_placeholder"
@@ -60,6 +60,16 @@
             ProgressWheel:barWidth="8dp"
             ProgressWheel:rimWidth="8dp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stats_profile_pic"
+            android:id="@+id/curr_level"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:text="Level 1"
+            android:layout_marginLeft="30dip"/>
+
     </RelativeLayout>
 
     <ScrollView android:layout_width="match_parent"
@@ -71,15 +81,42 @@
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dip"
+                android:paddingLeft="20dip"
                 android:text="LIFETIME TOTALS"
                 android:textColor="@color/white"
                 android:background="@color/toolbar_color"
                 android:textStyle="bold"
                 android:textSize="18sp"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="20dip"
+                android:orientation="horizontal">
+
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Total Trips: "
+                    android:textStyle="bold"
+                    android:textSize="@dimen/profile_label"/>
+
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/profile_info"
+                    android:text="0"
+                    android:gravity="right"
+                    android:paddingRight="30dip"
+                    android:id="@+id/stats_text_total_trips"/>
+
+            </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
 
             <LinearLayout android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="20dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
                 android:layout_marginLeft="20dip"
                 android:orientation="horizontal">
 
@@ -92,9 +129,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0"
                     android:id="@+id/stats_text_total_miles"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -111,9 +155,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0"
                     android:id="@+id/stats_text_total_points"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -130,9 +181,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0"
                     android:id="@+id/stats_text_total_harsh_braking"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -149,9 +207,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0"
                     android:id="@+id/stats_text_total_harsh_accelerating"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -168,9 +233,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0"
                     android:id="@+id/stats_text_total_harsh_turns"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -187,9 +259,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0"
                     android:id="@+id/stats_text_total_speeding"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -206,13 +285,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0"
                     android:id="@+id/stats_text_total_gas"/>
 
             </LinearLayout>
 
+
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dip"
+                android:paddingLeft="20dip"
                 android:text="TRIP AVERAGES"
                 android:textColor="@color/white"
                 android:background="@color/toolbar_color"
@@ -234,9 +316,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0.0"
                     android:id="@+id/stats_text_average_miles"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -253,9 +342,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0.0"
                     android:id="@+id/stats_text_average_points"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -272,9 +368,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0.0"
                     android:id="@+id/stats_text_average_harsh_braking"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -291,14 +394,22 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0.0"
                     android:id="@+id/stats_average_harsh_accelerating"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_marginTop="@dimen/stats_info_spacing"
                 android:layout_marginLeft="20dip"
+
                 android:orientation="horizontal">
 
                 <TextView android:layout_height="wrap_content"
@@ -310,9 +421,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0.0"
                     android:id="@+id/stats_text_average_harsh_turns"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -329,9 +447,16 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0.0"
                     android:id="@+id/stats_text_average_speeding"/>
 
             </LinearLayout>
+
+            <View android:layout_height="1dip"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/stats_info_spacing"
+                android:background="@color/black"/>
+
 
             <LinearLayout android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
@@ -349,6 +474,7 @@
                 <TextView android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:text="0.0"
                     android:id="@+id/stats_text_average_gas"/>
 
             </LinearLayout>

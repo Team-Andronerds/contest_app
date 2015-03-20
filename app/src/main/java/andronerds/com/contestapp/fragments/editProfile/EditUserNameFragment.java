@@ -14,7 +14,9 @@ import java.util.List;
 
 import andronerds.com.contestapp.MyVehicleActivity;
 import andronerds.com.contestapp.R;
+import andronerds.com.contestapp.data.Trip;
 import andronerds.com.contestapp.data.User;
+import andronerds.com.contestapp.data.Vehicle;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -50,6 +52,8 @@ public class EditUserNameFragment extends Fragment implements View.OnClickListen
         String userName = mEditTextUserName.getText().toString();
         List<User> user = User.find(User.class, "name = ?",oldUserName);
         List<User> userTest = User.find(User.class, "name = ?",userName);
+        List<Vehicle> userVehicle = Vehicle.find(Vehicle.class, "name = ?", oldUserName);
+        List<Trip> userTrips = Trip.find(Trip.class,"name = ?", oldUserName);
 
         if(!userName.equals(""))
         {
@@ -60,6 +64,21 @@ public class EditUserNameFragment extends Fragment implements View.OnClickListen
                 if (user.size() != 0) {
                     user.get(0).setName(userName);
                     user.get(0).save();
+
+                    if(userVehicle.size() != 0)
+                    {
+                        userVehicle.get(0).setName(userName);
+                        userVehicle.get(0).save();
+                    }
+
+                    if(userTrips.size() != 0)
+                    {
+                        for(Trip trip : userTrips)
+                        {
+                            trip.setName(userName);
+                            trip.save();
+                        }
+                    }
                 }
 
                 editor.commit();

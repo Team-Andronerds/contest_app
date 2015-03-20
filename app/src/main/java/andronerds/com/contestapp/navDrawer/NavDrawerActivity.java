@@ -317,6 +317,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         }catch(IllegalArgumentException e){
 
         }
+
+        mNavDrawerAdapter.setCurrentlySelected(1);
     }
 
     @Override
@@ -334,5 +336,12 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         }if(resultCode == RESULT_OK){
             OnBoardDiagnostic.setState(true);
         }
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        mNavDrawerAdapter.setCurrentlySelected(1);
+        super.onBackPressed();
     }
 }

@@ -14,30 +14,24 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="MATH" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: andronerds.com.contestapp" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad2629cd-8a7c-44eb-951a-811f7e12cb2c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contest_app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/AchievementsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/AchievementsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/editProfile/EditPictureFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/editProfile/EditPictureFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyVehicleActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyVehicleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/OnBoardDiagnostic.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/OnBoardDiagnostic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/editProfile/EditUserNameFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/editProfile/EditUserNameFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/andronerds/com/contestapp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/andronerds/com/contestapp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/RefreshThread.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/RefreshThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/SettingsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/SettingsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SettingsConnectFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SettingsConnectFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SettingsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SettingsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Trip.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Trip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Vehicle.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Vehicle.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_picture.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_picture.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_vehicle.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_vehicle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ec83f3bb-4ad7-4f79-8a29-3996ce1556c9" name="Failed commit: Default" comment="Merge remote-tracking branch 'origin/FEAT-CP-00' into develop&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;app/app.iml&#10;&#9;app/build.gradle&#10;&#9;app/build/generated/source/r/debug/android/support/v7/appcompat/R.java&#10;&#9;app/build/generated/source/r/debug/andronerds/com/contestapp/R.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/MainActivity.java&#10;&#9;app/src/main/res/layout/activity_main.xml&#10;" />
@@ -63,11 +57,162 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OnBoardDiagnostic.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/OnBoardDiagnostic.java">
+      <file leaf-file-name="fragment_edit_picture.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_picture.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.107143" vertical-offset="831" max-vertical-offset="4131">
-              <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+            <state vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="561">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_edit_profile.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5555553" vertical-offset="561" max-vertical-offset="1003">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatsFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2001" max-vertical-offset="4505">
+              <caret line="153" column="62" selection-start-line="153" selection-start-column="62" selection-end-line="153" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dimens.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Trip.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Trip.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="2227">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.64" vertical-offset="20" max-vertical-offset="1785">
+              <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_my_vehicle.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_my_vehicle.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-27.074074" vertical-offset="0" max-vertical-offset="2805">
+              <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_stats.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.0654205" vertical-offset="1596" max-vertical-offset="8330">
+              <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
+              <folding>
+                <element signature="e#1199#1229#0" expanded="true" />
+                <element signature="e#1863#1897#0" expanded="true" />
+                <element signature="e#4294#4316#0" expanded="true" />
+                <element signature="e#4476#4497#0" expanded="true" />
+                <element signature="e#4861#4888#0" expanded="true" />
+                <element signature="e#5098#5125#0" expanded="true" />
+                <element signature="e#5477#5499#0" expanded="true" />
+                <element signature="e#5659#5680#0" expanded="true" />
+                <element signature="e#5951#5978#0" expanded="true" />
+                <element signature="e#6189#6216#0" expanded="true" />
+                <element signature="e#6569#6591#0" expanded="true" />
+                <element signature="e#6751#6772#0" expanded="true" />
+                <element signature="e#7044#7071#0" expanded="true" />
+                <element signature="e#7282#7309#0" expanded="true" />
+                <element signature="e#7669#7691#0" expanded="true" />
+                <element signature="e#7851#7872#0" expanded="true" />
+                <element signature="e#8151#8178#0" expanded="true" />
+                <element signature="e#8389#8416#0" expanded="true" />
+                <element signature="e#8781#8803#0" expanded="true" />
+                <element signature="e#8963#8984#0" expanded="true" />
+                <element signature="e#9268#9295#0" expanded="true" />
+                <element signature="e#9506#9533#0" expanded="true" />
+                <element signature="e#9891#9913#0" expanded="true" />
+                <element signature="e#10073#10094#0" expanded="true" />
+                <element signature="e#10371#10398#0" expanded="true" />
+                <element signature="e#10609#10636#0" expanded="true" />
+                <element signature="e#10997#11019#0" expanded="true" />
+                <element signature="e#11179#11200#0" expanded="true" />
+                <element signature="e#11474#11501#0" expanded="true" />
+                <element signature="e#11712#11739#0" expanded="true" />
+                <element signature="e#12096#12118#0" expanded="true" />
+                <element signature="e#12278#12299#0" expanded="true" />
+                <element signature="e#13386#13408#0" expanded="true" />
+                <element signature="e#13568#13589#0" expanded="true" />
+                <element signature="e#13864#13891#0" expanded="true" />
+                <element signature="e#14102#14129#0" expanded="true" />
+                <element signature="e#14484#14506#0" expanded="true" />
+                <element signature="e#14666#14687#0" expanded="true" />
+                <element signature="e#14963#14990#0" expanded="true" />
+                <element signature="e#15201#15228#0" expanded="true" />
+                <element signature="e#15590#15612#0" expanded="true" />
+                <element signature="e#15772#15793#0" expanded="true" />
+                <element signature="e#16076#16103#0" expanded="true" />
+                <element signature="e#16314#16341#0" expanded="true" />
+                <element signature="e#16708#16730#0" expanded="true" />
+                <element signature="e#16890#16911#0" expanded="true" />
+                <element signature="e#17194#17221#0" expanded="true" />
+                <element signature="e#17432#17459#0" expanded="true" />
+                <element signature="e#17820#17842#0" expanded="true" />
+                <element signature="e#18002#18023#0" expanded="true" />
+                <element signature="e#18304#18331#0" expanded="true" />
+                <element signature="e#18542#18569#0" expanded="true" />
+                <element signature="e#18932#18954#0" expanded="true" />
+                <element signature="e#19114#19135#0" expanded="true" />
+                <element signature="e#19413#19440#0" expanded="true" />
+                <element signature="e#19651#19678#0" expanded="true" />
+                <element signature="e#20089#20111#0" expanded="true" />
+                <element signature="e#20271#20292#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavDrawerActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.571428" vertical-offset="5344" max-vertical-offset="5933">
+              <caret line="343" column="50" selection-start-line="343" selection-start-column="50" selection-end-line="343" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,89 +220,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutputThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/OutputThread.java">
+      <file leaf-file-name="fragment_home.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2278">
-              <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+            <state vertical-scroll-proportion="-2.5185184" vertical-offset="0" max-vertical-offset="340">
+              <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SettingsFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SettingsFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1496">
-              <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_stats.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4130" max-vertical-offset="6188">
-              <caret line="338" column="50" selection-start-line="338" selection-start-column="50" selection-end-line="338" selection-end-column="50" />
-              <folding>
-                <element signature="e#1199#1229#0" expanded="true" />
-                <element signature="e#1863#1897#0" expanded="true" />
-                <element signature="e#3872#3894#0" expanded="true" />
-                <element signature="e#4054#4075#0" expanded="true" />
-                <element signature="e#4325#4352#0" expanded="true" />
-                <element signature="e#4705#4727#0" expanded="true" />
-                <element signature="e#4887#4908#0" expanded="true" />
-                <element signature="e#5159#5186#0" expanded="true" />
-                <element signature="e#5546#5568#0" expanded="true" />
-                <element signature="e#5728#5749#0" expanded="true" />
-                <element signature="e#6007#6034#0" expanded="true" />
-                <element signature="e#6399#6421#0" expanded="true" />
-                <element signature="e#6581#6602#0" expanded="true" />
-                <element signature="e#6865#6892#0" expanded="true" />
-                <element signature="e#7250#7272#0" expanded="true" />
-                <element signature="e#7432#7453#0" expanded="true" />
-                <element signature="e#7709#7736#0" expanded="true" />
-                <element signature="e#8097#8119#0" expanded="true" />
-                <element signature="e#8279#8300#0" expanded="true" />
-                <element signature="e#8553#8580#0" expanded="true" />
-                <element signature="e#8937#8959#0" expanded="true" />
-                <element signature="e#9119#9140#0" expanded="true" />
-                <element signature="e#10145#10167#0" expanded="true" />
-                <element signature="e#10327#10348#0" expanded="true" />
-                <element signature="e#10600#10627#0" expanded="true" />
-                <element signature="e#10982#11004#0" expanded="true" />
-                <element signature="e#11164#11185#0" expanded="true" />
-                <element signature="e#11438#11465#0" expanded="true" />
-                <element signature="e#11827#11849#0" expanded="true" />
-                <element signature="e#12009#12030#0" expanded="true" />
-                <element signature="e#12290#12317#0" expanded="true" />
-                <element signature="e#12684#12706#0" expanded="true" />
-                <element signature="e#12866#12887#0" expanded="true" />
-                <element signature="e#13147#13174#0" expanded="true" />
-                <element signature="e#13534#13556#0" expanded="true" />
-                <element signature="e#13716#13737#0" expanded="true" />
-                <element signature="e#13995#14022#0" expanded="true" />
-                <element signature="e#14385#14407#0" expanded="true" />
-                <element signature="e#14567#14588#0" expanded="true" />
-                <element signature="e#14843#14870#0" expanded="true" />
-                <element signature="e#15281#15303#0" expanded="true" />
-                <element signature="e#15463#15484#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
+          <provider editor-type-id="android-designer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Trip.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Trip.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="1904">
-              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -748,11 +820,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/MilestonesFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/database/DatabaseManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SignInFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/AchievementCard.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_my_trips_trip.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
@@ -760,7 +827,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/User.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/InsuranceInfoFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/EmergencyFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/DriveToWinActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_vehicle_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/adapters/SettingsListAdapter.java" />
@@ -777,12 +843,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/animator/slide_right_out.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/insurance/InsuranceVehicleListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/insurance/InsuranceInfoFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Vehicle.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/utils/IdentityStrings.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/LoginActivity.java" />
@@ -796,7 +857,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SettingsConnectFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/OnBoardDiagnostic.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/editProfile/EditUserNameFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Trip.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/insurance/InsuranceVehicleListFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Vehicle.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_picture.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_vehicle.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml" />
       </list>
@@ -968,6 +1040,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ContestApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1040,7 +1142,117 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="navDrawer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ContestApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contestapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ContestApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contestapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="editProfile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ContestApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contestapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="driveToWin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1481,7 +1693,11 @@
       <created>1426754340011</created>
       <updated>1426754340011</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Updated Stats Fragment UI,&#10;Updated Trips Sugar Class,&#10;Fixed Bug on Camera saving bitmaps with weird resolution,&#10;Fixed Bug for Connect to OBD and set back button.">
+      <created>1426820136357</created>
+      <updated>1426820136357</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1511,18 +1727,18 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3274918" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10902896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26396495" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42248723" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3274918" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26746166" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31175467" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18085106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1557,7 +1773,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added more UI elements to my trips fragment" />
     <MESSAGE value="Updated My Trips fragment, and started in on My Vehicle" />
     <MESSAGE value="Updated Emergency UI, and added a login screen. Updated overflow menu. Added connection OBD UI shell stuff." />
     <MESSAGE value="Updated UI for OBD slightly, added spot for OBD Connect in Nav drawer" />
@@ -1582,7 +1797,8 @@
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/FEAT-CP-03' into develop&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;app/build/generated/source/r/debug/android/support/v7/appcompat/R.java&#10;&#9;app/build/generated/source/r/debug/andronerds/com/contestapp/R.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/InsuranceInfoActivity.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/LoginActivity.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/MainActivity.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/fragments/SignUpFragment.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/AchievementsFragment.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/fragments/insurance/InsuranceInfoFragment.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/fragments/insurance/InsuranceVehicleListFragment.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerAdapter.java&#10;&#9;app/src/main/res/layout/fragment_sign_up.xml&#10;&#9;app/src/main/res/layout/row_vehicle_info.xml&#10;&#9;local.properties&#10;" />
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/FEAT-CP-03' into develop&#10;" />
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/FEAT-AM-01' into develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'remotes/origin/FEAT-AM-01' into develop" />
+    <MESSAGE value="Updated Stats Fragment UI,&#10;Updated Trips Sugar Class,&#10;Fixed Bug on Camera saving bitmaps with weird resolution,&#10;Fixed Bug for Connect to OBD and set back button." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Stats Fragment UI,&#10;Updated Trips Sugar Class,&#10;Fixed Bug on Camera saving bitmaps with weird resolution,&#10;Fixed Bug for Connect to OBD and set back button." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1598,42 +1814,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/HomeTripCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/adapters/SettingsListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="1098">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_vehicle_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.230769" vertical-offset="0" max-vertical-offset="324">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_insurance_info.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.923077" vertical-offset="0" max-vertical-offset="972">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_emergency.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
@@ -1649,14 +1829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="720">
           <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1224">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1684,17 +1856,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1098" max-vertical-offset="1764">
-          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up.xml">
@@ -1729,34 +1890,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1278">
-          <caret line="25" column="96" selection-start-line="25" selection-start-column="96" selection-end-line="25" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06965174" vertical-offset="1077" max-vertical-offset="1768">
-          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/utils/PictureUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33830845" vertical-offset="0" max-vertical-offset="425">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="5616">
-          <caret line="221" column="5" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1812,14 +1949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/insurance/InsuranceVehicleListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1530">
-          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/EditProfileFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1692">
@@ -1852,14 +1981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="2250">
-          <caret line="57" column="99" selection-start-line="57" selection-start-column="99" selection-end-line="57" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/PairedListLoadingFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="442">
@@ -1884,14 +2005,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/qt_grill.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/editProfile/EditPictureFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="3740">
-          <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/AchievementsFragment.java">
@@ -1920,16 +2033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyVehicleActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1472" max-vertical-offset="2091">
-          <caret line="94" column="60" selection-start-line="94" selection-start-column="60" selection-end-line="94" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/RefreshThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="401" max-vertical-offset="816">
@@ -1946,9 +2049,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/OnBoardDiagnostic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.107143" vertical-offset="831" max-vertical-offset="4131">
+        <state vertical-scroll-proportion="0.94736844" vertical-offset="576" max-vertical-offset="4131">
           <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1958,32 +2069,122 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/OBD/OutputThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2278">
+        <state vertical-scroll-proportion="-0.08457711" vertical-offset="357" max-vertical-offset="2278">
           <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SettingsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state vertical-scroll-proportion="2.5373135" vertical-offset="204" max-vertical-offset="1496">
+          <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/editProfile/EditPictureFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="3740">
+          <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_my_vehicle.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7777777" vertical-offset="612" max-vertical-offset="2720">
-          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.63432837" vertical-offset="0" max-vertical-offset="1156">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/editProfile/EditUserNameFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="1564">
+          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1428">
+          <caret line="36" column="71" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
+          <folding>
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1521#1522#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1695#1696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyVehicleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1472" max-vertical-offset="2091">
+          <caret line="94" column="60" selection-start-line="94" selection-start-column="60" selection-end-line="94" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="2295">
+          <caret line="109" column="103" selection-start-line="109" selection-start-column="103" selection-end-line="109" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/insurance/InsuranceVehicleListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="1496">
+          <caret line="43" column="88" selection-start-line="43" selection-start-column="88" selection-end-line="43" selection-end-column="88" />
+          <folding>
+            <element signature="e#2767#2768#0" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.185185" vertical-offset="51" max-vertical-offset="1666">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.571428" vertical-offset="5344" max-vertical-offset="5933">
+          <caret line="343" column="50" selection-start-line="343" selection-start-column="50" selection-end-line="343" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5185184" vertical-offset="0" max-vertical-offset="340">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_picture.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.296296" vertical-offset="0" max-vertical-offset="561">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1992,83 +2193,126 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_edit_profile.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5555553" vertical-offset="561" max-vertical-offset="1003">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SettingsFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="989" max-vertical-offset="1496">
-          <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+        <state vertical-scroll-proportion="-4.64" vertical-offset="20" max-vertical-offset="1785">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Trip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="1904">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2533">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_my_vehicle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.074074" vertical-offset="0" max-vertical-offset="2805">
+          <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2001" max-vertical-offset="4505">
+          <caret line="153" column="62" selection-start-line="153" selection-start-column="62" selection-end-line="153" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4130" max-vertical-offset="6188">
-          <caret line="338" column="50" selection-start-line="338" selection-start-column="50" selection-end-line="338" selection-end-column="50" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0654205" vertical-offset="1596" max-vertical-offset="8330">
+          <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
           <folding>
             <element signature="e#1199#1229#0" expanded="true" />
             <element signature="e#1863#1897#0" expanded="true" />
-            <element signature="e#3872#3894#0" expanded="true" />
-            <element signature="e#4054#4075#0" expanded="true" />
-            <element signature="e#4325#4352#0" expanded="true" />
-            <element signature="e#4705#4727#0" expanded="true" />
-            <element signature="e#4887#4908#0" expanded="true" />
-            <element signature="e#5159#5186#0" expanded="true" />
-            <element signature="e#5546#5568#0" expanded="true" />
-            <element signature="e#5728#5749#0" expanded="true" />
-            <element signature="e#6007#6034#0" expanded="true" />
-            <element signature="e#6399#6421#0" expanded="true" />
-            <element signature="e#6581#6602#0" expanded="true" />
-            <element signature="e#6865#6892#0" expanded="true" />
-            <element signature="e#7250#7272#0" expanded="true" />
-            <element signature="e#7432#7453#0" expanded="true" />
-            <element signature="e#7709#7736#0" expanded="true" />
-            <element signature="e#8097#8119#0" expanded="true" />
-            <element signature="e#8279#8300#0" expanded="true" />
-            <element signature="e#8553#8580#0" expanded="true" />
-            <element signature="e#8937#8959#0" expanded="true" />
-            <element signature="e#9119#9140#0" expanded="true" />
-            <element signature="e#10145#10167#0" expanded="true" />
-            <element signature="e#10327#10348#0" expanded="true" />
-            <element signature="e#10600#10627#0" expanded="true" />
-            <element signature="e#10982#11004#0" expanded="true" />
-            <element signature="e#11164#11185#0" expanded="true" />
-            <element signature="e#11438#11465#0" expanded="true" />
-            <element signature="e#11827#11849#0" expanded="true" />
-            <element signature="e#12009#12030#0" expanded="true" />
-            <element signature="e#12290#12317#0" expanded="true" />
-            <element signature="e#12684#12706#0" expanded="true" />
-            <element signature="e#12866#12887#0" expanded="true" />
-            <element signature="e#13147#13174#0" expanded="true" />
-            <element signature="e#13534#13556#0" expanded="true" />
-            <element signature="e#13716#13737#0" expanded="true" />
-            <element signature="e#13995#14022#0" expanded="true" />
-            <element signature="e#14385#14407#0" expanded="true" />
-            <element signature="e#14567#14588#0" expanded="true" />
-            <element signature="e#14843#14870#0" expanded="true" />
-            <element signature="e#15281#15303#0" expanded="true" />
-            <element signature="e#15463#15484#0" expanded="true" />
+            <element signature="e#4294#4316#0" expanded="true" />
+            <element signature="e#4476#4497#0" expanded="true" />
+            <element signature="e#4861#4888#0" expanded="true" />
+            <element signature="e#5098#5125#0" expanded="true" />
+            <element signature="e#5477#5499#0" expanded="true" />
+            <element signature="e#5659#5680#0" expanded="true" />
+            <element signature="e#5951#5978#0" expanded="true" />
+            <element signature="e#6189#6216#0" expanded="true" />
+            <element signature="e#6569#6591#0" expanded="true" />
+            <element signature="e#6751#6772#0" expanded="true" />
+            <element signature="e#7044#7071#0" expanded="true" />
+            <element signature="e#7282#7309#0" expanded="true" />
+            <element signature="e#7669#7691#0" expanded="true" />
+            <element signature="e#7851#7872#0" expanded="true" />
+            <element signature="e#8151#8178#0" expanded="true" />
+            <element signature="e#8389#8416#0" expanded="true" />
+            <element signature="e#8781#8803#0" expanded="true" />
+            <element signature="e#8963#8984#0" expanded="true" />
+            <element signature="e#9268#9295#0" expanded="true" />
+            <element signature="e#9506#9533#0" expanded="true" />
+            <element signature="e#9891#9913#0" expanded="true" />
+            <element signature="e#10073#10094#0" expanded="true" />
+            <element signature="e#10371#10398#0" expanded="true" />
+            <element signature="e#10609#10636#0" expanded="true" />
+            <element signature="e#10997#11019#0" expanded="true" />
+            <element signature="e#11179#11200#0" expanded="true" />
+            <element signature="e#11474#11501#0" expanded="true" />
+            <element signature="e#11712#11739#0" expanded="true" />
+            <element signature="e#12096#12118#0" expanded="true" />
+            <element signature="e#12278#12299#0" expanded="true" />
+            <element signature="e#13386#13408#0" expanded="true" />
+            <element signature="e#13568#13589#0" expanded="true" />
+            <element signature="e#13864#13891#0" expanded="true" />
+            <element signature="e#14102#14129#0" expanded="true" />
+            <element signature="e#14484#14506#0" expanded="true" />
+            <element signature="e#14666#14687#0" expanded="true" />
+            <element signature="e#14963#14990#0" expanded="true" />
+            <element signature="e#15201#15228#0" expanded="true" />
+            <element signature="e#15590#15612#0" expanded="true" />
+            <element signature="e#15772#15793#0" expanded="true" />
+            <element signature="e#16076#16103#0" expanded="true" />
+            <element signature="e#16314#16341#0" expanded="true" />
+            <element signature="e#16708#16730#0" expanded="true" />
+            <element signature="e#16890#16911#0" expanded="true" />
+            <element signature="e#17194#17221#0" expanded="true" />
+            <element signature="e#17432#17459#0" expanded="true" />
+            <element signature="e#17820#17842#0" expanded="true" />
+            <element signature="e#18002#18023#0" expanded="true" />
+            <element signature="e#18304#18331#0" expanded="true" />
+            <element signature="e#18542#18569#0" expanded="true" />
+            <element signature="e#18932#18954#0" expanded="true" />
+            <element signature="e#19114#19135#0" expanded="true" />
+            <element signature="e#19413#19440#0" expanded="true" />
+            <element signature="e#19651#19678#0" expanded="true" />
+            <element signature="e#20089#20111#0" expanded="true" />
+            <element signature="e#20271#20292#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>

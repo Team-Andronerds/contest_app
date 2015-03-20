@@ -12,7 +12,7 @@ public class Trip extends User
     private String mTripStart;
     private String mTripEnd;
     private int mTripMap;
-    private HashMap<String, String> mTripIssues;
+    //private HashMap<String, String> mTripIssues;
     private int mTripMileage = 0;
     private int mHarshBrakeCount = 0;
     private int mSpeedingCount = 0;
@@ -23,7 +23,7 @@ public class Trip extends User
 
     public Trip() {}
 
-    public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues,int mileage,int brakeCount,int speedingCount, int gasCount,
+  /*  public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues,int mileage,int brakeCount,int speedingCount, int gasCount,
                 int accelCount, int turnCount, int points, String userName)
     {
         this.mTripStart = mTripStart;
@@ -38,24 +38,40 @@ public class Trip extends User
         this.mSpeedingCount = speedingCount;
         this.mTripMileage = mileage;
         this.setName(userName);
-    }
+    }*/
 
-    public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues)
+    public Trip(String mTripStart, String mTripEnd, int mTripMap,int mileage,int brakeCount,int speedingCount, int gasCount,
+                int accelCount, int turnCount, int points, String userName)
     {
         this.mTripStart = mTripStart;
         this.mTripEnd = mTripEnd;
         this.mTripMap = mTripMap;
-        this.mTripIssues = mTripIssues;
-    }
-
-    public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues, String userName)
-    {
-        this.mTripStart = mTripStart;
-        this.mTripEnd = mTripEnd;
-        this.mTripMap = mTripMap;
-        this.mTripIssues = mTripIssues;
+        this.mHarshAccelCount = accelCount;
+        this.mHarshBrakeCount = brakeCount;
+        this.mHarshTurnCount = turnCount;
+        this.mPoints = points;
+        this.mLowGasCount = gasCount;
+        this.mSpeedingCount = speedingCount;
+        this.mTripMileage = mileage;
         this.setName(userName);
     }
+
+    /*public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues)
+    {
+        this.mTripStart = mTripStart;
+        this.mTripEnd = mTripEnd;
+        this.mTripMap = mTripMap;
+        this.mTripIssues = mTripIssues;
+    }*/
+
+  /*  public Trip(String mTripStart, String mTripEnd, int mTripMap, HashMap<String, String> mTripIssues, String userName)
+    {
+        this.mTripStart = mTripStart;
+        this.mTripEnd = mTripEnd;
+        this.mTripMap = mTripMap;
+        //this.mTripIssues = mTripIssues;
+        this.setName(userName);
+    }*/
 
     public String getmTripStart()
     {
@@ -72,10 +88,10 @@ public class Trip extends User
         return mTripMap;
     }
 
-    public HashMap<String, String> getmTripIssues()
+  /*  public HashMap<String, String> getmTripIssues()
     {
         return mTripIssues;
-    }
+    }*/
 
     public int getTripMileage() {return this.mTripMileage;}
 
@@ -106,10 +122,10 @@ public class Trip extends User
         this.mTripMap = mTripMap;
     }
 
-    public void setmTripIssues(HashMap<String, String> mTripIssues)
+  /*  public void setmTripIssues(HashMap<String, String> mTripIssues)
     {
         this.mTripIssues = mTripIssues;
-    }
+    }*/
 
     public void setTripMileageCount(int miles){this.mTripMileage = miles;}
 

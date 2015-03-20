@@ -34,6 +34,16 @@ public class Vehicle extends User implements Serializable {
         this.setName(name);
     }
 
+    public Vehicle(String year, String make, String model, String vin, String color, String name)
+    {
+        this.make = make;
+        this.model = model;
+        this.vin = vin;
+        this.year = year;
+        this.color = color;
+        this.setName(name);
+    }
+
     public String getMake()
     {
         return this.make;
