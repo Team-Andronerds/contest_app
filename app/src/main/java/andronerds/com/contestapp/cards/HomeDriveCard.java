@@ -123,6 +123,8 @@ public class HomeDriveCard extends Card
         temptrip3.save();
         List<Trip> trips = Trip.find(Trip.class,"name = ?",userName);
 
+        Log.d("TRIP SIZE", Integer.toString(trips.size()));
+
         if(trips.size() != 0)
         {
             int total = 0;
@@ -133,6 +135,7 @@ public class HomeDriveCard extends Card
             temptrip.delete();
             temptrip2.delete();
             temptrip3.delete();
+            Log.d("TRIP TEST", Integer.toString(total));
             return total;
         }
         else
@@ -144,8 +147,16 @@ public class HomeDriveCard extends Card
     public int calcLevel(int points)
     {
         if(points >= 100) {
-            Log.d("MATH TEST", Double.toString(Math.ceil(1.516408154 * Math.exp(0.001235231805 * points))));
-            return (int) Math.ceil(1.516408154 * Math.exp(0.001235231805 * points));
+            int level = 0;
+            for(int i = 0; points >= 0; i++)
+            {
+                points -= 100 * i;
+                level = i;
+            }
+
+            Log.d("MATH TEST", Integer.toString(level));
+
+            return level;
         }
         else
         {

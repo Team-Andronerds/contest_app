@@ -110,7 +110,7 @@ public class HomeFragment extends Fragment implements Card.OnCardClickListener
         MyTripsTripCard tripCard = (MyTripsTripCard) card;
         Bundle args = new Bundle();
         Trip trip = tripCard.getTrip();
-        args.putSerializable(Intent.EXTRA_TEXT, trip);
+        //args.putSerializable(Intent.EXTRA_TEXT, trip);
         args.putString(Intent.EXTRA_KEY_EVENT, IdentityStrings.FROM_HOME);
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();

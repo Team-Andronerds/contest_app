@@ -149,9 +149,9 @@ public class StatsFragment extends Fragment
     {
         Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
         temptrip.save();
-        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,400,userName);
+        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,100,userName);
         temptrip2.save();
-        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,500,userName);
+        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,200,userName);
         temptrip3.save();
         List<Trip> userTrips = Trip.find(Trip.class, "name = ?", userName);
 
@@ -221,9 +221,9 @@ public class StatsFragment extends Fragment
     {
         Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
         temptrip.save();
-        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,400,userName);
+        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,2000,userName);
         temptrip2.save();
-        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,500,userName);
+        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,200,userName);
         temptrip3.save();
         List<Trip> trips = Trip.find(Trip.class,"name = ?",userName);
 
@@ -251,8 +251,16 @@ public class StatsFragment extends Fragment
     public int calcLevel(int points)
     {
         if(points >= 100) {
-            Log.d("MATH TEST", Double.toString(Math.ceil(1.516408154 * Math.exp(0.001235231805 * points))));
-            return (int) Math.ceil(1.516408154 * Math.exp(0.001235231805 * points));
+            int level = 0;
+            for(int i = 0; points >= 0; i++)
+            {
+                points -= 100 * i;
+                level = i;
+            }
+
+            Log.d("MATH TEST", Integer.toString(level));
+
+            return level;
         }
         else
         {
@@ -270,7 +278,7 @@ public class StatsFragment extends Fragment
                 points += i * 100;
             }
             Log.d("MATH CURR LEVEL PROG",Integer.toString(points));
-            return points - mCurrTotalPoints;
+            return mCurrTotalPoints - points;
         }
         else
         {
