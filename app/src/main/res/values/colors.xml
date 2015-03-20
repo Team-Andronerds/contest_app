@@ -2,6 +2,7 @@
 <resources>
     <item name="toolbar_color" type="color">#4CAF50</item>
     <item name="status_bar_color" type="color">#388E3C</item>
+    <item name="drive_mode_color" type="color">#787878</item>
     <item name="black" type="color">#000000</item>
     <item name="white" type="color">#FFFFFF</item>
     <color name="light_green_body_color">#81C784</color>

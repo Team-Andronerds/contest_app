@@ -46,6 +46,9 @@ public class OutputThread extends AsyncTask<JSONObject, Integer, Void> {
         JSONObject job = Params[0];
         pitcher = BluetoothAdapter.getDefaultAdapter();
         BluetoothSocket tmp;
+
+        try{Thread.sleep(100);}catch(InterruptedException e){e.printStackTrace();}
+
         try {
             final String toWhom = job.getString("To");
 
@@ -60,7 +63,7 @@ public class OutputThread extends AsyncTask<JSONObject, Integer, Void> {
         }
 
         // Get a BluetoothSocket to connect with the given BluetoothDevice
-        while(OnBoardDiagnostic.isPitching()) {
+        while(OnBoardDiagnostic.isActive()) {
             while(waitingForMessage){};
         try {
             // MY_UUID is the app's UUID string, also used by the server code
@@ -79,6 +82,13 @@ public class OutputThread extends AsyncTask<JSONObject, Integer, Void> {
             } catch (IOException connectException) {
                 // Unable to connect; close the socket and get out
                 try {
+                    OnBoardDiagnostic.setWaitingOnBluetooth(false);
+                    Message msg = Message.obtain();
+                    Bundle b = new Bundle();
+                    b.putString("Purpose","FAILED");
+                    msg.setData(b);
+                    OnBoardDiagnostic.mHandler.sendMessage(msg);
+
                     Log.d("Run: ", " Connecting failed/Closing started");
                     catcherSocket.close();
                 } catch (IOException closeException) {
@@ -92,15 +102,9 @@ public class OutputThread extends AsyncTask<JSONObject, Integer, Void> {
                 catcherSocket.close();
             }catch(IOException e){}
 
-            try{
-                if(job.getString("Purpose").equals("DISCONNECT")){
-                    Log.d("Setting State:", "False");
-                    OnBoardDiagnostic.setState(false);
-                    return null;
-                }
-            }catch(JSONException e){}
-
         }
+
+        Log.d("Disconnecting output","..." );
         return null;
     }
 
@@ -139,8 +143,10 @@ public class OutputThread extends AsyncTask<JSONObject, Integer, Void> {
         super.onPostExecute(aVoid);
         OnBoardDiagnostic.setPitchingState(false);
         Log.d("Pitching","Finished");
-        new InputThread().execute();
-
-
+        /*
+        if(OnBoardDiagnostic.getDriveMode() || !OnBoardDiagnostic.isActive()){
+            OnBoardDiagnostic.listen();
+        }
+        */
     }
 }

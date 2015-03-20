@@ -10,6 +10,12 @@
         <item name="android:windowAnimationStyle">@null</item>
     </style>
 
+    <style name="driveModeDialog" parent="android:Theme" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
     <declare-styleable name="ProgressWheel">
         <attr name="text" format="string" />
         <attr name="textColor" format="color" />

@@ -24,6 +24,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import java.util.HashMap;
 import java.util.List;
 
+import andronerds.com.contestapp.data.Trip;
 import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.fragments.LoadingFragment;
 import andronerds.com.contestapp.fragments.LoginFragment;
@@ -334,6 +335,8 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         editor.putString(IdentityStrings.USER_EMAIL, user.getEmail());
         editor.putBoolean(IdentityStrings.USER_IS_GOOGLE_PLUS, false);
         editor.commit();
+
+        setTestTrip();
     }
 
     public void addGoogleProfileToSharedPrefs()
@@ -367,6 +370,54 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
             }
         } catch (Exception ex) {
             ex.printStackTrace();
+        }
+
+        setTestTrip();
+    }
+
+    //FOR TESTING ONLY
+    public void setTestTrip()
+    {
+        SharedPreferences settings = getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
+        String userName = settings.getString(IdentityStrings.USER_NAME, "");
+
+        List<Trip> list = Trip.find(Trip.class, "name = ?", userName);
+
+        if(list.size() == 0)
+        {
+            Trip trip = new Trip();
+            trip.setmTripMap(R.drawable.pc_map);
+            trip.setmTripStart("Oklahoma City, OK");
+            trip.setmTripEnd("Stillwater, OK");
+            trip.setPoints(73);
+            trip.setTripMileageCount(112);
+            trip.setHarshAccelCount(2);
+            trip.setHarshBrakeCount(3);
+            trip.setHarshTurnCount(1);
+            trip.setSpeedingCount(6);
+            trip.setmTripStartLat(35.4822);
+            trip.setmTripStartLong(-97.5350);
+            trip.setmTripEndLat(36.1157);
+            trip.setmTripEndLong(-97.0586);
+            trip.setName(userName);
+            trip.save();
+
+            trip = new Trip();
+            trip.setmTripMap(R.drawable.pc_map);
+            trip.setmTripStart("Stillwater, OK");
+            trip.setmTripEnd("Owasso, OK");
+            trip.setPoints(18);
+            trip.setTripMileageCount(23);
+            trip.setHarshAccelCount(1);
+            trip.setHarshBrakeCount(0);
+            trip.setHarshTurnCount(2);
+            trip.setSpeedingCount(1);
+            trip.setmTripStartLat(36.1157);
+            trip.setmTripStartLong(-97.0586);
+            trip.setmTripEndLat(36.2903);
+            trip.setmTripEndLong(-95.8286);
+            trip.setName(userName);
+            trip.save();
         }
     }
 }

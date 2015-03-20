@@ -1,11 +1,14 @@
 package andronerds.com.contestapp.obd;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,9 +20,12 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Set;
 
+import andronerds.com.contestapp.data.Vehicle;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
 
 /**
@@ -34,12 +40,20 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
     private static ArrayList<BluetoothDevice> discoveredNotPairedDevices;
     private static ArrayAdapter<String> pairedAdapter;
     private static IntentFilter filter;
-    private static JSONObject message;
+    private static InputThread in = new InputThread();
+    private static OutputThread out = new OutputThread();
+    private static Fragment mParent;
+    private static JSONObject trip = new JSONObject();
+    private static Vehicle myVehicle = new Vehicle();
+    private static int instance = 0;
     private static boolean discoverFlag = false;
     private static boolean pitchingState = false;
     private static boolean catchingState = false;
     private static boolean newMessage = false;
+    private static boolean driveMode = false;
     private static boolean initialize;
+    private static boolean waitingOnBluetooth = false;
+    private static boolean failed = false;
     private static String secureAddress;
     private static boolean active = false;
     public static final Handler mHandler = new Handler(){
@@ -51,14 +65,33 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
             Log.d("MainThread bundle:", b.toString());
             switch(b.getString("Purpose")){
                 case "HANDSHAKE_SUCCESS":
-                    setState(true);
                     Log.d("State:", "Active");
                     secureAddress = b.getString("From");
+                    waitingOnBluetooth = false;
+                    try{
+                        JSONObject job = new JSONObject();
+                        job.put("Purpose","CAR");
+                        OnBoardDiagnostic.sendMessage(job);
+                    }catch(JSONException e){
+                        e.printStackTrace();
+                    }
                     break;
                 case "HANDSHAKE":
-                    connect(b.getString("From"));
                     break;
-
+                case "FAILED":
+                    setState(false);
+                    disconnect();
+                    failed = true;
+                    Toast.makeText(mParent.getActivity().getApplicationContext(), "Connection Failed", Toast.LENGTH_SHORT).show();
+                    mParent.getFragmentManager().popBackStack();
+                    FragmentTransaction ft = mParent.getActivity().getFragmentManager().beginTransaction();
+                    ft.remove(mParent).commit();
+                    break;
+                case "Driving":
+                    String time = DateFormat.getDateTimeInstance().format(new Date());
+                    Log.d("TIME", time);
+                    addToTrip(b.getString("Event"), time);
+                    break;
             }
 
         }
@@ -148,6 +181,62 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
         active = state;
     }
 
+    public static void setDriveMode(boolean mode){
+        driveMode = mode;
+        if(driveMode){
+            try{
+                JSONObject job = new JSONObject();
+                job.put("Purpose", "DRIVEMODEON");
+                sendMessage(job);
+                listen();
+            }catch(JSONException e){
+
+            }
+        }else{
+            try{
+                JSONObject job = new JSONObject();
+                job.put("Purpose", "DRIVEMODEOFF");
+                sendMessage(job);
+            }catch(JSONException e){
+
+            }
+        }
+    }
+
+    public static void addToTrip(String event, String timestamp){
+        if(event.equals("lowGas") || event.equals("poi") || event.equals("crash")){
+
+        }else{
+            instance++;
+            try{
+                trip.put("Instance " + instance, event);
+                trip.accumulate("Instance " + instance, timestamp);
+            }catch(JSONException e){e.printStackTrace();}
+        }
+
+    }
+
+    public static void startNewTrip(){
+        String time = DateFormat.getDateTimeInstance().format(new Date());
+        try{
+            trip = new JSONObject();
+            instance = 0;
+            trip.put("START", time);
+        }catch(JSONException e){e.printStackTrace();}
+    }
+
+    public static void finishTrip(){
+        String time = DateFormat.getDateTimeInstance().format(new Date());
+        try{
+            trip.put("FINISH", time);
+            Log.d("Final Trip:", trip.toString(2));
+        }catch(JSONException e){e.printStackTrace();}
+    }
+
+    public static JSONObject getTrip(){ return trip;}
+
+    public static int getInstanceCount(){ return instance;}
+
     public static Boolean isInitialized(){
         return initialize;
     }
@@ -168,19 +257,33 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
         return newMessage;
     }
 
-    public static void sendMessage(JSONObject job){
+    public static boolean getDriveMode(){ return driveMode; }
 
-        if(isActive()){
-            try{
-                Log.d("OutputThread", "Creating New");
-                JSONObject ini = new JSONObject();
-                ini.put("To", secureAddress);
-                ini.put("From",adapt.getAddress());
-                ini.put("Purpose", job.getString("Purpose"));
-                pitchingState = true;
-                new OutputThread().execute(ini);
-            }catch(JSONException e){ e.printStackTrace(); }
-        }
+    public static boolean isWaitingOnBluetooth(){ return waitingOnBluetooth;}
+
+    public static void setWaitingOnBluetooth(Boolean x){
+        waitingOnBluetooth = x;
+    }
+
+    public static void setVehicle(JSONObject job){
+        Log.d("CAR", "Setting Vehicle");
+        try{
+            Log.d("Vin",job.getString("Vin"));
+            Log.d("Color",job.getString("Color"));
+            myVehicle = new Vehicle();
+            myVehicle.setMake(job.getString("Make"));
+            myVehicle.setColor(job.getString("Color"));
+            myVehicle.setModel(job.getString("Model"));
+            myVehicle.setYear(job.getString("Year"));
+            myVehicle.setVin(job.getString("Vin"));
+        }catch(JSONException e){e.printStackTrace();}
+    }
+
+    public static Vehicle getVehicle(){
+        return myVehicle;
+    }
+
+    public static void sendMessage(JSONObject job){
         Message msg = Message.obtain();
         Bundle b = new Bundle();
         b.putString("job",job.toString());
@@ -221,14 +324,32 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
         parent.unregisterReceiver(receiver);
     }
 
-    public static void connect(String address){
+    public static void connect(String address, Fragment parent, String name){
+        mParent = parent;
+        waitingOnBluetooth = true;
+        android.app.ProgressDialog progress;
+        progress = android.app.ProgressDialog.show(parent.getActivity(), null,
+                "Connecting to " + name, true);
+        new ProgressDialogBluetooth().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, progress);
         adapt.cancelDiscovery();
+        setState(true);
         JSONObject job = new JSONObject();
         try {
             job.put("To", address);
             job.put("From",adapt.getAddress());
             pitchingState = true;
-            new OutputThread().execute(job);
+            /*
+            if(out.getStatus()== AsyncTask.Status.valueOf("RUNNING")){
+                Log.d("connect", "CANCELING OUT");
+                out.cancel(true);
+            }else if(in.getStatus() == AsyncTask.Status.valueOf("RUNNING")){
+                Log.d("connect", "CANCELING IN");
+                in.cancel();
+            }
+            */
+            listen();
+            out = new OutputThread();
+            out.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, job);
 
             JSONObject handShake = new JSONObject();
             try{
@@ -238,17 +359,31 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
             OnBoardDiagnostic.sendMessage(handShake);
 
         }catch(JSONException e){}
+    }
 
-
+    public static void listen(){
+        /*
+        if(out.getStatus() == AsyncTask.Status.valueOf("RUNNING")){
+            out.cancel(true);
+            Log.d("listen()", "CANCELING OUT");
+        }else if(in.getStatus() == AsyncTask.Status.valueOf("RUNNING")){
+            in.cancel(true);
+            Log.d("listen()", "CANCELING IN");
+        }
+        */
+        in = new InputThread();
+        in.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     public static void disconnect(){
         adapt.cancelDiscovery();
+        waitingOnBluetooth = false;
         JSONObject disconnect = new JSONObject();
         try{
             disconnect.put("Purpose","DISCONNECT");
         }catch(JSONException e){}
-        OnBoardDiagnostic.sendMessage(disconnect);
+        setState(false);
+        sendMessage(disconnect);
     }
 
     public static void setPitchingState(boolean s){

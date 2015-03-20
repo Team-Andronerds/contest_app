@@ -2,8 +2,6 @@ package andronerds.com.contestapp;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.app.ProgressDialog;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
@@ -49,25 +47,33 @@ public class SettingsActivity extends NavDrawerActivity
     public void onBackPressed() {
         PairedListLoadingFragment frag = (PairedListLoadingFragment) getFragmentManager().findFragmentByTag("loading");
         SettingsConnectFragment connectFrag = (SettingsConnectFragment) getFragmentManager().findFragmentByTag("devices");
-        if (!frag.isVisible())
+        if(frag != null)
         {
-            Log.d("BACK CALL", "loading not  visible");
-            if (getFragmentManager().getBackStackEntryCount() == 0) {
-                super.onBackPressed();
-                Log.d("BACK CALL", "super on back");
-            }
-            else if(connectFrag.isVisible()){
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.remove(connectFrag);
-                ft.commit();
-                getFragmentManager().popBackStack();
+            if(!frag.isVisible())
+            {
+                Log.d("BACK CALL", "loading not  visible");
+                if(getFragmentManager().getBackStackEntryCount() == 0)
+                {
+                    super.onBackPressed();
+                    Log.d("BACK CALL", "super on back");
+                } else if(connectFrag.isVisible())
+                {
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    ft.remove(connectFrag);
+                    ft.commit();
+                    getFragmentManager().popBackStack();
 
-                Log.d("BACK CALL", "connect frag is visible");
+                    Log.d("BACK CALL", "connect frag is visible");
+                } else
+                {
+                    getFragmentManager().popBackStack();
+                    Log.d("BACK CALL", "else");
+                }
             }
-            else {
-                getFragmentManager().popBackStack();
-                Log.d("BACK CALL", "else");
-            }
+        }
+        else
+        {
+            super.onBackPressed();
         }
     }
 }

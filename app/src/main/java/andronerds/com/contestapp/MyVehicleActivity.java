@@ -11,8 +11,12 @@ import android.provider.MediaStore;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.ByteArrayOutputStream;
 
+import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.fragments.MyVehicleFragment;
 import andronerds.com.contestapp.fragments.editProfile.EditPictureFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
@@ -39,6 +43,16 @@ public class MyVehicleActivity extends NavDrawerActivity
     {
         setContentView(R.layout.activity_my_vehicle);
         ButterKnife.inject(this);
+
+        if(OnBoardDiagnostic.isActive()){
+            try{
+                JSONObject job = new JSONObject();
+                job.put("Purpose","CAR");
+                OnBoardDiagnostic.sendMessage(job);
+            }catch(JSONException e){
+                e.printStackTrace();
+            }
+        }
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

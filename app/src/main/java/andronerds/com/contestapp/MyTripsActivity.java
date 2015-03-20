@@ -54,7 +54,6 @@ public class MyTripsActivity extends NavDrawerActivity implements OnMapReadyCall
         return mToolbar;
     }
 
-
     public void testGMaps()
     {
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
@@ -83,21 +82,16 @@ public class MyTripsActivity extends NavDrawerActivity implements OnMapReadyCall
 
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(mTrip.getmTripStartLat(), mTrip.getmTripStartLong()))
-                .title(mTrip.getmTripStart()));
+                .title("Start: " + mTrip.getmTripStart()));
 
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(mTrip.getmTripEndLat(), mTrip.getmTripEndLong()))
-                .title(mTrip.getmTripEnd()));
+                .title("End: " + mTrip.getmTripEnd()));
 
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
         builder.include(new LatLng(mTrip.getmTripStartLat(), mTrip.getmTripStartLong()));
         builder.include(new LatLng(mTrip.getmTripEndLat(), mTrip.getmTripEndLong()));
         LatLngBounds bounds = builder.build();
-
-        double middleLat = mTrip.getmTripStartLat() + mTrip.getmTripEndLat();
-        middleLat = middleLat / 2;
-        double middleLong = mTrip.getmTripStartLong() + mTrip.getmTripEndLong();
-        middleLong = middleLong / 2;
 
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngBounds(bounds, 200);
 

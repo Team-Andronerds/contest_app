@@ -16,10 +16,10 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import andronerds.com.contestapp.R;
-import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.data.Vehicle;
-import andronerds.com.contestapp.utils.PictureUtil;
+import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.utils.IdentityStrings;
+import andronerds.com.contestapp.utils.PictureUtil;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -101,6 +101,11 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
         temp.save();
         List<Vehicle> myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
         temp.delete();
+
+        if(OnBoardDiagnostic.isActive()){
+            myVehicles.add(OnBoardDiagnostic.getVehicle());
+        }
+
         if(myVehicles.size() == 0) {
             mVehicleInfo.setText("YEAR MAKE MODEL");
         }

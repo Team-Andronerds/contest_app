@@ -25,8 +25,6 @@ import butterknife.InjectView;
  * Created by Alexander Melton on 3/16/2015.
  */
 public class SettingsConnectFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemClickListener{
-    private int mNumRows;
-    private ArrayList<String> mSettingsRows;
     private String address = "";
     private int pos = -1;
     ArrayAdapter<String> deviceAdapter;
@@ -93,9 +91,7 @@ public class SettingsConnectFragment extends Fragment implements View.OnClickLis
                 address = deviceAddressAdapter.getItem(position);
                 pos = position;
                 Log.d("Address is: ", address);
-                //start progress dialog
-                OnBoardDiagnostic.connect(address);
-
+                OnBoardDiagnostic.connect(address, this,deviceAdapter.getItem(position));
             }else if(position == pos){
                 mDeviceList.setItemChecked(position, false);
                 pos = -1;
@@ -108,7 +104,7 @@ public class SettingsConnectFragment extends Fragment implements View.OnClickLis
                 address = deviceAddressAdapter.getItem(position);
                 pos = position;
                 OnBoardDiagnostic.disconnect();
-                OnBoardDiagnostic.connect(address);
+                OnBoardDiagnostic.connect(address, this, deviceAdapter.getItem(position));
                 Log.d("Address is: ", address);
             }
         }else{
@@ -117,6 +113,4 @@ public class SettingsConnectFragment extends Fragment implements View.OnClickLis
             Toast.makeText(this.getActivity().getApplicationContext(), "Device is not paired", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 }
