@@ -147,13 +147,7 @@ public class StatsFragment extends Fragment
 
     public void setupStats(String userName)
     {
-        Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
-        temptrip.save();
-        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,100,userName);
-        temptrip2.save();
-        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,200,userName);
-        temptrip3.save();
-        List<Trip> userTrips = Trip.find(Trip.class, "name = ?", userName);
+        List<Trip> userTrips = Trip.find(Trip.class, "name = ?", "loll");
 
         int tripsCount = userTrips.size();
 
@@ -212,20 +206,11 @@ public class StatsFragment extends Fragment
             Log.d("STATS TRIPS","NO TRIPS AVAILABLE");
         }
 
-        temptrip.delete();
-        temptrip2.delete();
-        temptrip3.delete();
     }
 
     public int getTotalPoints(String userName)
     {
-        Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
-        temptrip.save();
-        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,2000,userName);
-        temptrip2.save();
-        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,200,userName);
-        temptrip3.save();
-        List<Trip> trips = Trip.find(Trip.class,"name = ?",userName);
+        List<Trip> trips = Trip.find(Trip.class,"name = ?","loll");
 
 
         if(trips.size() != 0)
@@ -235,9 +220,6 @@ public class StatsFragment extends Fragment
             {
                 total += trip.getPoints();
             }
-            temptrip.delete();
-            temptrip2.delete();
-            temptrip3.delete();
             return total;
         }
         else

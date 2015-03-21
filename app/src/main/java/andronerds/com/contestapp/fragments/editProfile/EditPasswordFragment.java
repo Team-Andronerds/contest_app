@@ -48,7 +48,7 @@ public class EditPasswordFragment extends Fragment implements View.OnClickListen
         String password = mEditTextPassword.getText().toString();
         String confirmPassword = mEditTextConfirmPassword.getText().toString();
 
-        if(password.equals(confirmPassword))
+        if(password.equals(confirmPassword) && password.length() > 0)
         {
                 SharedPreferences sPref = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF,0);
                 List<User> user = User.find(User.class,"name = ?", sPref.getString(IdentityStrings.USER_NAME,""));

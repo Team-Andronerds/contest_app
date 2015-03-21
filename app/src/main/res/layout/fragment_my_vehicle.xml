@@ -57,6 +57,7 @@
                 <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:layout_marginLeft="20dip"
                     android:id="@+id/my_vehicle_info">
 
                 </TextView>
@@ -79,6 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:layout_marginLeft="20dip"
                     android:id="@+id/my_vehicle_vin">
                 </TextView>
             </LinearLayout>
@@ -136,6 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/profile_info"
+                    android:layout_marginLeft="20dip"
                     android:id="@+id/my_vehicle_email">
                 </TextView>
             </LinearLayout>

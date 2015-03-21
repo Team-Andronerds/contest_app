@@ -112,12 +112,6 @@ public class HomeDriveCard extends Card
     public int getTotalPoints(String userName)
     {
 
-        Trip temptrip = new Trip("hi","hi",0,31,1,2,3,4,5,0,userName);
-        temptrip.save();
-        Trip temptrip2 = new Trip("hi","hi",0,31,1,2,3,4,5,400,userName);
-        temptrip2.save();
-        Trip temptrip3 = new Trip("hi","hi",0,27,2,1,1,1,1,500,userName);
-        temptrip3.save();
         List<Trip> trips = Trip.find(Trip.class,"name = ?",userName);
 
         Log.d("TRIP SIZE", Integer.toString(trips.size()));
@@ -129,9 +123,7 @@ public class HomeDriveCard extends Card
             {
                 total += trip.getPoints();
             }
-            temptrip.delete();
-            temptrip2.delete();
-            temptrip3.delete();
+
             Log.d("TRIP TEST", Integer.toString(total));
             return total;
         }

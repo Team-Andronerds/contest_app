@@ -49,6 +49,8 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
         View view = inflater.inflate(R.layout.fragment_my_vehicle, container, false);
         ButterKnife.inject(this, view);
 
+
+
         mEditProfileButton.setOnClickListener(this);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(IdentityStrings.SHARE_PREF_USER_PROF, 0);
@@ -97,24 +99,31 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
         }
 
 
-        Vehicle temp = new Vehicle("2004","Honda","Accord","C3458109094C","#AB09BC",sharedPreferences.getString(IdentityStrings.USER_NAME,""));
-        temp.save();
         List<Vehicle> myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
-        temp.delete();
 
         if(OnBoardDiagnostic.isActive()){
-            myVehicles.add(OnBoardDiagnostic.getVehicle());
+
+            if(OnBoardDiagnostic.getVehicle()!= null) {
+                Log.d("OBD PROFILE TEST","TEST");
+                Vehicle.deleteAll(Vehicle.class);
+                Vehicle vehicle = OnBoardDiagnostic.getVehicle();
+                vehicle.save();
+                myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
+            }
         }
 
-        if(myVehicles.size() == 0) {
-            mVehicleInfo.setText("YEAR MAKE MODEL");
-        }
-        else
+        if(myVehicles.size()!=0)
         {
             Vehicle vehicle = myVehicles.get(0);
             mVehicleInfo.setText(vehicle.getYear() + " " + vehicle.getMake() + " " + vehicle.getModel());
             mVehicleVin.setText(vehicle.getVin());
-            mVehicleColor.setBackgroundColor(Color.parseColor(vehicle.getColor()));
+            try {
+                mVehicleColor.setBackgroundColor(Color.parseColor(vehicle.getColor()));
+            }
+            catch(Exception e)
+            {
+
+            }
         }
 
         if(usingGooglePlus)
