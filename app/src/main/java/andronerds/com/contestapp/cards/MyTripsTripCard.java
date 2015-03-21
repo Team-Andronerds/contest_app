@@ -1,6 +1,8 @@
 package andronerds.com.contestapp.cards;
 
 import android.content.Context;
+import android.location.Address;
+import android.location.Geocoder;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -10,6 +12,10 @@ import android.widget.TextView;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMapOptions;
 import com.squareup.picasso.Picasso;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.data.Trip;
@@ -51,8 +57,34 @@ public class MyTripsTripCard extends Card
 
         //mTripMapView.setImageDrawable(getContext().getResources().getDrawable(R.drawable.map_placeholder));
 
-        mFromText.setText(mTrip.getmTripStart());
-        mToText.setText(mTrip.getmTripEnd());
+        Geocoder geocoder = new Geocoder(getContext(), Locale.getDefault());
+        String startAdd = "";
+        String endAdd = "";
+        try
+        {
+            List<Address> startAddrList = geocoder.getFromLocation(mTrip.getmTripStartLat(), mTrip.getmTripStartLong(), 1);
+            Address start = startAddrList.get(0);
+            startAdd = start.getAddressLine(1);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        try
+        {
+            List<Address> endAddrList = geocoder.getFromLocation(mTrip.getmTripEndLat(), mTrip.getmTripEndLong(), 1);
+            Address end = endAddrList.get(0);
+            endAdd = end.getAddressLine(1);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        startAdd = startAdd.replaceAll("\\d","");
+        endAdd = endAdd.replaceAll("\\d","");
+
+        mFromText.setText(startAdd);
+        mToText.setText(endAdd);
 
 
         Picasso.with(this.getContext())

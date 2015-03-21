@@ -3,6 +3,8 @@ package andronerds.com.contestapp;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.SharedPreferences;
+import android.location.Address;
+import android.location.Geocoder;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
@@ -15,8 +17,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 import andronerds.com.contestapp.data.Achievements;
 import andronerds.com.contestapp.data.Trip;
@@ -119,15 +123,40 @@ public class MainActivity extends NavDrawerActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap map)
     {
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        String startAdd = "";
+        String endAdd = "";
+        try
+        {
+            List<Address> startAddrList = geocoder.getFromLocation(mTrip.getmTripStartLat(), mTrip.getmTripStartLong(), 1);
+            Address start = startAddrList.get(0);
+            startAdd = start.getAddressLine(0);
+            startAdd = startAdd + "\n" + start.getAddressLine(1);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        try
+        {
+            List<Address> endAddrList = geocoder.getFromLocation(mTrip.getmTripEndLat(), mTrip.getmTripEndLong(), 1);
+            Address end = endAddrList.get(0);
+            endAdd = end.getAddressLine(0);
+            endAdd = endAdd + "\n" + end.getAddressLine(1);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(mTrip.getmTripStartLat(), mTrip.getmTripStartLong()))
-                .title("Start: " + mTrip.getmTripStart()));
+                .title("Start: " + "\n" + startAdd));
 
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(mTrip.getmTripEndLat(), mTrip.getmTripEndLong()))
-                .title("End: " + mTrip.getmTripEnd()));
+                .title("End: " + "\n" + endAdd));
 
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
         builder.include(new LatLng(mTrip.getmTripStartLat(), mTrip.getmTripStartLong()));
