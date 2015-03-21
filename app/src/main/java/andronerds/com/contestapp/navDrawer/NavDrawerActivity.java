@@ -26,9 +26,9 @@ import andronerds.com.contestapp.InsuranceInfoActivity;
 import andronerds.com.contestapp.MainActivity;
 import andronerds.com.contestapp.MyTripsActivity;
 import andronerds.com.contestapp.MyVehicleActivity;
-import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.SettingsActivity;
+import andronerds.com.contestapp.fragments.DriveModeDialog;
 import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import butterknife.InjectView;
 

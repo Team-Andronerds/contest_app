@@ -14,14 +14,20 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: andronerds.com.contestapp" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="andronerd" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2629cd-8a7c-44eb-951a-811f7e12cb2c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/AchievementsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/AchievementsFragment.java" />
+    <list default="true" id="ad2629cd-8a7c-44eb-951a-811f7e12cb2c" name="Default" comment="Merge remote-tracking branch 'remotes/origin/FEAT-AM-03' into develop">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/DriveModeDialog.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/DriveModeDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/OnBoardDiagnostic.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/OnBoardDiagnostic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/andronerds/com/contestapp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/andronerds/com/contestapp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ec83f3bb-4ad7-4f79-8a29-3996ce1556c9" name="Failed commit: Default" comment="Merge remote-tracking branch 'origin/FEAT-CP-00' into develop&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;app/app.iml&#10;&#9;app/build.gradle&#10;&#9;app/build/generated/source/r/debug/android/support/v7/appcompat/R.java&#10;&#9;app/build/generated/source/r/debug/andronerds/com/contestapp/R.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/MainActivity.java&#10;&#9;app/src/main/res/layout/activity_main.xml&#10;" />
@@ -47,107 +53,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyTripsFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/trips/MyTripsFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="2826">
-              <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AchievementsFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/AchievementsFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.62963" vertical-offset="55" max-vertical-offset="1260">
-              <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TripInfoFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/trips/TripInfoFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="588" max-vertical-offset="1872">
-              <caret line="66" column="66" selection-start-line="66" selection-start-column="66" selection-end-line="66" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StatsFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="4500">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3330" max-vertical-offset="4878">
               <caret line="185" column="42" selection-start-line="185" selection-start-column="42" selection-end-line="185" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_stats.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="fragment_stats.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40495867" vertical-offset="7508" max-vertical-offset="8298">
-              <caret line="428" column="0" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
-              <folding>
-                <element signature="e#11062#11089#0" expanded="true" />
-                <element signature="e#11314#11341#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/HomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="1890">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7417" max-vertical-offset="8298">
+              <caret line="428" column="0" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AchievementCard.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/AchievementCard.java">
+      <file leaf-file-name="MyVehicleFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1260">
-              <caret line="53" column="29" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="3006">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyTripsTripCard.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="NavDrawerActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2466" max-vertical-offset="6462">
+              <caret line="167" column="9" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriveModeDialog.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/DriveModeDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="719" max-vertical-offset="2754">
+              <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyTripsTripCard.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1476" max-vertical-offset="2052">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="83" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.2923077" vertical-offset="1107" max-vertical-offset="1692">
+              <caret line="92" column="22" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
+              <folding>
+                <element signature="e#3187#3188#0" expanded="true" />
+                <element signature="e#3220#3221#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnBoardDiagnostic.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/OnBoardDiagnostic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.888889" vertical-offset="3648" max-vertical-offset="7200">
+              <caret line="263" column="46" selection-start-line="263" selection-start-column="46" selection-end-line="263" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Achievements.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Achievements.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="1026">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1656">
+              <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <file leaf-file-name="LoginActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1890">
-              <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6242" max-vertical-offset="7128">
+              <caret line="396" column="0" selection-start-line="396" selection-start-column="0" selection-end-line="399" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyTripsFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/trips/MyTripsFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1544" max-vertical-offset="2430">
+              <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -1245,7 +1253,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/toast_custom.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SignUpFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/toast_bg.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/animator/fade_in.xml" />
@@ -1270,7 +1277,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_no_trips.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/ProgressDialog.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/OnBoardDiagnostic.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/RefreshThread.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_trips.xml" />
@@ -1286,9 +1292,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyTripsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/data/Trip.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/SettingsFragment.java" />
@@ -1296,6 +1300,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/AchievementsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/StatsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/DriveModeDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/OnBoardDiagnostic.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java" />
       </list>
     </option>
   </component>
@@ -1331,7 +1339,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1342,6 +1349,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1356,20 +1365,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1378,10 +1373,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ContestApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
@@ -1400,96 +1391,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ContestApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
@@ -1518,10 +1419,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1542,7 +1439,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="navDrawer" />
+              <option name="myItemId" value="obd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1550,10 +1447,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ContestApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
@@ -1584,10 +1477,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ContestApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
@@ -1624,116 +1513,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contestapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fragments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="driveToWin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contestapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contestapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ContestApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1744,7 +1523,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1758,8 +1536,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="5219ce02" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="T01130JJXW" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="test_device" />
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -2208,11 +1986,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26396495" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41182914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32968238" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18051118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -2228,6 +2005,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32858709" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2248,7 +2026,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="***Base new branches off of this*** Added icons for nav drawer. Updated login with loading animations." />
     <MESSAGE value="Created ViewPager for DriveToWIn Activity. Similarly needs to be done for vechicle/insurance info." />
     <MESSAGE value="Got rid of app loading two apks on to device." />
     <MESSAGE value="Added stats view, and fixed issues with ViewPager not updating navDrawer" />
@@ -2273,7 +2050,8 @@
     <MESSAGE value="Activity's will now be added to back stack (expected back button behavior)" />
     <MESSAGE value="Fixed activity back button behavior." />
     <MESSAGE value="Fixed more geolocation stuff. Finalized app for presentation. Waiting for merge from other branches." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed more geolocation stuff. Finalized app for presentation. Waiting for merge from other branches." />
+    <MESSAGE value="Merge remote-tracking branch 'remotes/origin/FEAT-AM-03' into develop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'remotes/origin/FEAT-AM-03' into develop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2289,15 +2067,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1890">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_insurance_info.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="972">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/insurance/InsuranceInfoFragment.java">
@@ -2320,42 +2106,34 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_trip_info.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.692307" vertical-offset="0" max-vertical-offset="486">
           <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_my_trips_trip.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_my_trips_trip.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231" vertical-offset="900" max-vertical-offset="1530">
           <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_trip_info.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_trip_info.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="3888">
           <caret line="73" column="53" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="1656">
-          <caret line="81" column="48" selection-start-line="81" selection-start-column="48" selection-end-line="81" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -2393,35 +2171,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="37" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/ProgressDialogBluetooth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="810">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/OnBoardDiagnostic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4813" max-vertical-offset="6246">
-          <caret line="332" column="37" selection-start-line="332" selection-start-column="37" selection-end-line="332" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="558">
           <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/utils/IdentityStrings.java">
@@ -2436,19 +2197,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
           <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_my_trips.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="663">
           <caret line="31" column="44" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="44" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_launcher.png">
@@ -2467,7 +2227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.6451614" vertical-offset="821" max-vertical-offset="2805">
           <caret line="133" column="21" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2475,13 +2234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="476">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1782" max-vertical-offset="2916">
-          <caret line="99" column="34" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -2532,7 +2284,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1275">
           <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2540,7 +2291,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="2556">
           <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2548,15 +2298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/DriveModeDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="612">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2564,7 +2305,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="984" max-vertical-offset="2052">
           <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="119" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2572,7 +2312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1674" max-vertical-offset="2664">
           <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="148" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2580,22 +2319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="694" max-vertical-offset="1938">
           <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4032" max-vertical-offset="7038">
-          <caret line="224" column="13" selection-start-line="224" selection-start-column="13" selection-end-line="224" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6375" max-vertical-offset="7128">
-          <caret line="403" column="30" selection-start-line="403" selection-start-column="30" selection-end-line="403" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -2612,23 +2335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
           <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/trips/MyTripsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="2430">
-          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="804" max-vertical-offset="1620">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="83" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2666,7 +2372,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/driveToWin/AchievementsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.62963" vertical-offset="55" max-vertical-offset="1260">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="1620">
           <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
           <folding />
         </state>
@@ -2689,17 +2395,83 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_stats.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40495867" vertical-offset="7508" max-vertical-offset="8298">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7417" max-vertical-offset="8298">
           <caret line="428" column="0" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="3006">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2466" max-vertical-offset="6462">
+          <caret line="167" column="9" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/DriveModeDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="719" max-vertical-offset="2754">
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
           <folding>
-            <element signature="e#11062#11089#0" expanded="true" />
-            <element signature="e#11314#11341#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6242" max-vertical-offset="7128">
+          <caret line="396" column="0" selection-start-line="396" selection-start-column="0" selection-end-line="399" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/trips/MyTripsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="2430">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/OnBoardDiagnostic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.888889" vertical-offset="3648" max-vertical-offset="7200">
+          <caret line="263" column="46" selection-start-line="263" selection-start-column="46" selection-end-line="263" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1656">
+          <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2923077" vertical-offset="1107" max-vertical-offset="1692">
+          <caret line="92" column="22" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
+          <folding>
+            <element signature="e#3187#3188#0" expanded="true" />
+            <element signature="e#3220#3221#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

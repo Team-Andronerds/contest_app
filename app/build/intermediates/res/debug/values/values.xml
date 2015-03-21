@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="achievement_description">
         <item name="firstDrive">You Went on Your First Drive</item>
@@ -43,9 +43,8 @@
         <item>Achievements</item>
         <item>MY TRIPS</item>
         <item>Trips</item>
-        <item>MY VEHICLE</item>
+        <item>MY PROFILE</item>
         <item>Profile</item>
-        <item>Insurance Info</item>
         <item>Emergency</item>
         <item>Settings</item>
     </string-array>
@@ -61,12 +60,11 @@
         <item>Activity</item>
         <item>Activity</item>
         <item>Activity</item>
-        <item>Activity</item>
     </string-array>
     <string-array name="settings_menu_rows">
         <item>Bluetooth Status</item>
     </string-array>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -88,10 +86,10 @@
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
     <color name="background_material_light">#ffeeeeee</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="black" type="color">#000000</item>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -99,18 +97,18 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="button_green_selected" type="color">#4C7F50</item>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="button_red">#C0392B</color>
     <color name="button_red_pressed">#EF5350</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <color name="card_activated">#CFE9F3</color>
     <color name="card_activated_kitkat">#ADE1F4</color>
@@ -132,13 +130,13 @@
     <color name="card_text_color_header">#000</color>
     <color name="card_undobar_material_background_color">#323232</color>
     <color name="card_undobar_material_text_color">#4CAF50</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="cardview_dark_background">#FF202020</color>
     <color name="cardview_light_background">#FFFAFAFA</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/common_colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/common_colors.xml -->
     <eat-comment/>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
@@ -150,33 +148,33 @@
     <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="dark_gray" type="color">#222222</item>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="drive_mode_color" type="color">#787878</item>
     <color name="green_button">#2E7D32</color>
     <color name="green_button_pressed">#388E3C</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="home_progress_bg">#81C084</color>
     <item name="item_selected_color" type="color">#EEEEEE</item>
     <item name="item_selected_text_color" type="color">#4CAF50</item>
     <color name="light_green_body_color">#81C784</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="link_text_material_dark">@color/material_deep_teal_200</color>
     <color name="link_text_material_light">@color/material_deep_teal_500</color>
@@ -185,11 +183,11 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="navDrawerText" type="color">#666666</item>
     <item name="non_achievement_color" type="color">#AAAAAA</item>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
@@ -205,18 +203,18 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="stats_divider_color" type="color">#AAAAAA</item>
     <item name="status_bar_color" type="color">#388E3C</item>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="toolbar_color" type="color">#4CAF50</item>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/wallet_colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/wallet_colors.xml -->
     <eat-comment/>
     <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
     <color name="wallet_bright_foreground_holo_dark">#fff3f3f3</color>
@@ -231,7 +229,7 @@
     <color name="wallet_hint_foreground_holo_light">#808080</color>
     <color name="wallet_holo_blue_light">#ff33b5e5</color>
     <color name="wallet_link_text_light">#0000ee</color>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <item name="white" type="color">#FFFFFF</item>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
@@ -268,7 +266,7 @@
     <declare-styleable name="WalletFragmentStyle"><attr format="dimension" name="buyButtonHeight"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="dimension" name="buyButtonWidth"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="enum" name="buyButtonText"><enum name="buy_with_google" value="1"/><enum name="buy_now" value="2"/><enum name="book_now" value="3"/><enum name="donate_with_google" value="4"/></attr><attr format="enum" name="buyButtonAppearance"><enum name="classic" value="1"/><enum name="grayscale" value="2"/><enum name="monochrome" value="3"/></attr><attr format="reference" name="maskedWalletDetailsTextAppearance"/><attr format="reference" name="maskedWalletDetailsHeaderTextAppearance"/><attr format="reference|color" name="maskedWalletDetailsBackground"/><attr format="reference" name="maskedWalletDetailsButtonTextAppearance"/><attr format="reference|color" name="maskedWalletDetailsButtonBackground"/><attr format="color" name="maskedWalletDetailsLogoTextColor"/><attr format="enum" name="maskedWalletDetailsLogoImageType"><enum name="classic" value="1"/><enum name="monochrome" value="2"/></attr></declare-styleable>
     <declare-styleable name="card_listItem"><attr format="dimension" name="card_list_item_dividerHeight"/></declare-styleable>
     <declare-styleable name="card_options"><attr format="reference" name="card_layout_resourceID"/><attr format="reference" name="card_shadow_layout_resourceID"/><attr format="reference" name="card_header_layout_resourceID"/><attr format="reference" name="card_thumbnail_layout_resourceID"/><attr format="reference" name="list_card_layout_resourceID"/><attr format="reference" name="list_card_layout_resourceIDs"/></declare-styleable>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
     <dimen name="abc_action_bar_default_padding_material">4dp</dimen>
@@ -307,11 +305,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="card_background_default_radius">2dp</dimen>
     <dimen name="card_base_cardwithlist_dividerHeight">1dp</dimen>
@@ -403,12 +401,12 @@
     <dimen name="card_shadow_view_margin_top">0dp</dimen>
     <dimen name="card_thumbnail_height">72dp</dimen>
     <dimen name="card_thumbnail_width">72dp</dimen>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -416,7 +414,7 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="grid_card_padding_bottom">2dp</dimen>
     <dimen name="grid_card_padding_left">2dp</dimen>
@@ -434,14 +432,14 @@
     <dimen name="native_recyclerview_card_margin_left">0dp</dimen>
     <dimen name="native_recyclerview_card_margin_right">0dp</dimen>
     <dimen name="native_recyclerview_card_margin_top">6dp</dimen>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="profile_info">16sp</dimen>
     <dimen name="profile_info_spacing">40dip</dimen>
     <dimen name="profile_label">18sp</dimen>
     <dimen name="stats_info_right_spacing">40dip</dimen>
     <dimen name="stats_info_spacing">20dip</dimen>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -453,10 +451,10 @@
     <item name="split_action_bar" type="id"/>
     <item name="up" type="id"/>
     <integer name="abc_max_action_buttons">2</integer>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/version.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/version.xml -->
     <eat-comment/>
     <integer name="google_play_services_version">6587000</integer>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <integer name="list_card_swipe_distance_divisor">2</integer>
     <integer name="list_card_undobar_hide_delay">5000</integer>
@@ -468,7 +466,7 @@
         <item quantity="one">1 card removed</item>
         <item quantity="other">%d cards removed</item>
     </plurals>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -486,20 +484,20 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="accept">Accept</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="accident_info_button">Report An Accident</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">ContestApp</string>
     <string name="bluetooth_connect_title">Bluetooth Connection</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="card_empty_cardwithlist_text">No data....</string>
     <string name="card_progressbar_cardwithlist_text">Loading data...</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/common_strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/common_strings.xml -->
     <eat-comment/>
     <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
     <string name="common_android_wear_update_text">This app won\'t run unless you update the Android Wear app.</string>
@@ -529,12 +527,12 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="decline">Decline</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="drawer_closed">drawer_closed</string>
     <string name="drawer_open">drawer_open</string>
@@ -543,28 +541,28 @@
     <string name="drive_mode_on">Drive Mode On</string>
     <string name="drive_points_placeholder">0 / 100</string>
     <string name="emergency_call">Make Emergency Call</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="font_fontFamily_medium">sans-serif</string>
     <string name="font_fontFamily_regular">sans-serif</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="from">from:</string>
     <string name="hello_world">Hello world!</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="list_card_undo_title">Undo</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="loading">Loading...</string>
     <string name="obd_select">Select Your OBD</string>
     <string name="settings_menu">Settings</string>
     <string name="sign_out_button">Sign out</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_nav_drawer">NavDrawerActivity1</string>
     <string name="to">to:</string>
@@ -573,16 +571,16 @@
     <string name="trip_pts_earned">You earned</string>
     <string name="trip_pts_placeholder">20</string>
     <string name="trip_to_placeholder">Oklahoma City, OK</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/wallet_strings.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowAnimationStyle">@null</item>
     </style>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
         <item name="android:textColor">?android:textColorPrimary</item>
@@ -1336,7 +1334,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="CardView">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
@@ -1352,7 +1350,7 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1580,7 +1578,7 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_iap_style.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_iap_style.xml -->
     <eat-comment/>
     <style name="Theme.IAPTheme" parent="android:Theme">
     <item name="android:windowIsTranslucent">true</item>
@@ -1590,14 +1588,14 @@
     <item name="android:windowIsFloating">true</item>
     <item name="android:backgroundDimEnabled">false</item>
   </style>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/wallet_styles.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/wallet_styles.xml -->
     <eat-comment/>
     <style name="WalletFragmentDefaultButtonTextAppearance">
         <item name="android:textColor">@color/wallet_primary_text_holo_light</item>
@@ -1631,7 +1629,7 @@
         <item name="maskedWalletDetailsLogoTextColor">@color/wallet_bright_foreground_holo_dark</item>
         <item name="maskedWalletDetailsLogoImageType">classic</item>
     </style>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar"/>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid"/>
@@ -1686,7 +1684,7 @@
     <style name="Widget.AppCompat.Spinner.DropDown.ActionBar" parent="Base.Widget.AppCompat.Spinner.DropDown.ActionBar"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="card">
         <!-- this style should be empty -->
@@ -1963,14 +1961,14 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/card_base_cardwithlist_background_list_color</item>
     </style>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="driveModeDialog" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowIsFloating">false</item>
     </style>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->
     <eat-comment/>
     <style name="grid_card">
         <item name="android:paddingLeft">@dimen/grid_card_padding_left</item>
@@ -2140,7 +2138,7 @@
         <item name="android:clipToPadding">false</item>
         <item name="android:scrollbarStyle">outsideOverlay</item>
     </style>
-    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/home/weava/Projects/ContestApp/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="noAnimTheme" parent="android:Theme">
         <item name="android:windowAnimationStyle">@null</item>

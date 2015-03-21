@@ -15,9 +15,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
-import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.data.Vehicle;
 import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.utils.IdentityStrings;

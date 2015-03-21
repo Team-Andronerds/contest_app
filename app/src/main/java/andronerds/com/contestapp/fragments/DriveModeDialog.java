@@ -48,7 +48,7 @@ public class DriveModeDialog extends DialogFragment implements View.OnClickListe
         ButterKnife.inject(this, view);
         cancelButt.setOnClickListener(this);
         viewButt.setOnClickListener(this);
-        pointsEarned = OnBoardDiagnostic.getmTrip().getPoints();
+        pointsEarned = 75; //OnBoardDiagnostic.getmTrip().getPoints();
 
 
 

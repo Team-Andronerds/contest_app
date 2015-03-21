@@ -260,6 +260,10 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
                 score = miles;
             }
             mTrip = new Trip("Stillwater", "Tulsa", 0, 10, iBreak, iFifteen + iFive + iTen, 0, iAccel, iTurn, score, "");
+            mTrip.setmTripStartLat(35.4822);
+            mTrip.setmTripStartLong(-97.5350);
+            mTrip.setmTripEndLat(36.1157);
+            mTrip.setmTripEndLong(-97.0586);
 
             /*
             mTrip.setHarshAccelCount(iAccel);

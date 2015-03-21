@@ -57,6 +57,7 @@ public class MyTripsTripCard extends Card
 
         //mTripMapView.setImageDrawable(getContext().getResources().getDrawable(R.drawable.map_placeholder));
 
+
         Geocoder geocoder = new Geocoder(getContext(), Locale.getDefault());
         String startAdd = "";
         String endAdd = "";
