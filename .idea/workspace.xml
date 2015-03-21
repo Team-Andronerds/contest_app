@@ -17,16 +17,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: andronerds.com.contestapp" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2629cd-8a7c-44eb-951a-811f7e12cb2c" name="Default" comment="Updated all of">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contest_app.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyTripsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyTripsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+    <list default="true" id="ad2629cd-8a7c-44eb-951a-811f7e12cb2c" name="Default" comment="Updated finding location of start and end of trip. Removed Insurance info from nav drawer">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ec83f3bb-4ad7-4f79-8a29-3996ce1556c9" name="Failed commit: Default" comment="Merge remote-tracking branch 'origin/FEAT-CP-00' into develop&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;app/app.iml&#10;&#9;app/build.gradle&#10;&#9;app/build/generated/source/r/debug/android/support/v7/appcompat/R.java&#10;&#9;app/build/generated/source/r/debug/andronerds/com/contestapp/R.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/MainActivity.java&#10;&#9;app/src/main/res/layout/activity_main.xml&#10;" />
@@ -112,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NavDrawerActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="NavDrawerActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2502" max-vertical-offset="6930">
-              <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.4" vertical-offset="6042" max-vertical-offset="6948">
+              <caret line="350" column="21" selection-start-line="350" selection-start-column="21" selection-end-line="350" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44536084" vertical-offset="594" max-vertical-offset="1890">
+            <state vertical-scroll-proportion="-8.64" vertical-offset="594" max-vertical-offset="1890">
               <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
               <folding />
             </state>
@@ -162,6 +154,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -1286,11 +1279,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/InsuranceInfoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyVehicleActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/SettingsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyTripsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/cards/MyTripsTripCard.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
       </list>
     </option>
   </component>
@@ -2049,7 +2042,11 @@
       <created>1426894088772</created>
       <updated>1426894088772</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Updated finding location of start and end of trip. Removed Insurance info from nav drawer">
+      <created>1426904914430</created>
+      <updated>1426904914430</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2088,7 +2085,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41182914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41182914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18051118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -2125,7 +2122,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Merge remote-tracking branch 'origin/FEAT-CP-02' into develop&#10;" />
     <MESSAGE value="Merge to develop" />
     <MESSAGE value="New branch FEAT-AW-02&#10;" />
     <MESSAGE value="Merged CP-02 and develop" />
@@ -2150,7 +2146,8 @@
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/FEAT-AM-02' into develop" />
     <MESSAGE value="Added recent trips to home screen.&#10;Fake test data added on login." />
     <MESSAGE value="Made sure fake data wasn't recreated every time user logged in." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made sure fake data wasn't recreated every time user logged in." />
+    <MESSAGE value="Updated finding location of start and end of trip. Removed Insurance info from nav drawer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated finding location of start and end of trip. Removed Insurance info from nav drawer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2555,21 +2552,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1962" max-vertical-offset="6930">
-          <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-8.64" vertical-offset="594" max-vertical-offset="1890">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44536084" vertical-offset="594" max-vertical-offset="1890">
-          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-          <folding />
+        <state vertical-scroll-proportion="0.4" vertical-offset="6042" max-vertical-offset="6948">
+          <caret line="350" column="21" selection-start-line="350" selection-start-column="21" selection-end-line="350" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

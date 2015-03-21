@@ -348,6 +348,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             getFragmentManager().popBackStack();
         } else {
             super.onBackPressed();
+            finish();
         }
     }
 
