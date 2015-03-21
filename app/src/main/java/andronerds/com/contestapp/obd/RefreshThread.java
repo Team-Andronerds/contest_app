@@ -3,6 +3,7 @@ package andronerds.com.contestapp.obd;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.bluetooth.BluetoothAdapter;
 import android.os.AsyncTask;
 import android.util.Log;
 

@@ -28,6 +28,7 @@ import andronerds.com.contestapp.MyTripsActivity;
 import andronerds.com.contestapp.MyVehicleActivity;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.SettingsActivity;
+import andronerds.com.contestapp.fragments.DriveModeDialog;
 import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import butterknife.InjectView;
 
@@ -159,6 +160,8 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 OnBoardDiagnostic.setDriveMode(false);
                 Toast.makeText(getApplicationContext(), "Driving mode off", Toast.LENGTH_LONG).show();
                 OnBoardDiagnostic.finishTrip();
+                DriveModeDialog dialog = new DriveModeDialog();
+                dialog.show(getFragmentManager(),null);
                 invalidateOptionsMenu();
         }
 

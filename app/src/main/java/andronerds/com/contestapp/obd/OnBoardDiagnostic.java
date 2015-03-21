@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Set;
 
+import andronerds.com.contestapp.data.Trip;
 import andronerds.com.contestapp.data.Vehicle;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
 
@@ -46,6 +47,8 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
     private static JSONObject trip = new JSONObject();
     private static Vehicle myVehicle = new Vehicle();
     private static int instance = 0;
+    private static Trip mTrip;
+    private static boolean tripView = false;
     private static boolean discoverFlag = false;
     private static boolean pitchingState = false;
     private static boolean catchingState = false;
@@ -227,10 +230,61 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
 
     public static void finishTrip(){
         String time = DateFormat.getDateTimeInstance().format(new Date());
+
         try{
             trip.put("FINISH", time);
             Log.d("Final Trip:", trip.toString(2));
+            int iAccel = 0, iBreak = 0, iTurn = 0, iFive = 0, iTen = 0, iFifteen = 0;
+            for(int i = 1; i <=instance; i++){
+                Log.d("Iteration " + i, trip.getString("Instance " + i));
+                if(trip.getString("Instance " + i).contains("accel")){
+                    Log.d("Accel", "Pluswan");
+                    iAccel++;
+                }else if(trip.getString("Instance " + i).contains("break")){
+                    iBreak++;
+                }else if(trip.getString("Instance " + i).contains("turn")){
+                    iTurn++;
+                }else if(trip.getString("Instance " + i).contains("five")){
+                    iFive++;
+                }else if(trip.getString("Instance " + i).contains("ten")){
+                    iTen++;
+                }else if(trip.getString("Instance " + i).contains("fifteen")){
+                    iFifteen++;
+                }
+            }
+
+            int miles = 10;
+
+            int score = miles * (1 + (miles*5 - ((iAccel + iBreak  + iTurn + iFive + iFifteen + iTen)*miles)/150));
+            if(score < miles){
+                score = miles;
+            }
+            mTrip = new Trip("Stillwater", "Tulsa", 0, 10, iBreak, iFifteen + iFive + iTen, 0, iAccel, iTurn, score, "");
+
+            /*
+            mTrip.setHarshAccelCount(iAccel);
+            mTrip.setHarshBrakeCount(iBreak);
+            mTrip.setHarshTurnCount(iTurn);
+            mTrip.setSpeedingCount( iFifteen + iFive + iTen);
+            mTrip.setPoints(score);
+            mTrip.setTripMileageCount(10);
+            */
+
+
         }catch(JSONException e){e.printStackTrace();}
+
+
+
+    }
+
+    public static boolean getTripView(){
+        return tripView;
+    }
+
+    public static Trip getmTrip(){return mTrip;}
+
+    public static void setTripViw(boolean x){
+        tripView = x;
     }
 
     public static JSONObject getTrip(){ return trip;}
@@ -330,7 +384,7 @@ public class OnBoardDiagnostic extends NavDrawerActivity{
         android.app.ProgressDialog progress;
         progress = android.app.ProgressDialog.show(parent.getActivity(), null,
                 "Connecting to " + name, true);
-        new ProgressDialog().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, progress);
+        new ProgressDialogBluetooth().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, progress);
         adapt.cancelDiscovery();
         setState(true);
         JSONObject job = new JSONObject();
