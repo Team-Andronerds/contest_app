@@ -1,4 +1,5 @@
-package andronerds.com.contestapp.OBD;
+package andronerds.com.contestapp.obd;
+
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
@@ -11,7 +12,7 @@ import android.os.Message;
 /**
  * Created by Dilancuan on 3/20/2015.
  */
-public class progressDialog extends AsyncTask<ProgressDialog, Integer, Void> {
+public class ProgressDialogBluetooth extends AsyncTask<ProgressDialog, Integer, Void> {
     @Override
     protected Void doInBackground(ProgressDialog... params) {
         ProgressDialog progress = params[0];

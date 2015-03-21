@@ -18,24 +18,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad2629cd-8a7c-44eb-951a-811f7e12cb2c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/generic_white_button.xml" />
-      <change type="DELETED" beforePath="C:\Users\Dilancuan\Documents\d2w\ctapp\contest_app\ContestApp.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Dilancuan\Documents\d2w\ctapp\contest_app\app\src\main\java\andronerds\com\contestapp\obd\ProgressDialog.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Dilancuan\Documents\d2w\ctapp\contest_app\app\src\main\res\layout\activity_drive_mode.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_summary_dialog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/andronerds/com/contestapp/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/andronerds/com/contestapp/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/DriveModeDialog.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/DriveModeDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyVehicleActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/MyVehicleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/fragments/MyVehicleFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/navDrawer/NavDrawerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/OnBoardDiagnostic.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/OnBoardDiagnostic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/andronerds/com/contestapp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/andronerds/com/contestapp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/RefreshThread.java" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/RefreshThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/andronerds/com/contestapp/obd/ProgressDialogBluetooth.java" />
+      <change type="DELETED" beforePath="C:\Users\Dilancuan\Documents\d2w\ctapp\contest_app\app\src\main\java\andronerds\com\contestapp\obd\progressDialog.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ec83f3bb-4ad7-4f79-8a29-3996ce1556c9" name="Failed commit: Default" comment="Merge remote-tracking branch 'origin/FEAT-CP-00' into develop&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;app/app.iml&#10;&#9;app/build.gradle&#10;&#9;app/build/generated/source/r/debug/android/support/v7/appcompat/R.java&#10;&#9;app/build/generated/source/r/debug/andronerds/com/contestapp/R.java&#10;&#9;app/src/main/java/andronerds/com/contestapp/MainActivity.java&#10;&#9;app/src/main/res/layout/activity_main.xml&#10;" />
@@ -1756,7 +1740,11 @@
       <created>1426869795433</created>
       <updated>1426869795433</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Added stuff">
+      <created>1426908896633</created>
+      <updated>1426908896633</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1833,7 +1821,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Made nav bar show result of G+ sign in." />
     <MESSAGE value="You can now sign out... I mean... If that is something you wanna do..." />
     <MESSAGE value="Merge remote-tracking branch 'origin/FEAT-CP-02' into develop&#10;" />
     <MESSAGE value="Merge to develop" />
@@ -1858,7 +1845,8 @@
     <MESSAGE value="Added initial view for trip info" />
     <MESSAGE value="Added new info screen for trips. Added ability to see map of trip." />
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/FEAT-AM-02' into develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'remotes/origin/FEAT-AM-02' into develop" />
+    <MESSAGE value="Added stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

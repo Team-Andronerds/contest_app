@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values-v21/values.xml -->
+    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values-v21/values.xml -->
     <eat-comment/>
     <string name="card_font_fontFamily_header">sans-serif-condensed</string>
     <string name="card_font_fontFamily_main_content">sans-serif</string>
     <string name="card_native_font_fontFamily_header">sans-serif-medium</string>
     <string name="card_native_font_fontFamily_main_content">sans-serif</string>
-    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml -->
+    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>
@@ -275,7 +275,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
     </style>
-    <!-- From: file:/home/weava/Projects/ContestApp/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values-v21/values.xml -->
+    <!-- From: file:/C:/Users/Dilancuan/Documents/d2w/ctapp/contest_app/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="card.header_button_base">
         <item name="android:layout_width">wrap_content</item>
