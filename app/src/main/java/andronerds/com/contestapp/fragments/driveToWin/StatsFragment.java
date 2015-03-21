@@ -12,13 +12,12 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
-import java.util.HashMap;
 import java.util.List;
 
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.data.Trip;
-import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.utils.IdentityStrings;
+import andronerds.com.contestapp.utils.PictureUtil;
 import andronerds.com.contestapp.views.ProgressWheel;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -61,14 +60,12 @@ public class StatsFragment extends Fragment
     @InjectView(R.id.stats_text_total_harsh_braking)TextView mTotalBrake;
     @InjectView(R.id.stats_text_total_harsh_turns) TextView mTotalTurns;
     @InjectView(R.id.stats_text_total_speeding) TextView mTotalSpeeding;
-    @InjectView(R.id.stats_text_total_gas) TextView mTotalGas;
     @InjectView(R.id.stats_text_average_miles)TextView mAvgMiles;
     @InjectView(R.id.stats_text_average_points)TextView mAvgPoints;
     @InjectView(R.id.stats_average_harsh_accelerating)TextView mAvgAccel;
     @InjectView(R.id.stats_text_average_harsh_braking)TextView mAvgBrake;
     @InjectView(R.id.stats_text_average_harsh_turns)TextView mAvgTurns;
     @InjectView(R.id.stats_text_average_speeding)TextView mAvgSpeeding;
-    @InjectView(R.id.stats_text_average_gas)TextView mAvgGas;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -147,7 +144,7 @@ public class StatsFragment extends Fragment
 
     public void setupStats(String userName)
     {
-        List<Trip> userTrips = Trip.find(Trip.class, "name = ?", "loll");
+        List<Trip> userTrips = Trip.find(Trip.class, "name = ?", userName);
 
         int tripsCount = userTrips.size();
 
@@ -187,7 +184,6 @@ public class StatsFragment extends Fragment
             mTotalPoints.setText(""+points);
             mTotalBrake.setText(""+brakes);
             mTotalTurns.setText(""+turns);
-            mTotalGas.setText(""+gas);
             mTotalSpeeding.setText(""+speeding);
             mTotalAccel.setText(""+accel);
 
@@ -197,7 +193,6 @@ public class StatsFragment extends Fragment
             mAvgPoints.setText(df.format(avgPoints));
             mAvgBrake.setText(df.format(avgBrakes));
             mAvgTurns.setText(df.format(avgTurns));
-            mAvgGas.setText(df.format(avgGas));
             mAvgSpeeding.setText(df.format(avgSpeeding));
             mAvgAccel.setText(df.format(avgAccel));
         }
@@ -210,7 +205,7 @@ public class StatsFragment extends Fragment
 
     public int getTotalPoints(String userName)
     {
-        List<Trip> trips = Trip.find(Trip.class,"name = ?","loll");
+        List<Trip> trips = Trip.find(Trip.class,"name = ?", userName);
 
 
         if(trips.size() != 0)

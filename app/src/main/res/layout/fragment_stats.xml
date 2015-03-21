@@ -276,35 +276,6 @@
 
             </LinearLayout>
 
-            <View android:layout_height="1dip"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/stats_info_spacing"
-                android:background="@color/stats_divider_color"/>
-
-
-            <LinearLayout android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/stats_info_spacing"
-                android:layout_marginLeft="20dip"
-                android:orientation="horizontal">
-
-                <TextView android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="Total Gas Lights: "
-                    android:textStyle="bold"
-                    android:textSize="@dimen/profile_label"/>
-
-                <TextView android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:textSize="@dimen/profile_info"
-                    android:text="0"
-                    android:gravity="right"
-                    android:paddingRight="@dimen/stats_info_right_spacing"
-                    android:id="@+id/stats_text_total_gas"/>
-
-            </LinearLayout>
-
-
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dip"
@@ -460,6 +431,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginTop="@dimen/stats_info_spacing"
                 android:layout_marginLeft="20dip"
+                android:layout_marginBottom="20dip"
                 android:orientation="horizontal">
 
                 <TextView android:layout_height="wrap_content"
@@ -475,35 +447,6 @@
                     android:gravity="right"
                     android:paddingRight="@dimen/stats_info_right_spacing"
                     android:id="@+id/stats_text_average_speeding"/>
-
-            </LinearLayout>
-
-            <View android:layout_height="1dip"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/stats_info_spacing"
-                android:background="@color/stats_divider_color"/>
-
-
-            <LinearLayout android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/stats_info_spacing"
-                android:layout_marginBottom="20dip"
-                android:layout_marginLeft="20dip"
-                android:orientation="horizontal">
-
-                <TextView android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="Average Gas Lights: "
-                    android:textStyle="bold"
-                    android:textSize="@dimen/profile_label"/>
-
-                <TextView android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:textSize="@dimen/profile_info"
-                    android:text="0.0"
-                    android:gravity="right"
-                    android:paddingRight="@dimen/stats_info_right_spacing"
-                    android:id="@+id/stats_text_average_gas"/>
 
             </LinearLayout>
 
