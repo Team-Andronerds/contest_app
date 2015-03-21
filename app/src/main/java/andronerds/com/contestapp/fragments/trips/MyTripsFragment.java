@@ -117,11 +117,11 @@ public class MyTripsFragment extends Fragment implements Card.OnCardClickListene
         View view = inflater.inflate(R.layout.fragment_my_trips, container, false);
         ButterKnife.inject(this, view);
 
-        if(mTripCardsList.size() > 1)
+        if(mTripCardsList.size() > 0)
         {
             mNoTrips.setVisibility(View.GONE);
         }
-        if(mTripCardsList.size() == 1)
+        if(mTripCardsList.size() == 0)
         {
             mNoTrips.setVisibility(View.VISIBLE);
         }

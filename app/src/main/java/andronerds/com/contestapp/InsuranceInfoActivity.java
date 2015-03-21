@@ -30,7 +30,7 @@ public class InsuranceInfoActivity extends NavDrawerActivity
         fragmentTransaction.replace(R.id.insurance_info_fragment_container, vehicleListFragment);
         fragmentTransaction.commit();
 
-        mToolbar.showOverflowMenu();
+        //mToolbar.showOverflowMenu();
         mToolbar.setTitle(mTitle);
         setSupportActionBar(mToolbar);
 

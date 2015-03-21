@@ -56,7 +56,7 @@ public class DriveToWinActivity extends NavDrawerActivity implements ViewPager.O
         mDrivePager.setOnPageChangeListener(this);
         mDrivePager.setCurrentItem(mInitialPosition);
 
-        mToolbar.showOverflowMenu();
+        //mToolbar.showOverflowMenu();
         mToolbar.setTitle(adapterViewPager.getPageTitle(mDrivePager.getCurrentItem()));
         setSupportActionBar(mToolbar);
 

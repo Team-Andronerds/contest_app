@@ -60,7 +60,7 @@ public class MyVehicleActivity extends NavDrawerActivity
         fragmentTransaction.add(R.id.my_vehicle_fragment_container, myVehicleFragment);
         fragmentTransaction.commit();
 
-        mToolbar.showOverflowMenu();
+        //mToolbar.showOverflowMenu();
         mToolbar.setTitle("View Profile");
         setSupportActionBar(mToolbar);
 

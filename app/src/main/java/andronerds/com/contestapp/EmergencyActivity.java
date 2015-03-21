@@ -32,7 +32,7 @@ public class EmergencyActivity extends NavDrawerActivity
         fragmentTransaction.add(R.id.emergency_fragment_container, emergencyFragment);
         fragmentTransaction.commit();
 
-        mToolbar.showOverflowMenu();
+        //mToolbar.showOverflowMenu();
         mToolbar.setTitle(mTitle);
         setSupportActionBar(mToolbar);
 

@@ -47,7 +47,7 @@ public class MyTripsActivity extends NavDrawerActivity implements OnMapReadyCall
         fragmentTransaction.replace(R.id.my_trips_fragment_container, myTripsFragment);
         fragmentTransaction.commit();
 
-        mToolbar.showOverflowMenu();
+       // mToolbar.showOverflowMenu();
         mToolbar.setTitle(mTitle);
         setSupportActionBar(mToolbar);
 

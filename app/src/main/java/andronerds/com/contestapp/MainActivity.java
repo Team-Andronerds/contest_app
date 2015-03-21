@@ -53,7 +53,7 @@ public class MainActivity extends NavDrawerActivity implements OnMapReadyCallbac
         fragmentTransaction.commit();
 
         //Toolbar settings
-        mToolbar.showOverflowMenu();
+        //mToolbar.showOverflowMenu();
         mToolbar.setTitle(mTitle);
         setSupportActionBar(mToolbar);
 

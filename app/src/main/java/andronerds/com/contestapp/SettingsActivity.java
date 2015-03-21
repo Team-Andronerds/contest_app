@@ -36,7 +36,7 @@ public class SettingsActivity extends NavDrawerActivity
         fragmentTransaction.add(R.id.settings_fragment_container, settingsFragment);
         fragmentTransaction.commit();
 
-        mToolbar.showOverflowMenu();
+       // mToolbar.showOverflowMenu();
         mToolbar.setTitle(mTitle);
         setSupportActionBar(mToolbar);
 

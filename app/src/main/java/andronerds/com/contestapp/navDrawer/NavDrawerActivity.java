@@ -119,22 +119,50 @@ public abstract class NavDrawerActivity extends ActionBarActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
     //Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_nav_drawer, menu);
+        //getMenuInflater().inflate(R.menu.menu_nav_drawer, menu);
         return true;
     }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        if(OnBoardDiagnostic.getDriveMode()){
+            getMenuInflater().inflate(R.menu.menu_drive_mode_on, menu);
+        }else{
+            getMenuInflater().inflate(R.menu.menu_drive_mode, menu);
+        }
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+// Handle action bar item clicks here. The action bar will
+// automatically handle clicks on the Home/Up button, so long
+// as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
+//noinspection SimplifiableIfStatement
         switch(id) {
             case R.id.action_settings:
                 Log.d("MENU", "Action settings clicked");
                 break;
+            case R.id.drive_mode_button:
+                Log.d("MENU", "Drive Mode Pressed");
+                if(OnBoardDiagnostic.isActive()){
+                    OnBoardDiagnostic.setDriveMode(true);
+                    Toast.makeText(getApplicationContext(), "You are now Driving to Win!", Toast.LENGTH_LONG).show();
+                    OnBoardDiagnostic.startNewTrip();
+                    invalidateOptionsMenu();
+                }else{
+                    Toast.makeText(getApplicationContext(), "Please connect to your OBD", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.drive_mode_button_on:
+                OnBoardDiagnostic.setDriveMode(false);
+                Toast.makeText(getApplicationContext(), "Driving mode off", Toast.LENGTH_LONG).show();
+                OnBoardDiagnostic.finishTrip();
+                invalidateOptionsMenu();
         }
-
         return super.onOptionsItemSelected(item);
     }
 
