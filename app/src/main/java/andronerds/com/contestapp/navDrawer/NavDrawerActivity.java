@@ -226,7 +226,6 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 intent.addFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
                 startActivity(intent);
-                finish();
             }
         }
     }
@@ -351,6 +350,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             getFragmentManager().popBackStack();
         } else {
             super.onBackPressed();
+            finish();
         }
     }
 
