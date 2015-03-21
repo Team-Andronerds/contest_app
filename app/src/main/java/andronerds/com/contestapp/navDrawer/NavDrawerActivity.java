@@ -65,11 +65,14 @@ public abstract class NavDrawerActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
         if(OnBoardDiagnostic.isInitialized()){
 
         }else{
             OnBoardDiagnostic.initialize(this);
             OnBoardDiagnostic.refresh(this);
+            OnBoardDiagnostic.setState(false);
         }
 
         /* Init sets content view and

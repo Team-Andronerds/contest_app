@@ -79,6 +79,8 @@ public class EditUserNameFragment extends Fragment implements View.OnClickListen
                             trip.save();
                         }
                     }
+
+
                 }
 
                 editor.commit();

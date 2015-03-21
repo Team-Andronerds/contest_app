@@ -24,6 +24,7 @@ import java.util.Locale;
 
 import andronerds.com.contestapp.data.Achievements;
 import andronerds.com.contestapp.data.Trip;
+import andronerds.com.contestapp.data.Vehicle;
 import andronerds.com.contestapp.fragments.HomeFragment;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
 import andronerds.com.contestapp.utils.IdentityStrings;
@@ -84,11 +85,11 @@ public class MainActivity extends NavDrawerActivity implements OnMapReadyCallbac
             String[] earned = getResources().getStringArray(R.array.achievement_have_earned);
             Achievements ach;
 
-            Log.d("ID CHECK MAIN","ID = " + R.drawable.ic_profile_null);
+            Log.d("ID CHECK MAIN","ID = " + R.drawable.ic_launcher);
 
             for(int i = 0; i < achTitles.size(); i++)
             {
-                ach = new Achievements(achTitles.get(i),achDesc[i],earned[i].equals("true"),R.drawable.nav_vehicle_gray,userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
+                ach = new Achievements(achTitles.get(i),achDesc[i],earned[i].equals("true"),R.drawable.ic_launcher,userProfilePrefs.getString(IdentityStrings.USER_NAME, "Name"));
                 ach.save();
             }
         }
