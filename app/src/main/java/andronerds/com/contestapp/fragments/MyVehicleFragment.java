@@ -102,10 +102,18 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
         List<Vehicle> myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
         temp.delete();
         if(OnBoardDiagnostic.isActive()){
-            myVehicles.add(OnBoardDiagnostic.getVehicle());
+            //myVehicles.add(OnBoardDiagnostic.getVehicle());
+            if(OnBoardDiagnostic.getVehicle() != null)
+            {
+                Vehicle.deleteAll(Vehicle.class);
+                Vehicle vehicle = OnBoardDiagnostic.getVehicle();
+                vehicle.setName(sharedPreferences.getString(IdentityStrings.USER_NAME,""));
+                vehicle.save();
+                myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
+            }
         }
         if(myVehicles.size() == 0) {
-            mVehicleInfo.setText("YEAR MAKE MODEL");
+            //mVehicleInfo.setText("YEAR MAKE MODEL");
         }
 
         if(myVehicles.size()!=0)
