@@ -1,5 +1,6 @@
 package andronerds.com.contestapp.obd;
 
+
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,8 +14,8 @@ import android.os.Message;
  */
 public class ProgressDialogBluetooth extends AsyncTask<ProgressDialog, Integer, Void> {
     @Override
-    protected Void doInBackground(android.app.ProgressDialog... params) {
-        android.app.ProgressDialog progress = params[0];
+    protected Void doInBackground(ProgressDialog... params) {
+        ProgressDialog progress = params[0];
 
         Looper.prepare();
         Handler handler = new Handler();

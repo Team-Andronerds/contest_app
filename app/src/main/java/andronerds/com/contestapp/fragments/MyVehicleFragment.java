@@ -15,7 +15,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import andronerds.com.contestapp.OBD.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
+import andronerds.com.contestapp.data.User;
 import andronerds.com.contestapp.data.Vehicle;
 import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.utils.IdentityStrings;
@@ -48,8 +50,6 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
     {
         View view = inflater.inflate(R.layout.fragment_my_vehicle, container, false);
         ButterKnife.inject(this, view);
-
-
 
         mEditProfileButton.setOnClickListener(this);
 
@@ -99,17 +99,15 @@ public class MyVehicleFragment extends Fragment implements View.OnClickListener
         }
 
 
+        Vehicle temp = new Vehicle("2004","Honda","Accord","C3458109094C","#AB09BC",sharedPreferences.getString(IdentityStrings.USER_NAME,""));
+        temp.save();
         List<Vehicle> myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
-
+        temp.delete();
         if(OnBoardDiagnostic.isActive()){
-
-            if(OnBoardDiagnostic.getVehicle()!= null) {
-                Log.d("OBD PROFILE TEST","TEST");
-                Vehicle.deleteAll(Vehicle.class);
-                Vehicle vehicle = OnBoardDiagnostic.getVehicle();
-                vehicle.save();
-                myVehicles = Vehicle.find(Vehicle.class, "name = ?", sharedPreferences.getString(IdentityStrings.USER_NAME, "Name"));
-            }
+            myVehicles.add(OnBoardDiagnostic.getVehicle());
+        }
+        if(myVehicles.size() == 0) {
+            mVehicleInfo.setText("YEAR MAKE MODEL");
         }
 
         if(myVehicles.size()!=0)

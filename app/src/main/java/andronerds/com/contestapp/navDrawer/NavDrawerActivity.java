@@ -29,6 +29,7 @@ import andronerds.com.contestapp.MyVehicleActivity;
 import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.SettingsActivity;
+import andronerds.com.contestapp.obd.OnBoardDiagnostic;
 import butterknife.InjectView;
 
 /**
@@ -72,7 +73,6 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         }else{
             OnBoardDiagnostic.initialize(this);
             OnBoardDiagnostic.refresh(this);
-            OnBoardDiagnostic.setState(false);
         }
 
         /* Init sets content view and
@@ -82,6 +82,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         mTitle = mToolbar.getTitle();
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         mNavDrawerItems = getNavDrawerItems();
         mNavDrawerAdapter = new NavDrawerAdapter(mNavDrawerItems, this, mCurrentSelectionIndex);
@@ -120,13 +121,6 @@ public abstract class NavDrawerActivity extends ActionBarActivity
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-    //Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_nav_drawer, menu);
-        return true;
-    }
-
-    @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         if(OnBoardDiagnostic.getDriveMode()){
             getMenuInflater().inflate(R.menu.menu_drive_mode_on, menu);
@@ -136,15 +130,19 @@ public abstract class NavDrawerActivity extends ActionBarActivity
         return super.onPrepareOptionsMenu(menu);
     }
 
-
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+    //Inflate the menu; this adds items to the action bar if it is present.
+        //getMenuInflater().inflate(R.menu.menu_nav_drawer, menu);
+        return true;
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-// Handle action bar item clicks here. The action bar will
-// automatically handle clicks on the Home/Up button, so long
-// as you specify a parent activity in AndroidManifest.xml.
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-//noinspection SimplifiableIfStatement
+        //noinspection SimplifiableIfStatement
         switch(id) {
             case R.id.action_settings:
                 Log.d("MENU", "Action settings clicked");
@@ -164,8 +162,11 @@ public abstract class NavDrawerActivity extends ActionBarActivity
                 OnBoardDiagnostic.setDriveMode(false);
                 Toast.makeText(getApplicationContext(), "Driving mode off", Toast.LENGTH_LONG).show();
                 OnBoardDiagnostic.finishTrip();
+                DriveModeDialog dialog = new DriveModeDialog();
+                dialog.show(getFragmentManager(),null);
                 invalidateOptionsMenu();
         }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -225,6 +226,7 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 intent.addFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+
                 startActivity(intent);
             }
         }
@@ -382,5 +384,4 @@ public abstract class NavDrawerActivity extends ActionBarActivity
             OnBoardDiagnostic.setState(true);
         }
     }
-
 }
