@@ -12,14 +12,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import andronerds.com.contestapp.LoginActivity;
-import andronerds.com.contestapp.obd.OnBoardDiagnostic;
-import andronerds.com.contestapp.obd.RefreshThread;
 import andronerds.com.contestapp.R;
 import andronerds.com.contestapp.adapters.SettingsListAdapter;
 import andronerds.com.contestapp.navDrawer.NavDrawerActivity;
+import andronerds.com.contestapp.obd.OnBoardDiagnostic;
+import andronerds.com.contestapp.obd.RefreshThread;
 import andronerds.com.contestapp.utils.IdentityStrings;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -44,7 +43,8 @@ public class SettingsFragment extends Fragment implements View.OnClickListener
     {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
         ButterKnife.inject(this, view);
-        mSettingsRows = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.settings_menu_rows)));
+        //mSettingsRows = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.settings_menu_rows)));
+        mSettingsRows = new ArrayList<>();
 
         SettingsListAdapter listAdapter = new SettingsListAdapter(this.getActivity(), R.layout.adapter_settings, mSettingsRows);
         mSettingsList.setAdapter(listAdapter);

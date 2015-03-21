@@ -386,7 +386,6 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
         if(list.size() == 0)
         {
             Trip trip = new Trip();
-            trip.setmTripMap(R.drawable.pc_map);
             trip.setmTripStart("Oklahoma City, OK");
             trip.setmTripEnd("Stillwater, OK");
             trip.setPoints(73);
@@ -403,7 +402,6 @@ public class LoginActivity extends Activity implements GoogleApiClient.Connectio
             trip.save();
 
             trip = new Trip();
-            trip.setmTripMap(R.drawable.pc_map);
             trip.setmTripStart("Stillwater, OK");
             trip.setmTripEnd("Owasso, OK");
             trip.setPoints(18);

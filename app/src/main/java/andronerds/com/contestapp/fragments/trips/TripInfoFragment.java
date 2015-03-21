@@ -2,12 +2,18 @@ package andronerds.com.contestapp.fragments.trips;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 import andronerds.com.contestapp.MainActivity;
 import andronerds.com.contestapp.MyTripsActivity;
@@ -53,12 +59,38 @@ public class TripInfoFragment extends Fragment implements View.OnClickListener
         currentTrip = (Trip) args.getSerializable(Intent.EXTRA_TEXT);
         mFromActivity = args.getString(Intent.EXTRA_KEY_EVENT);
 
+        Geocoder geocoder = new Geocoder(getActivity(), Locale.getDefault());
+        String startAdd = "";
+        String endAdd = "";
+        try
+        {
+            List<Address> startAddrList = geocoder.getFromLocation(currentTrip.getmTripStartLat(), currentTrip.getmTripStartLong(), 1);
+            Address start = startAddrList.get(0);
+            startAdd = start.getAddressLine(1);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        try
+        {
+            List<Address> endAddrList = geocoder.getFromLocation(currentTrip.getmTripEndLat(), currentTrip.getmTripEndLong(), 1);
+            Address end = endAddrList.get(0);
+            endAdd = end.getAddressLine(1);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        startAdd = startAdd.replaceAll("\\d","");
+        endAdd = endAdd.replaceAll("\\d","");
+
         MapLogoCard mapLogoCard = new MapLogoCard(getActivity());
         mMapCard.setCard(mapLogoCard);
         mMapCard.setClickable(true);
         mMapCard.setOnClickListener(this);
-        mFromText.setText(currentTrip.getmTripStart());
-        mToText.setText(currentTrip.getmTripEnd());
+        mFromText.setText(startAdd);
+        mToText.setText(endAdd);
 
         mHarshAcceleration.setText(Integer.toString(currentTrip.getHarshAccelCount()));
         mHarshBrakes.setText(Integer.toString(currentTrip.getHarshBrakeCount()));
